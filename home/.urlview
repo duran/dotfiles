@@ -1,0 +1,5 @@
+# Regexp is missing emails, git, magnets.
+#|[-a-zA-Z0-9_.+]+@[-a-zA-Z0-9]+\.[-a-zA-Z0-9.]
+REGEXP (https?|ftp)://[^ ,;\t\n\r<">\):]+
+# Replace this command for sniper-rifle
+COMMAND "$BROWSER"

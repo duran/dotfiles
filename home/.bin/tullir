@@ -1,0 +1,5 @@
+#!/bin/sh
+# This will leave the terminal in bad state
+# I do not remember where is from or why is it useful
+
+echo -e "\033*0"

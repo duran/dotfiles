@@ -1,0 +1,19 @@
+#!/bin/sh
+# Technically this should be in .xprofile
+# If this does not work with your distribution you could try to put this thing in .xsession, .xinitrc, or .profile_local
+
+# FIXME: I am not 100% sure that I should put this here instead in .profile,
+# first I am wary of race conditions, second, I do not need a WM in a desktop
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+
+export TERMCMD=uxterm                               # Terminal
+export BROWSER='qutescript open_url_in_instance.sh' # Browser
+
+# Change layout to US International English
+setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
+# Ctrl -> CapsLock -> LeftShift; OS -> Alt
+xmodmap "$HOME/.x/modmap"
+
+# Load X config local configuration
+test -f "$HOME/.x_local" && . "$HOME/.x_local"

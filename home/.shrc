@@ -1,0 +1,16 @@
+#!/bin/sh
+
+PS1="[$USER@$(uname -n)]"' ${PWD##*/}$ ' # Waiting for a command
+PS2='> '                                 # Waiting to complete command
+
+# modify workstation (terminal) parameters
+. "$HOME/.sh/tty"
+
+# aliases
+. "$HOME/.sh/aliases"
+
+# functions
+. "$HOME/.sh/functions"
+
+# local configuration
+test -f "$HOME/.sh_local" && . "$HOME/.sh_local"

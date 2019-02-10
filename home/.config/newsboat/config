@@ -1,0 +1,55 @@
+# basic config
+
+browser "$BROWSER > /dev/null 2>&1"
+auto-reload yes
+reload-time 60
+text-width 80
+reload-threads 8
+show-read-feeds no
+show-read-articles no
+#show-keymap-hint no
+external-url-viewer "urlview"
+#max-browser-tabs 10
+#openbrowser-and-mark-jumps-to-next-unread yes
+#delete-read-articles-on-quit yes
+#bookmark-cmd
+#html-renderer "elinks -dump -force-html"
+#pager elinks %f
+delete-read-articles-on-quit yes
+
+# vim-like keys
+
+bind-key j down
+bind-key k up
+bind-key f pagedown
+bind-key b pageup
+bind-key g home
+bind-key G end
+bind-key u show-urls
+bind-key O open-all-unread-in-browser-and-mark-read
+#bind-key h left
+#bind-key l right
+
+
+# Theme
+
+articlelist-format "%4i %f %t %> %D"
+articlelist-title-format "Feed '%T'"
+datetime-format "%F %T"
+feedlist-title-format "%?T?Feeds with tag '%T'&All feeds? (%t sources%?U?, %u unread&?)"
+filebrowser-title-format "%N %V - %?O?Open File&Save File? - %f"
+urlview-title-format "URLs"
+help-title-format "%N %V - Help"
+searchresult-title-format "Search result"
+selectfilter-title-format "Select Filter"
+selecttag-title-format "Select Tag"
+itemview-title-format "Article '%T'%?U? (%u unread left)"
+# dialogs-title-format
+
+# macros
+macro f set browser "nohup firefox %u > /dev/null 2>&1 &"; open-in-browser ; set browser "$BROWSER %u"
+macro w set browser "w3m %u"; open-in-browser ; set browser "$BROWSER %u"
+macro v set browser "nohup mpv %u > /dev/null 2>&1 &"; open-in-browser ; set browser "$BROWSER %u"
+macro y set browser "nohup youtube-dl  %u > /dev/null 2>&1 &"; open-in-browser ; set browser "$BROWSER %u"
+macro m set browser "nohup youtube-dl -ciw %u > /dev/null 2>&1 &"; open-in-browser ; set browser "$BROWSER %u"
+

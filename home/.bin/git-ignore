@@ -1,0 +1,13 @@
+#!/bin/sh
+# Ignore pattern(s)
+
+if [ $# -eq 0 ]; then
+  printf 'Saves patterns in .gitignore\n'
+else
+  for line in "$@"
+  do
+    printf '%s\n' "$line" > .gitignore
+  done
+fi
+    
+

@@ -1,0 +1,33 @@
+#!/bin/sh
+# Rolodex implemented with sqlite
+# 1: Action (/none/, init, import, export, join)
+# FIXME: Add init, import, join
+# FIXME: Move to XDG directory
+
+ROLODEX="${ROLODEX:-$HOME/.rolodex}" 
+TABLES='people telephones'
+
+case "$1" in
+  '')
+    sqlite3\
+      --cmd '.prompt "rolodex> " ""'\
+      --cmd '.separator " | "'\
+      "$ROLODEX"
+  ;;
+  export)
+    for table in $TABLES
+    do
+      sqlite3 -header -csv "$ROLODEX" "select * from $table;" \
+      > "$table.csv"
+    done
+    # "rolodex_$USER@$(uname -n)_$(date +%F)"
+    if test "$2" != csv
+    then
+      tar czf rolodex.tar.gz ${TABLES// /.csv }.csv
+      rm ${TABLES// /.csv }.csv
+    fi
+  ;;
+  *)
+    printf 'Command "%s" not found in rolodex\n' "$1" 1>&2
+  ;;
+esac    

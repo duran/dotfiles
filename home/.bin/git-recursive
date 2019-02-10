@@ -1,0 +1,8 @@
+#!/bin/dash
+# Monkey patching recursive repository command execution in git
+
+find . -type d -name .git -exec dirname {} + | while read REPLY; do
+  cd "$REPLY"
+  git ${@:-rev-parse --show-toplevel}
+  cd - >/dev/null
+done

@@ -1,0 +1,87 @@
+[core]
+    mergeoptions = --no-edit
+    excludesfile = ~/.config/git/ignore
+[push]
+    default = simple
+[rerere]
+    enabled = true
+[color]
+    ui = true
+[commit]
+    template = ~/.config/git/message
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+    prompt = false
+[mergetool]
+    keepBackup = false
+[diff]
+    tool = vimdiff
+    prompt = false
+    mnemonicprefix = true
+[am]
+    threeWay = true
+[alias]
+    # add
+    a = add
+    # bisect
+    # branch
+    b = branch
+    # checkout
+    # clone
+    # commit
+    c = commit
+    # diff
+    d = diff --color-words --minimal --diff-filter=M 
+    # fetch
+    f = fetch
+    # grep
+    # init
+    # log
+    l = log --raw --no-merges
+    # merge
+    m = merge
+    # mv
+    # pull
+    fm = pull
+    # push
+    p = push
+    # rebase
+    # reset
+    # rm
+    # show
+    # status
+    s = status --short --branch
+    # tag
+    t = tag
+    #
+    cd = !cd "$(git rev-parse --show-toplevel)"
+    cl = clean -xf
+    mt = mergetool
+    dog = log --all --decorate --oneline --graph  
+    tree = !exa --long --all --header --tree --git --git-ignore --ignore-glob=.git --color=always | $PAGER
+    undo = reset --soft HEAD^
+    wash = clean -xf
+    alias = config --get-regexp '^alias.'
+    graph = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    branches = branch -a
+    tags = tag
+    unstage = reset -q HEAD --
+    discard = checkout --
+    uncommit = reset --mixed HEAD~
+    amend = commit --amend
+    stashes = stash list
+    amend = commit --amend -C HEAD
+    update = add --update
+    cached = diff --cached
+    credit = commit --amend --author "$1 <$2>" -C HEAD # I do not know if this works
+    people = shortlog --summary --email --numbered
+    unpushed = git diff origin/$(git rev-parse --abbrev-ref HEAD)..HEAD
+    rmrbranch = push origin --delete
+    delete-local-merged = branch -d $(git branch --merged | grep -v '^*' | grep -v 'master' | tr -d '\n') # I do not know if this works
+#    nuke git branch -D $1 git push origin :$1
+#    cb = !git branch | grep ^* | cut -d' ' -f2
+#    sb = !ls .git/refs/remotes/*/$(git cb) | cut -d/ -f4,5 | \
+#         xargs git show-branch $(git cb)
+#[include]
+#    path = ~/.gitplugin/personal

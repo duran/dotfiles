@@ -1,0 +1,11 @@
+
+URxvt*font: xft:Hack:pixelsize=14:antialias=true
+
+URxvt.depth:                      32
+URxvt.background:                 [80]#000000
+URxvt*scrollBar:                  false
+URxvt*mouseWheelScrollPage:       false
+URxvt*cursorBlink:                true
+!URxvt*background:                 black
+!URxvt*foreground:                 grey
+URxvt*saveLines:                  5000

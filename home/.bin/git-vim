@@ -1,0 +1,16 @@
+#!/bin/sh
+# Git package manager for VIM
+# Poor's man Vundle
+# You better know what you are doing before using this command
+
+cd "$HOME/.vim/pack"
+
+if   test "$1" = "make"; then
+  xargs -L1 < gitmake git
+elif "$1" = "clone"; then
+  git "$@"
+elif "$1" = "rm"; then
+  rm -rf "$@"
+else
+  git recursive "$@"
+fi

@@ -1,0 +1,32 @@
+#!/bin/sh
+# Installs (copy) dotfiles to target server
+# By default intstall them in $HOME
+
+if [ $# -eq 0 ]; then
+  DEST="$HOME"
+elif [ $# -eq 1 ]; then
+  DEST="$1"
+else
+  printf 'You must give one parameter at most\n' 1>&2
+  exit 1
+fi
+
+while true; do
+  printf 'Send home/ dotfiles to %s?\n' "$DEST"
+  read REPLY 
+  case $REPLY in
+    [Yy]* ) break;;
+    [Nn]* ) exit;;
+    [Ww]* ) find home -type f;;
+    * ) echo "Please answer yes, no or what.";;
+  esac
+done
+
+if command -v rsync > /dev/null; then
+  rsync --archive --compress --verbose -P home/ "$DEST"
+elif command -v scp > /dev/null; then
+  scp -r home/.[!.]* "$DEST"
+else
+  printf 'Cannot find rsync or scp\n' 1>&2
+  exit 1
+fi

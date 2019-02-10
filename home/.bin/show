@@ -1,0 +1,13 @@
+#!/bin/sh
+# List stuff
+
+case "$1" in
+  'env')
+    env;;
+  'fonts')
+    fc-list | cut -f2 -d: | sort -u;;
+  *)
+    printf 'No valid command provided\n'
+    exit 1
+    ;;
+esac

@@ -1,0 +1,4 @@
+fullscreen=no
+framedrop=vo
+keep-open
+vo=x11

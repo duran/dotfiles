@@ -1,0 +1,10 @@
+#!/bin/sh
+# Takes a pdf and makes it look like is scanned 
+# Only use this in PDFs you trust. Probably ImageTrick will complain about
+# it. To turn off the relevant policies edit the file `convert -list policy` 
+
+if test $# -ne 2; then printf 'Usage toscan [original] [as scanned copy]\n'; exit 0;  fi
+
+
+convert "$1" -colorspace gray \( +clone -blur 0x1 \) +swap -compose divide -composite -linear-stretch 5%x0% "$2"
+

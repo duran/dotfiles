@@ -1,0 +1,10 @@
+#!/bin/sh
+# Saves a zip file inside a jpg image
+
+if test $# -ne 3; then
+  printf 'Usage zip2jpg [zip file] [original jpg file] [final jpg file]\n'
+fi
+
+cat "$2" "$1" > "$3"
+
+zip -A "$3"

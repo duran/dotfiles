@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# substitute regular expression global (s/re/g in s?ed)
+# but with POSIX extended regular expresions
+
+if [ $# -lt 2 ]
+then
+  printf 'sreg: Expected at least 2 arguments, received %d\n' $# 1>&2
+  exit 1
+fi
+
+sed -E 's/'"$1"'/'"$2"'/g' "${@:3}"

@@ -1,0 +1,12 @@
+editor "$EDITOR"
+extbrowser "$BROWSER"
+
+auto_image 1
+
+confirm_qq 0
+
+display_lineinfo 0
+display_link 1
+
+display_link_number 1
+show_lnum 0

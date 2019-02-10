@@ -1,0 +1,39 @@
+! -*- coding: utf-8 -*-
+! this is ~/Xmodmap
+!
+! mapping for xmodpap
+! get a complete list with xmodmap -pke
+! scan live with xev
+! format is
+! keycode {scancode} = {key} {key shift} {key mode_shift} {key mode_switch shift} {key Alt Graph} {key Alt Graph Shift} 
+
+clear Control
+clear Lock
+clear Mod1
+clear Mod2
+clear Mod3
+clear Mod4
+clear Mod5
+
+keycode  23 = Tab ISO_Left_Tab Tab ISO_Left_Tab
+! keycode  37 = Control_L NoSymbol Control_L
+keycode  37 = Alt_L Meta_L Alt_L Meta_L
+keycode  50 = Shift_L NoSymbol Shift_L
+! keycode  62 = Shift_R NoSymbol Shift_R
+keycode  62 = Caps_Lock NoSymbol Caps_Lock
+! keycode  64 = Alt_L Meta_L Alt_L Meta_L
+keycode  64 = Super_L NoSymbol Super_L
+! keycode  66 = Caps_Lock NoSymbol Caps_Lock
+keycode  66 = Control_L NoSymbol Control_L
+keycode 105 = Control_R NoSymbol Control_R
+keycode 108 = ISO_Level3_Shift Multi_key ISO_Level3_Shift Multi_key
+keycode 133 = Super_L NoSymbol Super_L
+keycode 135 = Menu NoSymbol Menu
+
+add Control = Control_L Control_R
+! add Lock = Caps_Lock
+add Mod1 = Alt_L Alt_R Meta_L
+! add Mod2 = Num_Lock
+add Mod3 = Hyper_L
+add Mod4 = Super_L Super_R
+add Mod5 = Mode_switch ISO_Level3_Shift

@@ -1,0 +1,38 @@
+conky.config = {
+    alignment = 'bottom_left',
+    background = true,
+    cpu_avg_samples = 2,
+    draw_shades = false,
+    default_color = '000000',
+    color2 = '0080FF',
+    double_buffer = true,
+    font = 'Bitstream Vera Sans:size=8',
+    gap_x = 25,
+    gap_y = 45,
+    minimum_width = 200,
+    no_buffers = true,
+    own_window = true,
+    own_window_type = 'override',
+    own_window_transparent = true,
+    update_interval = 2.0,
+    use_xft = true,
+}
+conky.text = [[
+${color2}<Super>${color} Escape key
+
+${color2}Return      ${color} terminal
+${color2}Return+Shift${color} xterm
+
+${color2}F1  ${color}ranger
+${color2}F2  ${color}mutt
+${color2}F3  ${color}newsboat
+${color2}F4  ${color}pcmanfm
+${color2}F5  ${color}thunderbird
+${color2}F6  ${color}
+${color2}F7  ${color}qutebrowser
+${color2}F8  ${color}chromium
+${color2}F9  ${color}
+${color2}F10 ${color}
+${color2}F11 ${color}
+${color2}F12 ${color}
+]]

@@ -1,0 +1,2 @@
+@reboot HOME/bin/backlock HISTFILE
+00 * * * * /usr/bin/find TMPDIR -mindepth 1 -mtime +2 -delete

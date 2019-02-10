@@ -1,0 +1,4 @@
+#!/bin/sh
+# A simple timer
+
+printf 'Timer started. Stop with Ctrl-D.\n' && date '+%a, %d %b %H:%M:%S' && time cat && date '+%a, %d %b %H:%M:%S'

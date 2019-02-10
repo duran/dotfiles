@@ -1,0 +1,16 @@
+! I do not know much about terminals, but vt340 supports the sixel protocol: https://en.wikipedia.org/wiki/Sixel
+
+UXTerm*decTerminalID: vt340
+
+! Clipboard
+UXTerm*selectToClipboard: true
+
+! I am not sure what is the best way to encode the metakey, but the most common strategy seems to prefix ESC, so thats what I do for now
+! For more info check :help map-alt-keys in vim
+UXTerm*vt100.altIsNotMeta:    true
+UXTerm*vt100.altSendsEscape:  true
+UXTerm*vt100.metaSendsEscape: true
+
+! Fonts
+UXTerm*faceName: SF Mono
+UXTerm*faceSize: 11

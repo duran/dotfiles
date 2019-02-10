@@ -1,0 +1,44 @@
+# New keybindings
+
+keymap t NEW_TAB
+
+keymap zh HELP
+
+# qutebrowser default keymaps
+# cheatsheet: https://qutebrowser.org/img/cheatsheet-big.png
+
+# FIXME: w missing web inspector
+keymap r RELOAD
+keymap T TAB_MENU
+keymap yy EXTERN      '(printf %s | clipboard -i)'
+keymap YY EXTERN_LINK '(printf %s | clipboard -i)'
+# FIXME: Missing Yy yank
+# FIXME: Missing u undo clossing tab
+# NOTE: Cannot scroll half page up (C-u)
+# FIXME: Missing i insert mode
+keymap O TAB_GOTO
+keymap o GOTO
+# FIXME: Missing Pp paste
+# FIXME: Missing {}[] navigation commands
+
+# FIXME: Missing a cancel download Ss set configuration
+# NOTE: Cannot scroll half page down (C-d)
+keymap d CLOSE_TAB
+# FIXME: Missing F open link in new tab
+keymap f LIST_MENU
+keymap C-f NEXT_PAGE
+keymap H PREV
+keymap J NEXT_TAB
+keymap K PREV_TAB
+#keymap J TAB_RIGHT
+#keymap K TAB_LEFT
+keymap L NEXT
+keymap : COMMAND
+# FIXME: Missing extended hint mode
+
+# FIXME: Missing c close other tabs
+# FIXME: Missing Bb quickmarks
+keymap C-b PREV_PAGE
+# FIXME: Missing m save quickmarks
+
+# FIXME: Missing modifier commands
