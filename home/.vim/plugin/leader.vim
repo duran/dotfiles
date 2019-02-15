@@ -35,6 +35,9 @@ nnoremap <leader>L zO
 nnoremap <leader>r zR
 nnoremap <leader>m zM
 
+" Toggle search highlighting
+nnoremap <leader><c-l> :nohlsearch<c-j>
+
 " Enclose things with things
 xnoremap <leader>' x2i'<c-[>P
 xnoremap <leader>" x2i"<c-[>P

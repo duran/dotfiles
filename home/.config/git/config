@@ -55,6 +55,7 @@
     # tag
     t = tag
     #
+    ac = commit -a
     cd = !cd "$(git rev-parse --show-toplevel)"
     cl = clean -xf
     mt = mergetool

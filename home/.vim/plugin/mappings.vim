@@ -72,10 +72,6 @@ noremap <m-0> :tabnext 10<c-j>
 " Shortcut to rapidly toggle `set list`
 " nnoremap <m-l> :set list!<c-j>
 
-" Toggle search highlighting
-" FIXME: Toggle on/off
-nnoremap <c-l> :nohlsearch<c-j>
-
 " Spell corrector
 " ]s [s to move between ocurrences
 noremap \ :call ToggleProseMode()<c-j>
