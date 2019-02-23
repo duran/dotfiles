@@ -240,11 +240,13 @@ vim : https://www.vim.org/
     ? A fast and highly configurable text editor
     - fzf.vim: VIM handlers to fzf | https://github.com/junegunn/fzf.vim
 
-ripgrep : https://github.com/BurntSushi/ripgrep
-    ? A parallel and fast grep alternative to recursive searches
 
-fd : https://github.com/sharkdp/fd#benchmark
-    ? A fast alternative to find
+rust : https://www.rust-lang.org/
+    ? A memory-safe and modern alternative to C++
+    - exa : A modern replacement for ls and tree | https://www.rust-lang.org/
+    - fd : A fast alternative to find | https://github.com/sharkdp/fd
+    - ripgrep : A parallel and fast grep alternative to recursive searches | https://github.com/BurntSushi/ripgrep
+    - bat : a terminal printing preprocessor | https://github.com/sharkdp/bat
 
 fzf : https://github.com/junegunn/fzf
     ? Fuzzy search in the terminal, the shell and VIM
@@ -254,11 +256,13 @@ git : https://git-scm.com/
 
 python : https://www.python.org/
     ? A scripting language with a terrific ecosystem
-    - pip: The standard pip package manager | https://pip.pypa.io/en/stable/
-    - ranger: A slow and customizable file manager with VI key bindings | https://ranger.github.io/
+    - pip : The standard pip package manager | https://pip.pypa.io/en/stable/
+    - ranger : A slow and customizable file manager with VI key bindings | https://ranger.github.io/
         + rifle: A decent file opener
     - jrnl: Journaling system that supports encryption  | http://jrnl.sh/
     - youtube-dl : Video and audio downloader for dozers of websites | https://github.com/rg3/youtube-dl
+    - httpie : An interactive http client | https://github.com/jakubroztocil/httpie
+    - asciinema : A terminal session recorder | https://github.com/asciinema/asciinema
 
 R : https://cran.r-project.org/
     ? A intreactive statistical programming language
@@ -287,9 +291,6 @@ cron : https://en.wikipedia.org/wiki/Cron
     - crontab: The main utility to interact with the cron daemon
 
 tree : Recurse over a directory and prints a tree
-
-exa : https://the.exa.website/
-    ? A modern replacement for ls and tree
 
 at : Schedule jobs for later execution (or when the load is low enough)
 
