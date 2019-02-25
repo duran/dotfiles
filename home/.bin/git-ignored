@@ -1,9 +1,4 @@
 #!/bin/sh
 # Show ignored files, short format
 
-if [ $# -ne 0 ]; then
-  git status --short --ignored "$@" | grep '^??'
-else
-  git status --short --ignored . | grep '^??'
-fi
-    
+git status --short --ignored "$@" | grep '^??'

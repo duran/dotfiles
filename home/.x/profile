@@ -17,3 +17,8 @@ xmodmap "$HOME/.x/modmap"
 
 # Load X config local configuration
 test -f "$HOME/.x_local" && . "$HOME/.x_local"
+
+# If we have redshift, we will use it
+if command -v redshift >/dev/null 2>&1; then
+  redshift >/dev/null 2>&1 &
+fi

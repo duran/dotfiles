@@ -70,6 +70,10 @@ export FZF_HOME="$HOME/.fzf"
 export FZF_DEFAULT_COMMAND='fd --hidden --exclude .git'
 export FZF_DEFAULT_OPTS='--bind=ctrl-j:accept'
 
+# Rofi and other
+
+export TERMINAL="$TERMCMD"
+
 # Local configuration
 
 test -f "$HOME/.profile_local" && . "$HOME/.profile_local"
