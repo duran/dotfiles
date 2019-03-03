@@ -14,17 +14,14 @@ vnoremap jk <c-[>
 " leader.vim
 noremap <space> <nop>
 
-" Turning off arrow keys because I can
-noremap  <up>    :echoerr "Use k"<c-j>
-noremap  <down>  :echoerr "Use j"<c-j>
-noremap  <left>  :echoerr "Use h"<c-j>
-noremap  <right> :echoerr "Use l"<c-j>
-
-
 " Normal mode 
 
 " Y inconsistent behaviour
 nnoremap Y y$
+
+" Fast common edits
+nnoremap <c-h> i<c-h><c-[>l
+nnoremap <c-j> o<c-[>
 
 " Move screen line and not file line
 nnoremap + gj
@@ -73,11 +70,12 @@ noremap <m-0> :tabnext 10<c-j>
 " nnoremap <m-l> :set list!<c-j>
 
 " Spell corrector
-" ]s [s to move between ocurrences
 noremap \ :call ToggleProseMode()<c-j>
-noremap <c-h> z=
-noremap ]w zg
-noremap [w zw
+noremap ` z=
+noremap <left> [s
+noremap <right> ]s
+noremap <up> zw
+noremap <down> zg
 
 " Working with diff mode
 nnoremap du     :wincmd w<c-j>:normal u<c-j>:wincmd w<c-j>

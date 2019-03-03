@@ -1,0 +1,4 @@
+#!/bin/sh
+# Comparision between the contents of two repositories
+
+rsync -rvnc --delete "$@"

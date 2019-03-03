@@ -247,6 +247,7 @@ rust : https://www.rust-lang.org/
     - fd : A fast alternative to find | https://github.com/sharkdp/fd
     - ripgrep : A parallel and fast grep alternative to recursive searches | https://github.com/BurntSushi/ripgrep
     - bat : a terminal printing preprocessor | https://github.com/sharkdp/bat
+    - xsv: A fast CSV command like toolkit | https://github.com/BurntSushi/xsv
 
 fzf : https://github.com/junegunn/fzf
     ? Fuzzy search in the terminal, the shell and VIM
@@ -254,6 +255,10 @@ fzf : https://github.com/junegunn/fzf
 git : https://git-scm.com/
     ? A distributed version control system 
 
+Haskell : https://www.haskell.org/
+    ? Research functional programming language
+    - Pandoc: Software document converter | https://pandoc.org/
+    - pp: A generic preprocessor mainly for Pandoc | http://cdsoft.fr/pp/
 python : https://www.python.org/
     ? A scripting language with a terrific ecosystem
     - pip : The standard pip package manager | https://pip.pypa.io/en/stable/
@@ -263,17 +268,33 @@ python : https://www.python.org/
     - youtube-dl : Video and audio downloader for dozers of websites | https://github.com/rg3/youtube-dl
     - httpie : An interactive http client | https://github.com/jakubroztocil/httpie
     - asciinema : A terminal session recorder | https://github.com/asciinema/asciinema
+    - black : An strict python autoformatter | https://github.com/ambv/black
+    - flexget : Automation tool for download and process content | https://github.com/Flexget/Flexget
 
 R : https://cran.r-project.org/
     ? A intreactive statistical programming language
     - Rscript: FIXME
     - data.table : Better performance data.frame with SQL syntax
 
-node : https://nodejs.org/en/ 
+JavaScript : https://nodejs.org/en/ 
     ? Node.js is a JavaScript runtime on the server side
+    - FIXME: Separate Node.js / CS / TS etc.
     - npm: A node package manager | https://github.com/npm/cli
     - nvm: A node version manager | https://github.com/creationix/nvm
+    - express: FIXME
+    - pm2: Node.js process manager and load balancer | https://pm2.io/
+    - sizzy: a tool for testing responsive websites | https://sizzy.co/
+    - KaTeX: Math typesetting library for the browser | https://katex.org/
+    - Slate: Rich text editor tools for the browser | https://github.com/ianstormtaylor/slate
+    - Vega: A visualization grammar | https://vega.github.io/vega/ 
+    - FPJS: Modern fingerprinting library | https://fingerprintjs.com/
+    - Puppeteer: A Node.js API to Chrome/Chromium | https://pptr.dev/
+    - Tensorflow.js | Tensorflow in the browser | https://js.tensorflow.org/
 
+TeX : http://tug.org/
+    ? A typesetting system 
+    - LaTeX: A document preparation system | https://www.latex-project.org/
+        + Tufte: A Tufte-inspired LaTeX class for producing handouts, papers, and books | https://tufte-latex.github.io/tufte-latex/
 fbida : https://www.kraxel.org/blog/linux/fbida/
     ? A set of tools to work with images and pdf/ps (specially in the framebuffer)
     - fbi: This is a image viewer for the linux framebuffer console.
@@ -306,17 +327,18 @@ rsync : https://rsync.samba.org/
 
 X/X11 : http://x.org/
     ? A windowing system for bitmap devices 
-    - xterm: The messy, low-latency and customizable standard terminal emulator of X | https://invisible-island.net/xterm/
-
-rxvt: http://rxvt.sourceforge.net/
-    ? A customizable (including tabs and daemonization) terminal
-    - urxvt: A rxvt fork with unicode support.
+    - xterm: The messy, low-latency and customizable standard terminal emulator of X in C | https://invisible-island.net/xterm/
+    - rxvt: A customizable (including tabs and daemonization) terminal in C |  http://rxvt.sourceforge.net/
+        + urxvt: A rxvt fork with unicode support.
+    - peek: A screen recorder to gif for X in Vala | https://github.com/phw/peek
+    - sxiv: Simple X image viewer in C | https://github.com/muennich/sxiv
 
 rofi : https://github.com/DaveDavenport/rofi
     ? A window switcher, application launcher and dmenu replacement
 
 Rstudio	: https://www.rstudio.com/products/RStudio/
     ? The best R IDE
+
 feh : https://feh.finalrewind.org/
     ? An X based image viewer
 
@@ -332,7 +354,6 @@ ejs	2013	Library	Yes	Javascript	-	HTML templating system for Node.js
 async	2013	Library	Yes	Javascript	bluebird.js, koa	Common async patterns in Javascript	
 superagent	2013	Library	Yes	Javascript	request	A better http client in Node.js	
 mocha	2014	Library	Yes	Javascript	-	Test framework	
-Python	2015	Language	Yes	-	-	A popular programming language	
 Spyder	2015	GUI	Yes	Python	-	Python IDE	
 yhat	2015	GUI	No	Python	Spyder	Python IDE	
 sklearn	2015	Library	Yes	Python	spark	Machine learning in Python	
@@ -387,7 +408,6 @@ nestat
 newsbeuter								
 noti	CLI	1		send a notification to the computer		-		https://github.com/variadico/noti
 okular								
-pandoc								
 parallel								
 pdfgrep								
 pdftotext								
@@ -399,8 +419,6 @@ python
 python2								
 python3								
 qutebrowser-gui								
-ranger								
-rmdir								
 scp								
 sed								
 sent								
@@ -412,7 +430,6 @@ ssh
 st								
 su								
 sudo								
-sxiv								
 tail								
 tar								
 textql								

@@ -20,7 +20,11 @@ http://xahlee.info/linux/linux_xvkbd_tutorial.html
 * check different line disciplines in Linux/Unix
 * Correct zsh init info and files
 * fzf for zsh
-* redshift conf file
+* add black as git prehook and vim autoformatter
+* how to check if a package is installed in VIM
+* download IBM flex
+* move file within VIM https://stackoverflow.com/questions/10884520/move-file-within-vim
+* Create ctags with VIM, use global root dir if fzf installed
 
 Under a day:
 * Try POSIXLY_CORRECT
@@ -31,10 +35,11 @@ Under a day:
 * :help map-alt-keys, how metakeys and mod keys work?
 * add mkdir, extract, compressor etc. to ranger
 * move to Manjaro Architech
+* create flexget basic configuration
 
 
 Under a long weekend:
-* undertand how use iptables
+* understand how use iptables
 * urlview + rifle
 * autodownload with youtube-dl and put everything in place
     - newsboat check gotbletu to make it a general download manager
