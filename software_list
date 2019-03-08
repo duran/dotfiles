@@ -321,6 +321,14 @@ jp2a : https://csl.name/jp2a/
 rsync : https://rsync.samba.org/
     ? Fast incremental file transfer
 
+C : The standard low level programming language
+    - xclip: An import/export X clipboard(s) utilty through file descriptors | https://github.com/astrand/xclip
+    - pv : Terminal monitor of data passing trough a pipeline | https://ivarch.com/programs/pv.shtml
+
+Go : Simple and clean semi-low level language oriented to high-performances web stuff | https://golang.org/
+    - gron: Shows every single path from root to leaf in JSONs | https://github.com/tomnomnom/gron
+    - rclone: rsync for cloud storage | https://rclone.org/
+
 ********************************************************************************
 *                                  GUI                                         *
 ********************************************************************************
@@ -438,7 +446,6 @@ tmux
 top	TWI	0		task manager		htop, glances		https://en.wikipedia.org/wiki/Top_(software)
 urlscan	TWI	0		extract and handle urls passing them to the editor (works well with mutt)		extract_url.pl, urlview, fpp for files		https://github.com/firecat53/urlscan
 urlview	TWI	2		extract and handle urls passing them to another command		extract_url.pl, urlscan, fpp for files		https://github.com/sigpipe/urlview
-vd								
 vd	TUI	1		a vi-like editor for data tables				http://visidata.org/
 vlc								
 w3m								
@@ -448,8 +455,6 @@ wget
 wget	CLI	1		a network downloader		curl		https://www.gnu.org/software/wget/
 which								
 wildmidi								
-xclip								
-xterm								
 z	CLI	2		track most used directories in bash or zsh		autojump		https://github.com/rupa/z
 zathura								
 zsh	CLI	0		a bash alternative with some goodies for interactive use		fish		https://www.zsh.org/
