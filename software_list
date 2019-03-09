@@ -255,10 +255,14 @@ fzf : https://github.com/junegunn/fzf
 git : https://git-scm.com/
     ? A distributed version control system 
 
+Bash : The unofficial standard Unix shell | https://www.gnu.org/software/bash/
+    - neofetch: command line information prompt | https://github.com/dylanaraps/neofetch
+
 Haskell : https://www.haskell.org/
     ? Research functional programming language
     - Pandoc: Software document converter | https://pandoc.org/
     - pp: A generic preprocessor mainly for Pandoc | http://cdsoft.fr/pp/
+    - shellcheck: Static analyzer for shell scripts
 python : https://www.python.org/
     ? A scripting language with a terrific ecosystem
     - pip : The standard pip package manager | https://pip.pypa.io/en/stable/
@@ -270,6 +274,7 @@ python : https://www.python.org/
     - asciinema : A terminal session recorder | https://github.com/asciinema/asciinema
     - black : An strict python autoformatter | https://github.com/ambv/black
     - flexget : Automation tool for download and process content | https://github.com/Flexget/Flexget
+    - pglcli: Postgress CLI with autocompletion and syntax highlighting | https://github.com/dbcli/pgcli
 
 R : https://cran.r-project.org/
     ? A intreactive statistical programming language
@@ -328,6 +333,7 @@ C : The standard low level programming language
 Go : Simple and clean semi-low level language oriented to high-performances web stuff | https://golang.org/
     - gron: Shows every single path from root to leaf in JSONs | https://github.com/tomnomnom/gron
     - rclone: rsync for cloud storage | https://rclone.org/
+    - wuzz: interactive http inspector | https://github.com/asciimoo/wuzz
 
 ********************************************************************************
 *                                  GUI                                         *
@@ -350,6 +356,8 @@ Rstudio	: https://www.rstudio.com/products/RStudio/
 feh : https://feh.finalrewind.org/
     ? An X based image viewer
 
+zathura : A keyboard based document viewer | https://pwmt.org/projects/zathura/
+
 ********************************************************************************
 *                                 other                                        *
 ********************************************************************************
@@ -370,7 +378,6 @@ LAMMPS	2016	Library	No	-	-	A Molecular Dynamics software
 tidyverse	2016	Library	Yes	R	data.table, Arrow	A better R	
 rmarkdown	2016	Library	Yes	R	LaTeX	Create HTML, epubs and PDF from R	
 rbook	2016	Library	No	R	LaTeX	Like rmarkdown, but for complex books	
-Bash	2016	Language	Yes	-	zsh, fish	Omnipresent shell language	
 readline	2017	CLI	Yes	-	-	Line text editor	
 Awk	2017	Language	Yes	-	Perl, TXR	Tabular processing language	
 numpy	2017	Library	Yes	Python	Numba	Scientific computing in Python	
@@ -379,7 +386,6 @@ Command	Kind	Importance		Description		Alternatives		Websites
 alsamixer								
 autojump	CLI	0		track most used directories in a variety of shells		z		https://github.com/wting/autojump
 awk	CLI	3		a pattern scanning ant text processing language for things closer to tabular data.		sed for line data, jq for json, sqlite for csv,  txr and perl for more complex		https://www.cs.princeton.edu/~bwk/btl.mirror/
-bash	CLI	3		the most popular shell around.		zsh for a bash compatible version with some goodies, dash for a faster shell, oil and fish for modern shells 		https://www.gnu.org/software/bash/
 batch	CLI	0		executes a job later when system levels permit. see at.		-
 curl	CLI	1		transfer an url		wget		https://curl.haxx.se/
 dash	CLI	0		a fast sh superset shell		bash		http://gondor.apana.org.au/~herbert/dash/
@@ -406,7 +412,6 @@ make
 man								
 mdless	TUI	0		markdown pager in ruby		mdv		mdv	http://brettterpstra.com/projects/mdless/
 mdv	CLI	2		markdown renderer in python		mdless		https://github.com/axiros/terminal_markdown_viewer
-mkfifo								
 mlterm								
 mosh								
 mpv								
@@ -430,15 +435,12 @@ qutebrowser-gui
 scp								
 sed								
 sent								
-shellcheck								
-sleep								
 sponge								
 sqlite	CLI	0		sql storing the tables in files		posgresql and mysql for full fledged solutions		https://sqlite.org/index.html
 ssh								
 st								
 su								
 sudo								
-tail								
 tar								
 textql								
 tmate								
@@ -451,12 +453,10 @@ vlc
 w3m								
 watch								
 wc								
-wget								
 wget	CLI	1		a network downloader		curl		https://www.gnu.org/software/wget/
 which								
 wildmidi								
 z	CLI	2		track most used directories in bash or zsh		autojump		https://github.com/rupa/z
-zathura								
 zsh	CLI	0		a bash alternative with some goodies for interactive use		fish		https://www.zsh.org/
 peco
 https://dev.yorhel.nl/ncdu
