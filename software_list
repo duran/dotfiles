@@ -275,6 +275,7 @@ python : https://www.python.org/
     - black : An strict python autoformatter | https://github.com/ambv/black
     - flexget : Automation tool for download and process content | https://github.com/Flexget/Flexget
     - pglcli: Postgress CLI with autocompletion and syntax highlighting | https://github.com/dbcli/pgcli
+    - scikit-learn : a popular machine learning framework for Python | https://scikit-learn.org/stable/
 
 R : https://cran.r-project.org/
     ? A intreactive statistical programming language
@@ -286,7 +287,7 @@ JavaScript : https://nodejs.org/en/
     - FIXME: Separate Node.js / CS / TS etc.
     - npm: A node package manager | https://github.com/npm/cli
     - nvm: A node version manager | https://github.com/creationix/nvm
-    - express: FIXME
+    - express: A popular and sort of fast web framework | https://expressjs.com/
     - pm2: Node.js process manager and load balancer | https://pm2.io/
     - sizzy: a tool for testing responsive websites | https://sizzy.co/
     - KaTeX: Math typesetting library for the browser | https://katex.org/
@@ -329,6 +330,8 @@ rsync : https://rsync.samba.org/
 C : The standard low level programming language
     - xclip: An import/export X clipboard(s) utilty through file descriptors | https://github.com/astrand/xclip
     - pv : Terminal monitor of data passing trough a pipeline | https://ivarch.com/programs/pv.shtml
+    - w3m : a TUI web browser and pager, it works only with old versions of HTML and HTTP. No JS, no CSS, no most of the things. | http://w3m.sourceforge.net/
+    - cmus : Small and fast CLI console music player for Unix | https://cmus.github.io/
 
 Go : Simple and clean semi-low level language oriented to high-performances web stuff | https://golang.org/
     - gron: Shows every single path from root to leaf in JSONs | https://github.com/tomnomnom/gron
@@ -362,8 +365,6 @@ zathura : A keyboard based document viewer | https://pwmt.org/projects/zathura/
 *                                 other                                        *
 ********************************************************************************
 
-LaTeX	2010	Library	Yes	TeX	Markdown, roff, org-mode	Typesetting software	
-express	2012	Library	Yes	Javascript	-	An API web server for Node.js	
 MongoDB	2013	Database	Yes	-	-	A user friendly  JSON database non SQL/ACID made for scale	
 Mongoose	2013	Library	Yes	Javascript	-	MongoDB ODM	
 ejs	2013	Library	Yes	Javascript	-	HTML templating system for Node.js	
@@ -372,7 +373,6 @@ superagent	2013	Library	Yes	Javascript	request	A better http client in Node.js
 mocha	2014	Library	Yes	Javascript	-	Test framework	
 Spyder	2015	GUI	Yes	Python	-	Python IDE	
 yhat	2015	GUI	No	Python	Spyder	Python IDE	
-sklearn	2015	Library	Yes	Python	spark	Machine learning in Python	
 Atom	2015	GUI	No	-	VIM	Slow but extremely extendable text editor	
 LAMMPS	2016	Library	No	-	-	A Molecular Dynamics software	
 tidyverse	2016	Library	Yes	R	data.table, Arrow	A better R	
@@ -406,7 +406,6 @@ head
 htop	TWI	3		task manager - allow sending signals to process		top, glances		http://hisham.hm/htop/
 httrack								
 jq	CLI	0		stream editing of json documents				https://stedolan.github.io/jq/
-jrnl								
 less								
 make								
 man								
@@ -428,9 +427,6 @@ ps
 ps2ascii								
 piknik								
 pylint								
-python								
-python2								
-python3								
 qutebrowser-gui								
 scp								
 sed								
@@ -450,7 +446,6 @@ urlscan	TWI	0		extract and handle urls passing them to the editor (works well wi
 urlview	TWI	2		extract and handle urls passing them to another command		extract_url.pl, urlscan, fpp for files		https://github.com/sigpipe/urlview
 vd	TUI	1		a vi-like editor for data tables				http://visidata.org/
 vlc								
-w3m								
 watch								
 wc								
 wget	CLI	1		a network downloader		curl		https://www.gnu.org/software/wget/

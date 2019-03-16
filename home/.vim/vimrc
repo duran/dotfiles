@@ -29,7 +29,7 @@ set formatoptions=c   " wrap only in commens
 set nomagic             " Only literals that must be escaped are \ and $
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
-set autochdir           " Change working directory to highlighted file see https://superuser.com/questions/604122/vim-file-name-completion-relative-to-current-file
+" set autochdir           " Change working directory to highlighted file see https://superuser.com/questions/604122/vim-file-name-completion-relative-to-current-file
 
 " Working with several files
 set wildmenu  " autocomplete menu
