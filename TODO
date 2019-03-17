@@ -28,6 +28,7 @@ http://xahlee.info/linux/linux_xvkbd_tutorial.html
 * git with patches
 * clean VIM main config file
 * Better way to work with OS clipboard; change leader related shortcuts to work with terminal and other: https://stackoverflow.com/questions/2084210/remove-a-pair-of-parentheses-brackets-or-braces-in-vim
+* perf command in linux
 
 Under a day:
 * Try POSIXLY_CORRECT
