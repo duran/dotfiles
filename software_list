@@ -276,6 +276,7 @@ python : https://www.python.org/
     - flexget : Automation tool for download and process content | https://github.com/Flexget/Flexget
     - pglcli: Postgress CLI with autocompletion and syntax highlighting | https://github.com/dbcli/pgcli
     - scikit-learn : a popular machine learning framework for Python | https://scikit-learn.org/stable/
+    - pylint : Pylint static analyzer for Python| https://www.pylint.org/
 
 R : https://cran.r-project.org/
     ? A intreactive statistical programming language
@@ -332,6 +333,7 @@ C : The standard low level programming language
     - pv : Terminal monitor of data passing trough a pipeline | https://ivarch.com/programs/pv.shtml
     - w3m : a TUI web browser and pager, it works only with old versions of HTML and HTTP. No JS, no CSS, no most of the things. | http://w3m.sourceforge.net/
     - cmus : Small and fast CLI console music player for Unix | https://cmus.github.io/
+    - tmux : Terminal mutiplexer | https://github.com/tmux/tmux/wiki
 
 Go : Simple and clean semi-low level language oriented to high-performances web stuff | https://golang.org/
     - gron: Shows every single path from root to leaf in JSONs | https://github.com/tomnomnom/gron
@@ -426,7 +428,6 @@ pdftotext
 ps								
 ps2ascii								
 piknik								
-pylint								
 qutebrowser-gui								
 scp								
 sed								
@@ -440,7 +441,6 @@ sudo
 tar								
 textql								
 tmate								
-tmux								
 top	TWI	0		task manager		htop, glances		https://en.wikipedia.org/wiki/Top_(software)
 urlscan	TWI	0		extract and handle urls passing them to the editor (works well with mutt)		extract_url.pl, urlview, fpp for files		https://github.com/firecat53/urlscan
 urlview	TWI	2		extract and handle urls passing them to another command		extract_url.pl, urlscan, fpp for files		https://github.com/sigpipe/urlview
