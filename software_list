@@ -334,6 +334,7 @@ C : The standard low level programming language
     - w3m : a TUI web browser and pager, it works only with old versions of HTML and HTTP. No JS, no CSS, no most of the things. | http://w3m.sourceforge.net/
     - cmus : Small and fast CLI console music player for Unix | https://cmus.github.io/
     - tmux : Terminal mutiplexer | https://github.com/tmux/tmux/wiki
+    - ffmpeg : Audio and video tool | https://ffmpeg.org/
 
 Go : Simple and clean semi-low level language oriented to high-performances web stuff | https://golang.org/
     - gron: Shows every single path from root to leaf in JSONs | https://github.com/tomnomnom/gron
@@ -397,7 +398,6 @@ epub-viewer
 evince								
 exiftool								
 extracturl	TWI	0		extract and handle urls passing them to antother command		urlscan, urlview, fpp for files		https://github.com/m3m0ryh0l3/extracturl
-ffmpeg								
 find								
 fish	CLI	0		a non-sh compatible shell		zsh		https://fishshell.com/
 fpp	TWI	0		extract and handle filepaths		urlview for urls		http://facebook.github.io/PathPicker/
