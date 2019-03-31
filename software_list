@@ -263,7 +263,8 @@ Haskell : https://www.haskell.org/
     - Pandoc: Software document converter | https://pandoc.org/
     - pp: A generic preprocessor mainly for Pandoc | http://cdsoft.fr/pp/
     - shellcheck: Static analyzer for shell scripts
-python : https://www.python.org/
+
+Python : https://www.python.org/
     ? A scripting language with a terrific ecosystem
     - pip : The standard pip package manager | https://pip.pypa.io/en/stable/
     - ranger : A slow and customizable file manager with VI key bindings | https://ranger.github.io/
@@ -277,6 +278,8 @@ python : https://www.python.org/
     - pglcli: Postgress CLI with autocompletion and syntax highlighting | https://github.com/dbcli/pgcli
     - scikit-learn : a popular machine learning framework for Python | https://scikit-learn.org/stable/
     - pylint : Pylint static analyzer for Python| https://www.pylint.org/
+    - line_profiler : Line by line Python speed profiler | https://github.com/rkern/line_profiler
+    - memory-profiler : Line by line and process memory profiler for Python | https://pypi.org/project/memory-profiler/
 
 R : https://cran.r-project.org/
     ? A intreactive statistical programming language
@@ -335,6 +338,7 @@ C : The standard low level programming language
     - cmus : Small and fast CLI console music player for Unix | https://cmus.github.io/
     - tmux : Terminal mutiplexer | https://github.com/tmux/tmux/wiki
     - ffmpeg : Audio and video tool | https://ffmpeg.org/
+    - sqlite : SQL database that stores everything in a single file, well tested and stable | https://sqlite.org/index.html
 
 Go : Simple and clean semi-low level language oriented to high-performances web stuff | https://golang.org/
     - gron: Shows every single path from root to leaf in JSONs | https://github.com/tomnomnom/gron
@@ -432,8 +436,6 @@ qutebrowser-gui
 scp								
 sed								
 sent								
-sponge								
-sqlite	CLI	0		sql storing the tables in files		posgresql and mysql for full fledged solutions		https://sqlite.org/index.html
 ssh								
 st								
 su								

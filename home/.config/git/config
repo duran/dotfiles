@@ -20,6 +20,8 @@
     tool = vimdiff
     prompt = false
     mnemonicprefix = true
+[difftool]
+    prompt = false
 [am]
     threeWay = true
 [alias]
