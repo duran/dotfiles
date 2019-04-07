@@ -1,91 +1,118 @@
 [core]
+    # I do not care about merge message
     mergeoptions = --no-edit
+    # Ignore files related with editors, etc.
     excludesfile = ~/.config/git/ignore
 [push]
+    # Merge without leaving add parent to new commit (aka forget dev branch)
     default = simple
+    # Push tags along with the commits
     followTags = true
 [rerere]
+    # Remember diff resolutions (not sure how it works)
     enabled = true
 [color]
+    # Add color to UI
     ui = true
 [commit]
+    # Change default git template
     template = ~/.config/git/message
 [merge]
+    # vimdiff is great
+    prompt = false
     tool = vimdiff
     conflictstyle = diff3
-    prompt = false
 [mergetool]
+    # Do not keep a backup of changes
     keepBackup = false
 [diff]
-    tool = vimdiff
+    # vimdiff is great
     prompt = false
+    tool = vimdiff
     mnemonicprefix = true
 [difftool]
     prompt = false
 [am]
+    # Never used this, maybe I should remove it
     threeWay = true
 [alias]
+    # [DEFAULT]
+
     # add
     a = add
     # bisect
     # branch
     b = branch
+    # count-objects (human format, verbose)
+    du = count-objects --verbose --human-readable
     # checkout
+    # clean (remove untracked files, incl ignored)
+    cl = clean -x --force
     # clone
     # commit
     c = commit
-    # diff
+    # diff (shorter, colorful, side-to-side)
     d = diff --color-words --minimal --diff-filter=M 
     # fetch
     f = fetch
     # grep
     # init
-    # log
+    # log (no merges, show files changed)
     l = log --raw --no-merges
     # merge
     m = merge
+    # mergetool
+    mt = mergetool
     # mv
     # pull
-    fm = pull
     # push
     p = push
     # rebase
     # reset
     # rm
     # show
-    # status
+    # status (short but showing the branch)
     s = status --short --branch
     # tag
     t = tag
-    #
-    ac = commit -a
-    cd = !cd "$(git rev-parse --show-toplevel)"
-    cl = clean -xf
-    mt = mergetool
-    dog = log --all --decorate --oneline --graph  
-    tree = !exa --long --all --header --tree --git --git-ignore --ignore-glob=.git --color=always | $PAGER
-    undo = reset --soft HEAD^
-    wash = clean -xf
+
+    # [SHOW]
+
     alias = config --get-regexp '^alias.'
-    graph = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    branches = branch -a
+    branches = branch --all
     tags = tag
-    unstage = reset -q HEAD --
-    discard = checkout --
-    uncommit = reset --mixed HEAD~
-    amend = commit --amend
     stashes = stash list
-    amend = commit --amend -C HEAD
-    update = add --update
-    cached = diff --cached
-    credit = commit --amend --author "$1 <$2>" -C HEAD # I do not know if this works
     people = shortlog --summary --email --numbered
+    index = diff --cached
+
+    # [COMBO]
+
+    # fetch and merge
+    fm = pull
+    # add and commit
+    ac = commit --all
+    # directed oriented graph
+    dog = log --all --decorate --oneline --graph  
+
+    # [NEW COMMANDS FROM OPTIONS]
+    amend = commit --amend
+    graph = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    update = add --update
+    unstage = checkout --
+    credit = commit --amend --author "$1 <$2>" 
+
+    # [NEW STUFF]
+
+    # go to top level
+    cd = !cd "$(git rev-parse --show-toplevel)"
+    # pretty tree (with exa)
+    tree = !exa --long --all --header --tree --git --git-ignore --ignore-glob=.git --color=always | $PAGER
+
+    # TODO: clean this part
     unpushed = git diff origin/$(git rev-parse --abbrev-ref HEAD)..HEAD
     rmrbranch = push origin --delete
     delete-local-merged = branch -d $(git branch --merged | grep -v '^*' | grep -v 'master' | tr -d '\n') # I do not know if this works
+    undo = reset --soft HEAD^
+    unstage = reset -q HEAD --
 #    nuke git branch -D $1 git push origin :$1
-#    cb = !git branch | grep ^* | cut -d' ' -f2
-#    sb = !ls .git/refs/remotes/*/$(git cb) | cut -d/ -f4,5 | \
-#         xargs git show-branch $(git cb)
-#[include]
-#    path = ~/.gitplugin/personal
+

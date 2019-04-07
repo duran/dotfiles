@@ -286,13 +286,18 @@ R : https://cran.r-project.org/
     - Rscript: FIXME
     - data.table : Better performance data.frame with SQL syntax
 
-JavaScript : https://nodejs.org/en/ 
-    ? Node.js is a JavaScript runtime on the server side
+JavaScript : The standard language in the Browser | https://developer.mozilla.org/en-US/docs/Web/JavaScript
+    - Node.js : JavaScript runtime and dialect on the server side based in V8 | https://nodejs.org/en/ 
+        + npm: A node package manager | https://github.com/npm/cli
+        + nvm: A node version manager | https://github.com/creationix/nvm
+        + express: A popular and sort of fast web framework | https://expressjs.com/
+        + pm2: Node.js process manager and load balancer | https://pm2.io/
+    - JSX : JavaScript dialect for XML templating | https://jsx.github.io/
+        + ReactJS : Event based UI templating library | https://reactjs.org/
+    - EJS : HTML templating JavaScript dialect | https://www.ejs.co/
+    - JSDoc : Markup languaje to comment JavaScript source files | http://usejsdoc.org/
+    - ESDoc : Documentation generator fo JavaScript | https://esdoc.org/
     - FIXME: Separate Node.js / CS / TS etc.
-    - npm: A node package manager | https://github.com/npm/cli
-    - nvm: A node version manager | https://github.com/creationix/nvm
-    - express: A popular and sort of fast web framework | https://expressjs.com/
-    - pm2: Node.js process manager and load balancer | https://pm2.io/
     - sizzy: a tool for testing responsive websites | https://sizzy.co/
     - KaTeX: Math typesetting library for the browser | https://katex.org/
     - Slate: Rich text editor tools for the browser | https://github.com/ianstormtaylor/slate
@@ -344,6 +349,10 @@ Go : Simple and clean semi-low level language oriented to high-performances web 
     - gron: Shows every single path from root to leaf in JSONs | https://github.com/tomnomnom/gron
     - rclone: rsync for cloud storage | https://rclone.org/
     - wuzz: interactive http inspector | https://github.com/asciimoo/wuzz
+    - piknik: Creates a network shared clipboard | https://github.com/jedisct1/piknik
+
+C++ : Kitchen-sink low-level programming language, C is Unix, C++ is GNU | https://isocpp.org/
+    mosh : ssh replacement (though it needs ssh) with roaming and speculative local echo. | https://mosh.org/
 
 ********************************************************************************
 *                                  GUI                                         *
@@ -418,7 +427,6 @@ man
 mdless	TUI	0		markdown pager in ruby		mdv		mdv	http://brettterpstra.com/projects/mdless/
 mdv	CLI	2		markdown renderer in python		mdless		https://github.com/axiros/terminal_markdown_viewer
 mlterm								
-mosh								
 mpv								
 mutt								
 nawk	CLI	0		A fast implementation of AWK. See awk.		-		?
@@ -431,7 +439,6 @@ pdfgrep
 pdftotext								
 ps								
 ps2ascii								
-piknik								
 qutebrowser-gui								
 scp								
 sed								

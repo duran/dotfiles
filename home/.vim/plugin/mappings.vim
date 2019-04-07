@@ -16,8 +16,9 @@ noremap <space> <nop>
 
 " Normal mode 
 
-" Y inconsistent behaviour
+" Inconsistent behaviour
 nnoremap Y y$
+nnoremap cw dwi
 
 " Fast common edits
 nnoremap <c-h> i<c-h><c-[>l
