@@ -1,4 +1,9 @@
 [user]
     name = NAME
     email = EMAIL
-
+[sendemail]
+    smtpserver = HOST
+    smtpuser = USER
+    smtpencryption = tls
+    smtpserverport = PORT
+    smtpPass = OPTIONAL_PASSWORD
