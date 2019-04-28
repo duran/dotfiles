@@ -280,6 +280,7 @@ Python : https://www.python.org/
     - pylint : Pylint static analyzer for Python| https://www.pylint.org/
     - line_profiler : Line by line Python speed profiler | https://github.com/rkern/line_profiler
     - memory-profiler : Line by line and process memory profiler for Python | https://pypi.org/project/memory-profiler/
+    - mypy : Optional static type checker for Python | http://mypy-lang.org/
 
 R : https://cran.r-project.org/
     ? A intreactive statistical programming language
@@ -456,7 +457,6 @@ urlview	TWI	2		extract and handle urls passing them to another command		extract_
 vd	TUI	1		a vi-like editor for data tables				http://visidata.org/
 vlc								
 watch								
-wc								
 wget	CLI	1		a network downloader		curl		https://www.gnu.org/software/wget/
 which								
 wildmidi								

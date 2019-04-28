@@ -1,0 +1,4 @@
+#!/bin/sh
+# Kills reshift, restores normal colors
+
+killall -9 redshift && redshift -x
