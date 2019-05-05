@@ -1,0 +1,22 @@
+#!/bin/sh
+
+set -e
+
+# Check that 
+if ! git diff --cached --name-only | xargs git diff --quiet
+then
+  echo 'ERROR: The index and working enviroment of the following files does not
+ match'
+  git diff --cached --name-only | xargs git diff --name-only | cat -
+  exit 1
+fi
+
+# Python
+# Autoformatter
+git diff --cached --name-only -- '*.py' | xargs black --line-length 79
+git diff --cached --name-only -- '*.py' | xargs git update
+
+# Linters
+git diff --cached --name-only -- '*.py' | xargs pylint
+git diff --cached --name-only -- '*.py' | xargs mypy
+
