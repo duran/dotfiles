@@ -30,6 +30,7 @@
     prompt = false
     tool = vimdiff
     mnemonicprefix = true
+    algorithm = patience
 [difftool]
     prompt = false
 [am]

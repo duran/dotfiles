@@ -281,6 +281,8 @@ Python : https://www.python.org/
     - line_profiler : Line by line Python speed profiler | https://github.com/rkern/line_profiler
     - memory-profiler : Line by line and process memory profiler for Python | https://pypi.org/project/memory-profiler/
     - mypy : Optional static type checker for Python | http://mypy-lang.org/
+    - flake8 : Static analyzer for Python | http://flake8.pycqa.org/en/latest/
+    - bandit : Yet another static analyzer for Python | https://github.com/PyCQA/bandit
 
 R : https://cran.r-project.org/
     ? A intreactive statistical programming language

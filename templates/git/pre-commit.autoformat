@@ -17,6 +17,9 @@ git diff --cached --name-only -- '*.py' | xargs black --line-length 79
 git diff --cached --name-only -- '*.py' | xargs git update
 
 # Linters
+git diff --cached --name-only -- '*.py' | xargs flake8
 git diff --cached --name-only -- '*.py' | xargs pylint
 git diff --cached --name-only -- '*.py' | xargs mypy
+git diff --cached --name-only -- '*.py' | xargs flake8
+git diff --cached --name-only -- '*.py' | xargs bandit
 
