@@ -6,7 +6,7 @@ if [ $# -eq 0 ]; then
 else
   for line in "$@"
   do
-    printf '%s\n' "$line" > .gitignore
+    printf '%s\n' "$line" >> .gitignore
   done
 fi
     
