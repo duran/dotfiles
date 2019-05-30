@@ -1,6 +1,7 @@
 Actions in this todo list are sorted by degree of difficulty and time:
 
 Under an hour:
+* qutebrowser not linked to terminal and not echoing to stdout
 * modify status line tmux
 * open question nvlc and custom mappings
 * think where to put loadkeys and setxkb
