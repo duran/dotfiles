@@ -308,6 +308,9 @@ JavaScript : The standard language in the Browser | https://developer.mozilla.or
     - FPJS: Modern fingerprinting library | https://fingerprintjs.com/
     - Puppeteer: A Node.js API to Chrome/Chromium | https://pptr.dev/
     - Tensorflow.js | Tensorflow in the browser | https://js.tensorflow.org/
+    - tesseract.js | port of tesseract OCR in the browser | https://tesseract.projectnaptha.com/
+    - pdf.js | library to render PDFs as HTML | https://github.com/mozilla/pdf.js
+
 
 TeX : http://tug.org/
     ? A typesetting system 
@@ -356,6 +359,11 @@ Go : Simple and clean semi-low level language oriented to high-performances web 
 
 C++ : Kitchen-sink low-level programming language, C is Unix, C++ is GNU | https://isocpp.org/
     mosh : ssh replacement (though it needs ssh) with roaming and speculative local echo. | https://mosh.org/
+    xpdf : a set of tools to transform and render PDFs (-utils extract text, images etc) | http://www.xpdfreader.com/
+    poppler : a fork of xpdf 3.0 to allow easy interop with other software | https://poppler.freedesktop.org/
+    tesseract : best open source OCR for clean images | https://github.com/tesseract-ocr
+    
+
 
 ********************************************************************************
 *                                  GUI                                         *
