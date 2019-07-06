@@ -5,7 +5,7 @@
 let mapleader = ' '
 
 " Command mode
-noremap <leader><leader> :
+noremap <leader><leader> q:
 
 " Opening, writting and exiting
 nnoremap <leader>q ZQ

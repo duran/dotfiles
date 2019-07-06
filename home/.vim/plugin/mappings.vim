@@ -36,11 +36,10 @@ nnoremap <c-p> :bprev<c-j>
 nnoremap gb :ls<c-j>:b
 nnoremap gw :execute ':silent !$BROWSER <cWORD>' <c-j> :redraw! <c-j>
 
-" Save and exit faster
-nnoremap Z ZZ
-nnoremap Q ZQ
-nnoremap S :update<c-j>
-nnoremap <c-s> :update<c-j>:!git add %<c-j>
+" Repeat macros and commands faster
+nnoremap Q @@
+nnoremap \ @:
+" TODO?: s, <c-s>, Z
 
 " Windows and tabs
 noremap <m-o> :ls<c-j>:b
@@ -71,7 +70,7 @@ noremap <m-0> :tabnext 10<c-j>
 " nnoremap <m-l> :set list!<c-j>
 
 " Spell corrector
-noremap \ :call ToggleProseMode()<c-j>
+noremap S :call ToggleProseMode()<c-j>
 noremap ` z=
 noremap <left> [s
 noremap <right> ]s
