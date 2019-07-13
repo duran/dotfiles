@@ -4,5 +4,9 @@
 # NOTE: For some reason, this bloks ssh login in AWS
 export TMPDIR="$HOME/tmp"  
 
+# Timezone. Some alias can be found in Linux in
+# /usr/share/zoneinfo
+export TZ='Europe/Berlin'
+
 # This can speed considerably some text CLI tools
 export LC_ALL=C
