@@ -80,7 +80,7 @@
     # [SHOW]
 
     alias = config --get-regexp '^alias.'
-    branches = branch --all
+    branches = !git --no-pager branch --all "$@"
     tags = tag
     stashes = stash list
     people = shortlog --summary --email --numbered

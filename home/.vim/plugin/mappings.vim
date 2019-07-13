@@ -21,6 +21,8 @@ nnoremap Y y$
 nnoremap cw dwi
 
 " Fast common edits
+nnoremap <c-s> :update<c-[>
+nnoremap S :update<c-[>
 nnoremap <c-h> i<c-h><c-[>l
 nnoremap <c-j> o<c-[>
 
@@ -70,7 +72,7 @@ noremap <m-0> :tabnext 10<c-j>
 " nnoremap <m-l> :set list!<c-j>
 
 " Spell corrector
-noremap S :call ToggleProseMode()<c-j>
+noremap <m-`> :call ToggleProseMode()<c-j>
 noremap ` z=
 noremap <left> [s
 noremap <right> ]s

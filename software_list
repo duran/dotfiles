@@ -343,6 +343,8 @@ rsync : https://rsync.samba.org/
     ? Fast incremental file transfer
 
 C : The standard low level programming language
+    - sed: non-interactive stream editor based in ed | https://en.wikipedia.org/wiki/Sed
+    - make: build automatation tools for generating executables (or any other file) | https://en.wikipedia.org/wiki/Make_(software)
     - xclip: An import/export X clipboard(s) utilty through file descriptors | https://github.com/astrand/xclip
     - pv : Terminal monitor of data passing trough a pipeline | https://ivarch.com/programs/pv.shtml
     - w3m : a TUI web browser and pager, it works only with old versions of HTML and HTTP. No JS, no CSS, no most of the things. | http://w3m.sourceforge.net/
@@ -409,7 +411,7 @@ readline	2017	CLI	Yes	-	-	Line text editor
 Awk	2017	Language	Yes	-	Perl, TXR	Tabular processing language	
 numpy	2017	Library	Yes	Python	Numba	Scientific computing in Python	
 visidata	2017	CLI	Yes	-	Excel, VIM + Plugins	Tabular data editor	
-Command	Kind	Importance		Description		Alternatives		Websites
+
 alsamixer								
 autojump	CLI	0		track most used directories in a variety of shells		z		https://github.com/wting/autojump
 awk	CLI	3		a pattern scanning ant text processing language for things closer to tabular data.		sed for line data, jq for json, sqlite for csv,  txr and perl for more complex		https://www.cs.princeton.edu/~bwk/btl.mirror/
@@ -433,7 +435,6 @@ htop	TWI	3		task manager - allow sending signals to process		top, glances		http:
 httrack								
 jq	CLI	0		stream editing of json documents				https://stedolan.github.io/jq/
 less								
-make								
 man								
 mdless	TUI	0		markdown pager in ruby		mdv		mdv	http://brettterpstra.com/projects/mdless/
 mdv	CLI	2		markdown renderer in python		mdless		https://github.com/axiros/terminal_markdown_viewer
@@ -452,7 +453,6 @@ ps
 ps2ascii								
 qutebrowser-gui								
 scp								
-sed								
 sent								
 ssh								
 st								

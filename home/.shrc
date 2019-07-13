@@ -1,7 +1,13 @@
 #!/bin/sh
 
-PS1="[$USER@$(uname -n)]"' ${PWD##*/}$ ' # Waiting for a command
-PS2='> '                                 # Waiting to complete command
+# Waiting for a command
+if test -v SSH_CLIENT -o -v SSH_TTY; then
+  PS1="[$USER@$(uname -n)]"' ${PWD##*/}$ '
+else
+  PS1='${PWD##*/}$ '
+fi
+# Waiting to complete command
+PS2='> '  
 
 # modify workstation (terminal) parameters
 . "$HOME/.sh/tty"
@@ -13,4 +19,4 @@ PS2='> '                                 # Waiting to complete command
 . "$HOME/.sh/functions"
 
 # local configuration
-test -f "$HOME/.sh_local" && . "$HOME/.sh_local"
+test -f "$HOME/.shrc_local" && . "$HOME/.shrc_local"

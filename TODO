@@ -33,6 +33,7 @@ http://xahlee.info/linux/linux_xvkbd_tutorial.html
 * joblib check out
 * alias for git ls-tree, cat-file, hash-object, write-tree, ls-files, show-branch, git orphan, git stash
 * add kebab-case, camel-case, snake-case, etc.
+* harden ssh vps
 
 Under a day:
 * Try POSIXLY_CORRECT

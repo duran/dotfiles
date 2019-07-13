@@ -1,0 +1,14 @@
+#!/bin/sh
+# Turn on colors when using GNU ls
+
+alias ls='ls --color'
+
+
+# Check if Tmux is in the machine and, if it is, log in
+
+if tmux has-session 2>/dev/null
+then
+  test -v TMUX && tmux attach
+else
+  tmux
+fi

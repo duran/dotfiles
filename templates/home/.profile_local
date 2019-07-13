@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Temporal file directory
+# NOTE: For some reason, this bloks ssh login in AWS
+export TMPDIR="$HOME/tmp"  
+
+# This can speed considerably some text CLI tools
+export LC_ALL=C

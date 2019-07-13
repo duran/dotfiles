@@ -25,7 +25,6 @@
 
 export ENV="$HOME/.shrc"       # If interactive, load POSIX configuration
 export PATH="$PATH:$HOME/.bin" # Personal scripts in path
-export TMPDIR="$HOME/tmp"      # Temporal file directory
 export LANG='en_IE.utf8'       # Main locale: language and standarization 
 export LANGUAGE='en_US.utf8'   # Fallback locale (you can overwrite both setting with LC_ALL)
 
