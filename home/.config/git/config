@@ -96,6 +96,7 @@
     dog = log --all --decorate --oneline --graph  
 
     # [NEW COMMANDS FROM OPTIONS]
+    wc = diff --numstat
     amend = commit --amend
     graph = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     update = add --update
