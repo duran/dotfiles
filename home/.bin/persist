@@ -1,17 +1,17 @@
 #!/bin/sh
-# scp, keep trying even if it fails
+# Keep doing something until it works
 
 echo "Started $(date +'%F at %T')"
 START=$(date +%s)
 
 while true
 do
-  if rsync -Pavz "$@"
+  if "$@"
   then
     echo 'Done.'
     exit
   else
-    echo 'Conexion failed, trying again in a minute.'
+    echo 'Failed, trying again in a minute.'
     sleep 60
   fi
 done

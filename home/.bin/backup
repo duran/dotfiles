@@ -1,4 +1,0 @@
-#!/bin/sh
-# simple differential backup using rsync
-
-rsync --archive --compress --verbose -P "$@"
