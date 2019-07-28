@@ -10,6 +10,7 @@ noremap! <c-[><c-[> <nop>
 inoremap jk <c-[>
 vnoremap jk <c-[>
 
+
 " Turning off space so it can be used as leader key without side effects. See
 " leader.vim
 noremap <space> <nop>
@@ -82,3 +83,11 @@ noremap <down> zg
 " Working with diff mode
 nnoremap du     :wincmd w<c-j>:normal u<c-j>:wincmd w<c-j>
 nnoremap d<c-l> :diffupdate<c-j>
+
+
+" Command-line window
+" TODO: Remove leader from here
+
+autocmd CmdwinEnter * nnoremap <buffer> <leader>q <c-c><c-c>
+autocmd CmdwinEnter * nnoremap <buffer> <c-j> <cr>
+
