@@ -30,7 +30,8 @@
     prompt = false
     tool = vimdiff
     mnemonicprefix = true
-    algorithm = patience
+    algorithm = histogram
+    colorMoved = dimmed_zebra
 [difftool]
     prompt = false
 [am]

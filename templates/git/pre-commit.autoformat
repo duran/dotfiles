@@ -1,4 +1,5 @@
 #!/bin/sh
+# Autoformatter example
 
 set -e
 
@@ -6,18 +7,23 @@ set -e
 if ! git diff --cached --name-only | xargs git diff --quiet
 then
   echo 'ERROR: The index and working enviroment of the following files does not
- match'
+ match, please stash the files before continue.'
   git diff --cached --name-only | xargs git diff --name-only | cat -
   exit 1
 fi
 
-# Python
 # Autoformatter
-git diff --cached --name-only -- '*.py' | xargs black --line-length 79
+git diff --cached --name-only -- '*.py' | ifne xargs black --line-length 79
+git diff --cached --name-only -- '*.js' | ifne xargs prettier --write 
+git diff --cached --name-only -- '*.css' | ifne xargs prettier --write 
+git diff --cached --name-only -- '*.html' | ifne xargs prettier --write 
+git diff --cached --name-only -- '*.json' | ifne xargs prettier --write 
+# More examples here...
 git diff --cached --name-only -- '*.py' | xargs git update
 
 # Linters
-git diff --cached --name-only -- '*.py' | xargs flake8
+# TODO: Finish this part
+git diff --cached --name-only -- '*.py' | ifne xargs flake8
 git diff --cached --name-only -- '*.py' | xargs pylint
 git diff --cached --name-only -- '*.py' | xargs mypy
 git diff --cached --name-only -- '*.py' | xargs flake8

@@ -295,6 +295,7 @@ JavaScript : The standard language in the Browser | https://developer.mozilla.or
         + nvm: A node version manager | https://github.com/creationix/nvm
         + express: A popular and sort of fast web framework | https://expressjs.com/
         + pm2: Node.js process manager and load balancer | https://pm2.io/
+        + mocha : tk Javascript test framework | https://mochajs.org/	
     - JSX : JavaScript dialect for XML templating | https://jsx.github.io/
         + ReactJS : Event based UI templating library | https://reactjs.org/
     - EJS : HTML templating JavaScript dialect | https://www.ejs.co/
@@ -364,6 +365,7 @@ C++ : Kitchen-sink low-level programming language, C is Unix, C++ is GNU | https
     xpdf : a set of tools to transform and render PDFs (-utils extract text, images etc) | http://www.xpdfreader.com/
     poppler : a fork of xpdf 3.0 to allow easy interop with other software | https://poppler.freedesktop.org/
     tesseract : best open source OCR for clean images | https://github.com/tesseract-ocr
+    watchman : execute actions when a file changes, binding to C++, Node.js and Python | https://facebook.github.io/watchman/
     
 
 
@@ -399,7 +401,6 @@ Mongoose	2013	Library	Yes	Javascript	-	MongoDB ODM
 ejs	2013	Library	Yes	Javascript	-	HTML templating system for Node.js	
 async	2013	Library	Yes	Javascript	bluebird.js, koa	Common async patterns in Javascript	
 superagent	2013	Library	Yes	Javascript	request	A better http client in Node.js	
-mocha	2014	Library	Yes	Javascript	-	Test framework	
 Spyder	2015	GUI	Yes	Python	-	Python IDE	
 yhat	2015	GUI	No	Python	Spyder	Python IDE	
 Atom	2015	GUI	No	-	VIM	Slow but extremely extendable text editor	
