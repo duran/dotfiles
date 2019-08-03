@@ -2,7 +2,7 @@
 " This is needed because most terminal nowdays encone meta-keys prefixing it
 " with Escape. If you want this to work you need to turn off the escape key c-[
 " NOTE: It works in all modes but Lang-Arg and Terminal-Job
-" FIXME: Missing shifted and F-keys
+" TODO: Missing shifted and F-keys
 
 
 " Normal, Visual, Select, Operator-pending modes

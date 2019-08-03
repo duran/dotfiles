@@ -2,4 +2,4 @@
 
 set formatoptions+=w
 
-call ToggleProseMode("silent")
+call ToggleSpellMode("silent")

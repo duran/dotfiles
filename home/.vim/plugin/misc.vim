@@ -1,6 +1,10 @@
 " Clipboard functions
 " Toggles on/off  OS clipboard
 
+
+" Tag jumping (needs ctags)
+command MakeTags !ctags -f tags -R .
+
 function ToggleSystemClipboard()
     if match(&clipboard, "unnamedplus") < 0
         set clipboard=unnamedplus

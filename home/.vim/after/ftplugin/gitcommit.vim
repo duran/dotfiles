@@ -1,6 +1,6 @@
 " gitcommit files
 
-call ToggleProseMode("silent")
+call ToggleSpellMode("silent")
 
 setlocal textwidth=72
 setlocal formatoptions+=t

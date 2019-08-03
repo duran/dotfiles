@@ -1,3 +1,3 @@
 " Markdown files
 
-call ToggleProseMode("silent")
+call ToggleSpellMode("silent")

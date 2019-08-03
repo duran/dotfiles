@@ -21,17 +21,11 @@ http://xahlee.info/linux/linux_xvkbd_tutorial.html
 * check different line disciplines in Linux/Unix
 * Correct zsh init info and files
 * fzf for zsh
-* add black as git prehook and vim autoformatter
-* how to check if a package is installed in VIM
 * download IBM flex
-* move file within VIM https://stackoverflow.com/questions/10884520/move-file-within-vim
-* Create ctags with VIM, use global root dir if fzf installed
 * git with patches
-* clean VIM main config file
-* Better way to work with OS clipboard; change leader related shortcuts to work with terminal and other: https://stackoverflow.com/questions/2084210/remove-a-pair-of-parentheses-brackets-or-braces-in-vim
 * perf command in linux
 * joblib check out
-* alias for git ls-tree, cat-file, hash-object, write-tree, ls-files, show-branch, git orphan, git stash
+* alias for git ls-tree, cat-file, hash-object, write-tree, ls-files, show-branch, git orphan, git stash, git-fsck
 * add kebab-case, camel-case, snake-case, etc.
 * harden ssh vps
 

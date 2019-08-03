@@ -1,22 +1,19 @@
 " Basic stuff
-syntax on          " enable syntax processing
+" set nocompatible   " unlocks vim upgrades over vi, not needed usually
 filetype plugin on " load filetype specific options 
-set relativenumber " relative numbers
+
+" Visual options
+syntax on          " enable syntax processing
+set shortmess+=I   " remove intro message
 set cursorline     " line under the cursor
 set colorcolumn=+1 " visual mark after textwidth column
-set ruler          " show line and column
 set number         " set line numbers
-set shortmess+=I   " remove intro message
-"set viminfo='100,<50,s10,h
+set relativenumber " relative numbers
+set ruler          " show line and column
 "set spelllang=en,es,gl
-"set showcmd
-"set tabline=%N/\ %t\ %M
-"set nocompatible
-" colorscheme desert
-" colorscheme elflord
-" colorscheme slate
+" colorscheme desert elflord slate
 
-" Indentation
+" Identation
 set backspace=2       " join lines when using backspace
 set expandtab         " tabs to spaces
 set shiftwidth=4      " Indent using 4 spaces
@@ -45,14 +42,16 @@ set splitright
 set viminfo+=n~/.vim/viminfo
 set directory^=$HOME/.vim/tmp//
 set swapfile
+" set writebackup # if you want to write a backup during the write
+" set backupdir^=~/.vim/backup//
+" set backupcopy=auto " rename and write when save
 set nobackup 
+" set undofile " persist the undo tree for each file
+" set undodir^=~/.vim/undo//
 
 " misc
 set timeoutlen=5000 " NOTE: Chefk if I should turn off timeout
 " set listchars=tab:▸\ ,eol:¬ 
-
-" Tag jumping (needs ctags)
-command MakeTags !ctags -f tags -R .
 
 " Set system clipboard as default register
 " set clipboard=unnamedplus
@@ -69,5 +68,6 @@ au BufReadPost *
  \ | endif
 
 " Load fzf is possible
+" FIXME: Check if fzf is installed
 set rtp+=$FZF_HOME
 packadd fzf.vim
