@@ -32,6 +32,7 @@
     mnemonicprefix = true
     algorithm = histogram
     colorMoved = dimmed_zebra
+    colorMovedWS = ignore-all-space
 [difftool]
     prompt = false
 [am]
