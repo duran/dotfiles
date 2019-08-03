@@ -20,7 +20,7 @@ set shiftwidth=4      " Indent using 4 spaces
 set softtabstop=4     " I do not know what this does
 set autoindent        " add identation when you press <start>
 set foldmethod=indent " fold things using identation
-set formatoptions=c   " wrap only in commens
+set formatoptions=c,j " wrap only in commens
 
 " Better search
 set nomagic             " Only literals that must be escaped are \ and $
@@ -52,7 +52,13 @@ set nobackup
 
 " misc
 set timeoutlen=5000 " NOTE: Chefk if I should turn off timeout
+set lazyredraw      " TODO: check if this improve things
+set virtualedit=all " Move to places without characters
 " set listchars=tab:▸\ ,eol:¬ 
+"  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+" set encoding=utf-8
+set autoread " read files on change
+" set autowrite " write when  moving from file
 
 " Set system clipboard as default register
 " set clipboard=unnamedplus

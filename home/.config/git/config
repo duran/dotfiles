@@ -113,10 +113,11 @@
     tree = !exa --long --all --header --tree --git --git-ignore --ignore-glob=.git --color=always | $PAGER
 
     # TODO: clean this part
-    unpushed = git diff origin/$(git rev-parse --abbrev-ref HEAD)..HEAD
+    unpushed = !git diff origin/$(git rev-parse --abbrev-ref HEAD)..HEAD
+    create-graph = !git show-ref -s | git commit-graph write --stdin-commits
     rmrbranch = push origin --delete
     delete-local-merged = branch -d $(git branch --merged | grep -v '^*' | grep -v 'master' | tr -d '\n') # I do not know if this works
     undo = reset --soft HEAD^
     unstage = reset -q HEAD --
-#    nuke git branch -D $1 git push origin :$1
+    nuke = !git branch -D $1 git push origin :$1
 
