@@ -123,6 +123,7 @@ nnoremap <leader><c-l> :nohlsearch<c-j>
 noremap <leader>~ :call ToggleSystemClipboard()<c-j>
 
 " fzf.vim plugin 
+" nnoremap <leader>o :e ./**/
 nnoremap <leader>o :Files .<c-j>
 nnoremap <leader>t :Tags<c-j>
 nnoremap <leader>/ :Lines<c-j>
