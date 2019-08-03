@@ -1,0 +1,13 @@
+Port 3526
+PasswordAuthentication no
+PermitRootLogin no
+MaxAuthTries 2
+MaxSessions 2
+ClientAliveCountMax 2
+AllowTcpForwarding no
+TCPKeepAlive no
+X11Forwarding no
+AllowAgentForwarding no
+Compression no
+LogLevel VERBOSE
+UsePrivilegeSeparation SANDBOX

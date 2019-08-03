@@ -248,12 +248,9 @@ rust : https://www.rust-lang.org/
     - ripgrep : A parallel and fast grep alternative to recursive searches | https://github.com/BurntSushi/ripgrep
     - bat : a terminal printing preprocessor | https://github.com/sharkdp/bat
     - xsv: A fast CSV command like toolkit | https://github.com/BurntSushi/xsv
+    - peco : Interactive filtering tool | https://github.com/peco/peco
+    - fzf : Fuzzy search in the terminal, the shell and VIM | https://github.com/junegunn/fzf
 
-fzf : https://github.com/junegunn/fzf
-    ? Fuzzy search in the terminal, the shell and VIM
-
-git : https://git-scm.com/
-    ? A distributed version control system 
 
 Bash : The unofficial standard Unix shell | https://www.gnu.org/software/bash/
     - neofetch: command line information prompt | https://github.com/dylanaraps/neofetch
@@ -283,6 +280,12 @@ Python : https://www.python.org/
     - mypy : Optional static type checker for Python | http://mypy-lang.org/
     - flake8 : Static analyzer for Python | http://flake8.pycqa.org/en/latest/
     - bandit : Yet another static analyzer for Python | https://github.com/PyCQA/bandit
+    - numpy : The standard python linear algebra library, | https://numpy.org/
+    - certbot: Automation Let’s Encrypt tool  to enable HTTPS on manually-administrated websites | https://certbot.eff.org/
+    - fail2ban : intrusion prevention tool over POSIX systems with packet-control of firewall like iptables or TCP Wrapper | https://www.fail2ban.org/wiki/index.php/Main_Page
+    - ufd (uncomplicated firewall) : simple Linux firewall that does not like to work with other apps | https://launchpad.net/ufw
+    - gunicorn : simple WSGI HTTP Server (compared with uWSGI | https://gunicorn.org/
+    - docker-compose : a tool to work with groups of Docker images through YAML files | https://docs.docker.com/compose/
 
 R : https://cran.r-project.org/
     ? A intreactive statistical programming language
@@ -353,12 +356,21 @@ C : The standard low level programming language
     - tmux : Terminal mutiplexer | https://github.com/tmux/tmux/wiki
     - ffmpeg : Audio and video tool | https://ffmpeg.org/
     - sqlite : SQL database that stores everything in a single file, well tested and stable | https://sqlite.org/index.html
+    - git : A distributed version control system for the linux ecosystem |  https://git-scm.com/
+    - nginx : The second most popular web server of the world, faster than Apache and stateles | https://www.nginx.com/
+    - LibHTTP : The third? most popular web server of the world, faster than nginx, less battle-tested | https://www.libhttp.org/
+    - GNU Wget : an HTTP, HTTPS and FTP network downloader |  https://www.gnu.org/software/wget/
+    - cURL : highly configurable command (and library) to work with dozens or networks protocols | https://www.gnu.org/software/wget/
+
 
 Go : Simple and clean semi-low level language oriented to high-performances web stuff | https://golang.org/
     - gron: Shows every single path from root to leaf in JSONs | https://github.com/tomnomnom/gron
     - rclone: rsync for cloud storage | https://rclone.org/
     - wuzz: interactive http inspector | https://github.com/asciimoo/wuzz
     - piknik: Creates a network shared clipboard | https://github.com/jedisct1/piknik
+    - noti: monitors a process and triggers a notification | https://github.com/variadico/noti
+    - Docker : a container building tool, a running container daemon (Docker Engine) and a client to run these containers, all at once | https://www.docker.com/
+
 
 C++ : Kitchen-sink low-level programming language, C is Unix, C++ is GNU | https://isocpp.org/
     mosh : ssh replacement (though it needs ssh) with roaming and speculative local echo. | https://mosh.org/
@@ -366,6 +378,8 @@ C++ : Kitchen-sink low-level programming language, C is Unix, C++ is GNU | https
     poppler : a fork of xpdf 3.0 to allow easy interop with other software | https://poppler.freedesktop.org/
     tesseract : best open source OCR for clean images | https://github.com/tesseract-ocr
     watchman : execute actions when a file changes, binding to C++, Node.js and Python | https://facebook.github.io/watchman/
+    Apache HTTPD: The standard web server in the planet | https://httpd.apache.org/
+    V8 : JavasCript and WebAssembly engine powering Chrome and Node.js | https://v8.dev/
     
 
 
@@ -410,14 +424,12 @@ rmarkdown	2016	Library	Yes	R	LaTeX	Create HTML, epubs and PDF from R
 rbook	2016	Library	No	R	LaTeX	Like rmarkdown, but for complex books	
 readline	2017	CLI	Yes	-	-	Line text editor	
 Awk	2017	Language	Yes	-	Perl, TXR	Tabular processing language	
-numpy	2017	Library	Yes	Python	Numba	Scientific computing in Python	
 visidata	2017	CLI	Yes	-	Excel, VIM + Plugins	Tabular data editor	
 
 alsamixer								
 autojump	CLI	0		track most used directories in a variety of shells		z		https://github.com/wting/autojump
 awk	CLI	3		a pattern scanning ant text processing language for things closer to tabular data.		sed for line data, jq for json, sqlite for csv,  txr and perl for more complex		https://www.cs.princeton.edu/~bwk/btl.mirror/
 batch	CLI	0		executes a job later when system levels permit. see at.		-
-curl	CLI	1		transfer an url		wget		https://curl.haxx.se/
 dash	CLI	0		a fast sh superset shell		bash		http://gondor.apana.org.au/~herbert/dash/
 diff								
 drill								
@@ -445,7 +457,6 @@ mutt
 nawk	CLI	0		A fast implementation of AWK. See awk.		-		?
 nestat								
 newsbeuter								
-noti	CLI	1		send a notification to the computer		-		https://github.com/variadico/noti
 okular								
 parallel								
 pdfgrep								
@@ -468,11 +479,9 @@ urlview	TWI	2		extract and handle urls passing them to another command		extract_
 vd	TUI	1		a vi-like editor for data tables				http://visidata.org/
 vlc								
 watch								
-wget	CLI	1		a network downloader		curl		https://www.gnu.org/software/wget/
 which								
 wildmidi								
 z	CLI	2		track most used directories in bash or zsh		autojump		https://github.com/rupa/z
 zsh	CLI	0		a bash alternative with some goodies for interactive use		fish		https://www.zsh.org/
-peco
 https://dev.yorhel.nl/ncdu
 cpulimit
