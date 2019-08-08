@@ -54,6 +54,7 @@ set nobackup
 set timeoutlen=5000 " NOTE: Chefk if I should turn off timeout
 set lazyredraw      " TODO: check if this improve things
 set virtualedit=all " Move to places without characters
+set nostartofline " stop changing the cursor when I fire a command
 " set listchars=tab:▸\ ,eol:¬ 
 "  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 " set encoding=utf-8
