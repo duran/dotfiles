@@ -286,6 +286,17 @@ Python : https://www.python.org/
     - ufd (uncomplicated firewall) : simple Linux firewall that does not like to work with other apps | https://launchpad.net/ufw
     - gunicorn : simple WSGI HTTP Server (compared with uWSGI | https://gunicorn.org/
     - docker-compose : a tool to work with groups of Docker images through YAML files | https://docs.docker.com/compose/
+    - Aws-shell : fast interactive shell wrapper for the AWS CLI | https://github.com/awslabs/aws-shell
+    - Computer Vision Annotation Tool (CVAT) : official OpenCV object detection annotation tool made with Django/React/Docker and compatible only with Chrome | https://github.com/opencv/cvat
+    - Yapf : a Python autoformatter tool | https://github.com/google/yapf
+    - Boto3 : AWS API wrapper for Python  | https://github.com/boto/boto3
+    - Beautiful Soup : Standard XML/HTML processing tool in Python | https://www.crummy.com/software/BeautifulSoup/
+    - google-images-download : utility to download hundreeds of images from ‘Google Images’ | https://github.com/hardikvasa/google-images-download
+    - Pygments : syntax highlighter compatible with more than +300 languages | http://pygments.org/
+    - Schedule : simple scheduler | https://schedule.readthedocs.io/en/stable/
+    - SQLAlchemy : SQL toolkit and Object Relational Mapper (ORM) | https://www.sqlalchemy.org/
+    - Numba : JIT compiler for a subset of Python and Numpy for the LLVM | https://numba.pydata.org/
+    - RAPIDS : adds multi-server GPU support for tools as Dask or XGBoost | https://rapids.ai/index.html
 
 R : https://cran.r-project.org/
     ? A intreactive statistical programming language
@@ -350,7 +361,9 @@ C : The standard low level programming language
     - sed: non-interactive stream editor based in ed | https://en.wikipedia.org/wiki/Sed
     - make: build automatation tools for generating executables (or any other file) | https://en.wikipedia.org/wiki/Make_(software)
     - xclip: An import/export X clipboard(s) utilty through file descriptors | https://github.com/astrand/xclip
+    - xsel : import/export tool for X clipboard | http://www.vergenet.net/~conrad/software/xsel/
     - pv : Terminal monitor of data passing trough a pipeline | https://ivarch.com/programs/pv.shtml
+    - chafa : terminal image renderer | https://hpjansson.org/chafa/
     - w3m : a TUI web browser and pager, it works only with old versions of HTML and HTTP. No JS, no CSS, no most of the things. | http://w3m.sourceforge.net/
     - cmus : Small and fast CLI console music player for Unix | https://cmus.github.io/
     - tmux : Terminal mutiplexer | https://github.com/tmux/tmux/wiki
@@ -381,6 +394,9 @@ C++ : Kitchen-sink low-level programming language, C is Unix, C++ is GNU | https
     Apache HTTPD: The standard web server in the planet | https://httpd.apache.org/
     V8 : JavasCript and WebAssembly engine powering Chrome and Node.js | https://v8.dev/
     
+Java: https://www.java.com/en/
+    ? World famous, RAM-hungry, almost-platform-independent programing language
+    - Bazel : Bazel is the specialized big-enterprise/monorepo build system by Google| https://bazel.build/
 
 
 ********************************************************************************
@@ -409,6 +425,60 @@ zathura : A keyboard based document viewer | https://pwmt.org/projects/zathura/
 ********************************************************************************
 *                                 other                                        *
 ********************************************************************************
+Javascript:
+C:
+                Jq : a command line JSON processor tool and language | https://stedolan.github.io/jq/
+                CPython : the reference implementation of the Python language | https://github.com/python/cpython
+                CMake : standard cross-platform building, testing and packing tools (and nightmarish language) to almost any language | https://cmake.org/
+                Slurm : cluster resource management and job scheduling system for  Linux | https://slurm.schedmd.com/overview.html
+                Ab : apache http benchamark tool | https://httpd.apache.org/docs/2.4/programs/ab.html
+                VIM : | https://cheerio.js.org/
+C++:
+                Minestest : one the best Minecraft FOSS look-alikes | http://www.minetest.net/
+                Pytbind11 : interoperability between C++ and Python | https://github.com/pybind/pybind11
+PHP:
+                phpBB : one of the oldest and most used forum software in the planet, that works without JavaScript | https://www.phpbb.com/
+Bourne Shell:
+                Spaceman-diff : CLI tool to diff images | https://github.com/holman/spaceman-diff
+Perl:
+                Lesspipe : input preprocessor (unzip, syntax highlighting, image asciiart, etc) for less | https://github.com/wofr06/lesspipe
+Rust:
+                Ripgrep-all : a ripgrep extension for PDFs, ebooks, office documents, compressed documents etc | https://github.com/phiresky/ripgrep-all
+Elixir:
+                Phoenix LiveView : Phoenix extension for real-time experiences with only server-rendered HTML | https://github.com/phoenixframework/phoenix_live_view
+                Phoenix : A web metaprogramable web framework, fast, reliable and maintainable | https://phoenixframework.org/
+ 
+Haskell:
+                ShellCheck :  linter for shell languages| https://www.shellcheck.net/
+                Postgrest : standalone web server that turns a PostGres database into a REST API | http://postgrest.org/
+OCalm:
+                Unison : A cross platform sync tool | https://www.cis.upenn.edu/~bcpierce/unison/
+Go:
+                Syncthing : Syncthing is a continuous file synchronization program | https://syncthing.net/
+    Chroma : a syntax highlighter based in Pygments | https://github.com/alecthomas/chroma
+
+ 
+
+    Xmonad : dynamically tiling X11 window manager | https://xmonad.org/
+
+Perl :
+
+    GNU Parallel : The most complete parallel manager for the CLI that it is not a cluster workload manager | https://www.gnu.org/software/parallel/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 MongoDB	2013	Database	Yes	-	-	A user friendly  JSON database non SQL/ACID made for scale	
 Mongoose	2013	Library	Yes	Javascript	-	MongoDB ODM	
