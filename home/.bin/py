@@ -1,0 +1,8 @@
+#!/bin/sh
+# Uses Ipython 3 by default
+
+if test "$#" -eq 0; then
+  ipython3 || python3
+else
+  python3 "$@"
+fi

@@ -40,6 +40,9 @@ alias x=extract
 
 alias ..='cd ..'
 alias ,.=', .'
+alias ci='clipboard -i'
+alias co='clipboard -o'
+alias ce='clipboard -e'
 alias ga='g a'
 alias gc='g c'
 alias gd='g d'
@@ -49,12 +52,8 @@ alias gp='g p'
 alias ka='killall -9'
 alias la='ls -A'
 alias ll='ls -ahlF'
-alias py=python3
 alias gs='g s'
 
-#alias ci='clipboard -i'
-#alias co='clipboard -o'
-#alias ce='clipboard -e'
 #alias di=popd
 #alias do=pushd
 #alias js=node
