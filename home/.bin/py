@@ -3,6 +3,9 @@
 
 if test "$#" -eq 0; then
   ipython3 || python3
+elif test "$#" -eq 1 -a ! -a "$1"; then
+  ipython3 --profile="$1"
 else
   python3 "$@"
 fi
+

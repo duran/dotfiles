@@ -85,6 +85,7 @@
     branches = !git --no-pager branch --all "$@"
     tags = tag
     stashes = stash list
+    sync = fetch --all --prune
     people = shortlog --summary --email --numbered
     index = diff --cached
 

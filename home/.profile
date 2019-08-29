@@ -70,9 +70,10 @@ export FZF_DEFAULT_COMMAND='fd --hidden --exclude .git'
 export FZF_DEFAULT_OPTS='--bind=ctrl-j:accept'
 
 # Rofi and other
-
 export TERMINAL="$TERMCMD"
 
-# Local configuration
+# Ipython
+export IPYTHONDIR="$HOME/.config/ipython"
 
+# Local configuration
 test -f "$HOME/.profile_local" && . "$HOME/.profile_local"
