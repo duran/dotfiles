@@ -399,6 +399,7 @@ Java: https://www.java.com/en/
     - Bazel : Bazel is the specialized big-enterprise/monorepo build system by Google| https://bazel.build/
 
 
+
 ********************************************************************************
 *                                  GUI                                         *
 ********************************************************************************
@@ -425,6 +426,112 @@ zathura : A keyboard based document viewer | https://pwmt.org/projects/zathura/
 ********************************************************************************
 *                                 other                                        *
 ********************************************************************************
+
+
+C:
+
+                Pi-hole : Network level ad and tracker blocker through a DNS sinkhole and DHSCP server | https://pi-hole.net/
+
+                BEAM : The Erlang/Elixir main VM | https://github.com/erlang/otp
+
+                RSYSLOG : connects different services logs to formats/databases | https://www.rsyslog.com/
+
+                Dqlite : Distributed and embedded SQLite database | https://dqlite.io/
+
+
+
+Cython : typed superset of Python that aims to deliver better performance than plain Python | https://cython.org/
+
+                Scikit-learn
+
+                Pandas
+
+                Scipy
+
+
+
+Go:
+
+                ChaosMonkey: randomly terminates machines in production environment to test architecture resilience | https://github.com/Netflix/chaosmonkey
+
+C++:
+
+                Aria2 : command-line and library download utility for HTTP{,S}, {,S}FTP, BitTorrent and Metalink | https://aria2.github.io/
+
+Python:
+
+                Ipython : Interactive REPL shell to Python and kernel of Jupyter project | https://ipython.org/
+
+                Pylint : static analysis tool for Python that supports inference | https://google.github.io/pytype/
+
+                MonkeyType : generate and apply type notation for runtime generated data | https://github.com/instagram/MonkeyType
+
+pyannotate : generate and apply type notation (to comments in Python 2) for runtime generated data | https://github.com/instagram/MonkeyType
+
+Hy : Lisp dialect embedded in Python | hylang.org/
+
+RedBaron : Python AST-wrapper library for more powerful and ergonomic metagrprogramming | http://redbaron.pycqa.org/en/latest/
+
+FaceSwap: GUI for deepfakes platform | https://www.faceswap.dev/
+
+Alembic : migration tool for SQLalchemy | https://alembic.sqlalchemy.org/en/latest/
+
+Locust : distributed loading testing tool for Python | https://locust.io/
+
+
+
+Scala:
+
+                Akka : Actor implementation toolkit/runtime for the JVM | https://akka.io/
+
+                PycURL : Python interface for libcurl | http://pycurl.io/
+
+                Apache Kafka : distributed stream-processing platform | https://kafka.apache.org/
+
+JavaScript :
+
+                LoDash: extended functional programing utilities for JS without touching the Javascript core object. It is the replacement of underscore.js| https://lodash.com/
+
+                Async.js: lots of async strategies for delaing with callbacks | https://caolan.github.io/async/
+
+                date-fns : modern date manipulation | https://date-fns.org/
+
+                JSDoc : API documentation generator for Javascript | https://jsdoc.app/
+
+                Axios : HTTP client that uses promises | https://github.com/axios/axios
+
+                Superagent : HTTP client that uses callbacks | https://github.com/visionmedia/superagent
+
+                RxJS : reactive programming in JS | https://rxjs.dev/
+
+                Material-UI : a React framework consisting in a coherent collection of React components | https://material-ui.com/
+
+
+
+Rust :
+
+                Lumen : BEAM (Erlang-VM) clone for WebAssembly to work with Elixir in the Fronted | https://github.com/lumen/lumen
+
+Perl :
+
+                Gitolite : git server manager | https://gitolite.com/
+
+
+
+CSS:
+
+                Twitter bootstrap : A CSS framework (with HTML and JS extensions) and a wealth of themes and legacy tools to work with | https://getbootstrap.com/
+
+                Augmented-UI : A CSS collection for Cyberpunk interfaces | http://augmented-ui.com/
+
+
+
+GraphQL: A query language to cleanly abstract multi-client multi-server data communications | https://graphql.org/
+
+xantfarm : simulaties an ant farm in X root window | https://acme.com/software/xantfarm/
+
+ulauncher : fancy looking application launcher for Linux | https://ulauncher.io/
+
 Javascript:
 C:
                 Jq : a command line JSON processor tool and language | https://stedolan.github.io/jq/
