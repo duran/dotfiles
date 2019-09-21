@@ -549,6 +549,7 @@ Bourne Shell:
                 Spaceman-diff : CLI tool to diff images | https://github.com/holman/spaceman-diff
 Perl:
                 Lesspipe : input preprocessor (unzip, syntax highlighting, image asciiart, etc) for less | https://github.com/wofr06/lesspipe
+                GNU Stow : Symlink manager to dotfiles | https://www.gnu.org/software/stow/
 Rust:
                 Ripgrep-all : a ripgrep extension for PDFs, ebooks, office documents, compressed documents etc | https://github.com/phiresky/ripgrep-all
 Elixir:
