@@ -297,6 +297,7 @@ Python : https://www.python.org/
     - SQLAlchemy : SQL toolkit and Object Relational Mapper (ORM) | https://www.sqlalchemy.org/
     - Numba : JIT compiler for a subset of Python and Numpy for the LLVM | https://numba.pydata.org/
     - RAPIDS : adds multi-server GPU support for tools as Dask or XGBoost | https://rapids.ai/index.html
+    - Jinja2 : the popular templating language for Python | https://jinja.palletsprojects.com/en/
 
 R : https://cran.r-project.org/
     ? A intreactive statistical programming language
@@ -437,6 +438,7 @@ C:
                 RSYSLOG : connects different services logs to formats/databases | https://www.rsyslog.com/
 
                 Dqlite : Distributed and embedded SQLite database | https://dqlite.io/
+                HTTrack : web crawler that downloads entire websites | http://www.httrack.com/
 
 
 
