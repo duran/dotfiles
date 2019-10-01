@@ -329,6 +329,9 @@ JavaScript : The standard language in the Browser | https://developer.mozilla.or
     - Tensorflow.js | Tensorflow in the browser | https://js.tensorflow.org/
     - tesseract.js | port of tesseract OCR in the browser | https://tesseract.projectnaptha.com/
     - pdf.js | library to render PDFs as HTML | https://github.com/mozilla/pdf.js
+    - RxJS | Reactive Programming framework library for Javascript | https://rxjs.dev/
+    - GatbsyJS | Static page generator with React | https://www.gatsbyjs.org/
+    - mkcert | Locally trusted certificates | https://github.com/FiloSottile/mkcert
 
 
 TeX : http://tug.org/
@@ -387,6 +390,7 @@ Go : Simple and clean semi-low level language oriented to high-performances web 
     - piknik: Creates a network shared clipboard | https://github.com/jedisct1/piknik
     - noti: monitors a process and triggers a notification | https://github.com/variadico/noti
     - Docker : a container building tool, a running container daemon (Docker Engine) and a client to run these containers, all at once | https://www.docker.com/
+    - Hugo : a popular and fast static site generator | https://gohugo.io/
 
 
 C++ : Kitchen-sink low-level programming language, C is Unix, C++ is GNU | https://isocpp.org/

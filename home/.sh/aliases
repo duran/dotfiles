@@ -56,7 +56,7 @@ alias gs='g s'
 
 #alias di=popd
 #alias do=pushd
-#alias js=node
+alias js=node
 #alias rs='Rscript --vanilla'
 #alias sc=shellcheck
 #alias gai='g a -i'
