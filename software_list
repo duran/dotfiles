@@ -298,6 +298,9 @@ Python : https://www.python.org/
     - Numba : JIT compiler for a subset of Python and Numpy for the LLVM | https://numba.pydata.org/
     - RAPIDS : adds multi-server GPU support for tools as Dask or XGBoost | https://rapids.ai/index.html
     - Jinja2 : the popular templating language for Python | https://jinja.palletsprojects.com/en/
+    - Gooey : transforms Python CLIs into GUIs with one line of code | https://github.com/chriskiehl/Gooey
+    - FastAI : SOTA DL Pytorch wrapper library with unreadable code | https://github.com/fastai/fastai
+    - doctest : stdlib to test test interactive Python examples in docstrings | https://docs.python.org/3.5/library/doctest.html
 
 R : https://cran.r-project.org/
     ? A intreactive statistical programming language
