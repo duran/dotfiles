@@ -1,0 +1,20 @@
+#=====================================================================#
+#     0-23   0-59               0-30  0-6   1-12                      #
+#     |_    _|                 _|    _|    _|                         #
+#       |  |                  |     |     |            * any          #
+#    At HH:MM on day-of-month MD on WD in M            - range        #
+#       |  |                  |     |     |            , array        #
+#     __|__|            ______|     |   __|            / step         #
+#    |  |            __|         ___|__|                              #
+#   _|  |__         |         __|   |__                               #
+#  |       |        |        |         |                              #
+#  |       |        |        |         |                              #
+#=====================================================================#
+#  Min  |  Hour  |  Mday  |  Month  |  Wday  |  Command               #
+#=====================================================================#
+PATH='/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+@reboot HOME/bin/backlock HISTFILE
+0 * * * * /usr/bin/find TMPDIR -mindepth 1 -atime +2 -delete
+#@reboot transmission-daemon
+#0 * * * * newsboat -x reload
+# */30 * * * * flexget --cron execute
