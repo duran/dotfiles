@@ -11,9 +11,12 @@
 [rerere]
     # Remember diff resolutions (not sure how it works)
     enabled = true
+[format]
+    pretty = fuller
 [color]
     # Add color to UI
     ui = true
+    interactive = true
 [commit]
     # Change default git template
     template = ~/.config/git/message
@@ -83,7 +86,8 @@
 
     alias = config --get-regexp '^alias.'
     branches = !git --no-pager branch --all "$@"
-    tags = tag
+    remotes = remote -v
+    tags = tag -l
     stashes = stash list
     sync = fetch --all --prune
     people = shortlog --summary --email --numbered
@@ -103,6 +107,7 @@
     amend = commit --amend
     graph = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     update = add --update
+    uncommit = reset --soft HEAD^
     unstage = checkout --
     credit = commit --amend --author "$1 <$2>" 
 
@@ -122,3 +127,10 @@
     unstage = reset -q HEAD --
     nuke = !git branch -D $1 git push origin :$1
 
+# origin alias: git clone github:rails/rails
+[url "git://github.com/"]
+    insteadOf = "github:"
+[url "git@gist.github.com:"]
+    insteadOf = "gist:"
+[url "git@heroku.com:"]
+    insteadOf = "heroku:"

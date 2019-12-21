@@ -28,6 +28,9 @@ set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 " set autochdir           " Change working directory to highlighted file see https://superuser.com/questions/604122/vim-file-name-completion-relative-to-current-file
 
+" Command history
+set history=5000
+
 " Working with several files
 set wildmenu  " autocomplete menu
 set hidden    " VIM does not complain when you open a new buffer 
