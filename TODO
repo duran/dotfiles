@@ -20,15 +20,13 @@ http://xahlee.info/linux/linux_xvkbd_tutorial.html
 * mime.types
 * aria2c
 * check different line disciplines in Linux/Unix
-* Correct zsh init info and files
-* fzf for zsh
-* download IBM flex
 * git with patches
 * perf command in linux
 * joblib check out
 * alias for git ls-tree, cat-file, hash-object, write-tree, ls-files, show-branch, git orphan, git stash, git-fsck
 * add kebab-case, camel-case, snake-case, etc.
 * harden ssh vps
+* add epdfview, pcmanfm and nmtui
 
 Under a day:
 * Try POSIXLY_CORRECT
@@ -37,7 +35,6 @@ Under a day:
 * torrent client CLI/TUI
 * test nixos
 * :help map-alt-keys, how metakeys and mod keys work?
-* add mkdir, extract, compressor etc. to ranger
 * move to Manjaro Architech
 * create flexget basic configuration
 
