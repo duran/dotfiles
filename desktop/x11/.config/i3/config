@@ -27,8 +27,6 @@ floating_modifier $mod
 # Kill app
 bindsym $mod+q kill
 
-# workspace back and forth (with/without active container)
-
 # Container (pane) control
 bindsym $mod+h       focus left
 bindsym $mod+j       focus down
@@ -121,6 +119,8 @@ bindsym $mod+m bar mode toggle
 
 # FIXME: check out this section
 for_window [urgent=latest] focus
+# for_window [class="Manjaro-hello"] floating enable
+# for_window [title="Manjaro-hello"] floating enable
 # Screen brightness controls
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
