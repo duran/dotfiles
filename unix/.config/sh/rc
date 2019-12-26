@@ -10,13 +10,13 @@ fi
 PS2='> '  
 
 # modify workstation (terminal) parameters
-. "$HOME/.sh/tty"
+. "$HOME/.config/sh/tty"
 
 # aliases
-. "$HOME/.sh/aliases"
+. "$HOME/.config/sh/aliases"
 
 # functions
-. "$HOME/.sh/functions"
+. "$HOME/.config/sh/functions"
 
 # local configuration
-test -f "$HOME/.shrc_local" && . "$HOME/.shrc_local"
+test -f "$HOME/.shrc" && . "$HOME/.shrc"

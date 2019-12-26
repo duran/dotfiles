@@ -222,8 +222,8 @@ bindsym $mod+F12 exec true
 
 # FIXME: Revise these options
 bindsym $mod+Ctrl+b exec "$TERMCMD -e bmenu"
-bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+t exec --no-startup-id compton -b
+bindsym $mod+t exec --no-startup-id pkill picom
+bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 
 ################################################################################
@@ -317,12 +317,12 @@ client.background       #2B2C2B
 exec --no-startup-id xautolock -time 120 -locker blurlock
 
 # Set backgroud
-# FIXME: Do I need compton? Substitute nitrogen with feh.
+# FIXME: Do I need picom? Substitute nitrogen with feh.
 # Check https://faq.i3wm.org/question/3279/do-i-need-a-composite-manager-compton.1.html
 # exec --no-startup-id xsetroot -solid "#333333"
 # exec --no-startup-id feh --bg-scale /path/to/image
 
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 
 # FIXME: Pamac monitorizes and messages when there is something to upadate. It is daemon and run constantly. Change this for a pacman command that says how many packages I need just once
 # exec --no-startup-id pamac-tray
@@ -331,8 +331,8 @@ exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id nm-applet
 # FIXME: I do not know if this is neccesary
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id conky -c ~/.config/conky/manjaro
-exec --no-startup-id conky -c ~/.config/conky/shortcuts
+exec --no-startup-id conky -q -c ~/.config/conky/manjaro
+exec --no-startup-id conky -q -c ~/.config/conky/shortcuts
 # FIXME: I do not know what is this
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Stuff that is nice to have, but not that much

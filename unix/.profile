@@ -23,10 +23,10 @@
 
 # Enviromental variables
 
-export ENV="$HOME/.shrc"       # If interactive, load POSIX configuration
-export PATH="$PATH:$HOME/.bin" # Personal scripts in path
-export LANG='en_IE.utf8'       # Main locale: language and standarization 
-export LANGUAGE='en_US.utf8'   # Fallback locale (you can overwrite both setting with LC_ALL)
+export ENV="$HOME/.config/sh/rc" # If interactive, load POSIX configuration
+export PATH="$PATH:$HOME/.bin"   # Personal scripts in path
+export LANG='en_IE.utf8'         # Main locale: language and standarization 
+export LANGUAGE='en_US.utf8'     # Fallback locale (you can overwrite both setting with LC_ALL)
 
 export EDITOR='vim -E' # Terminal command line editor
 export VISUAL=vim      # Terminal interactive editor
@@ -76,4 +76,4 @@ export TERMINAL="$TERMCMD"
 export IPYTHONDIR="$HOME/.config/ipython"
 
 # Local configuration
-test -f "$HOME/.profile_local" && . "$HOME/.profile_local"
+test -f "$HOME/.env" && . "$HOME/.env"
