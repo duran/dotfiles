@@ -32,4 +32,5 @@ alias -- -="cd -"
 if test -d "$FZF_HOME"; then
   . "$FZF_HOME/shell/completion.bash" 2> /dev/null 
   . "$FZF_HOME/shell/key-bindings.bash"
+  test -f "$HOME/.fzf.bash" && . "$HOME/.fzf.bash"
 fi

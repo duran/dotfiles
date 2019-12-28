@@ -77,8 +77,3 @@ au BufReadPost *
  \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
  \ |   exe "normal! g`\""
  \ | endif
-
-" Load fzf is possible
-" FIXME: Check if fzf is installed
-set rtp+=$FZF_HOME
-packadd fzf.vim
