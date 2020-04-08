@@ -14,3 +14,8 @@ UXTerm*vt100.metaSendsEscape: true
 ! Fonts
 UXTerm*faceName: SF Mono
 UXTerm*faceSize: 11
+
+! Scrolling
+UXTerm*saveLines: 4096
+UXTerm*scrollBar: false
+UXTerm*scrollTtyOutput: true

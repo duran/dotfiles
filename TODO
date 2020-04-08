@@ -1,7 +1,6 @@
 Actions in this todo list are sorted by degree of difficulty and time:
 
 Under an hour:
-* dmark should change modtime in terminal, or access in removing the stuff
 * qutebrowser not linked to terminal and not echoing to stdout
 * modify status line tmux
 * open question nvlc and custom mappings

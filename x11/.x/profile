@@ -10,6 +10,9 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export TERMCMD=uxterm                               # Terminal
 export BROWSER='qutescript open_url_in_instance.sh' # Browser
 
+# Make the keyboard repead delay and speed
+#xset r rate 220 160
+xset m 2 0
 # Change layout to US International English
 setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
 # Ctrl -> CapsLock -> LeftShift; OS -> Alt

@@ -12,14 +12,14 @@ pt() { $PAGER "$(command -v ""$1"")"; }
 
 mark() {
   if [ "$#" -eq 1 ]; then
-    if [ ! -L "$TMPDIR/dmark_$1" ]; then
+    if [ ! -L "${TMPDIR:-/tmp}/dmark_$1" ]; then
       printf 'Error: Cannot find %s mark\n' "$1" 1>&2
       return 1
     fi
   elif [ "$#" -eq 2 ]; then
     if [ -d "$2" ]; then
-      rm --force "$TMPDIR/dmark_$1"
-      ln --symbolic "$PWD/$2" "$TMPDIR/dmark_$1"
+      rm --force "${TMPDIR:-/tmp}/dmark_$1"
+      ln --symbolic "$PWD/$2" "${TMPDIR:-/tmp}/dmark_$1"
     else
       printf 'Error: Second argument %s should be a directory\n' "$2" 1>&2
       return 1
@@ -29,5 +29,6 @@ mark() {
     return 1
   fi
 
-  cd -P "$TMPDIR/dmark_$1" || return
+  cd -P "${TMPDIR:-/tmp}/dmark_$1"
+  touch -c "${TMPDIR:-/tmp}/dmark_$1"
 }

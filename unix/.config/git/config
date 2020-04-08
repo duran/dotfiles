@@ -86,6 +86,7 @@
 
     alias = config --get-regexp '^alias.'
     branches = !git --no-pager branch --all "$@"
+    recent = branch --all --sort=committerdate --format='%(committerdate:short): %(refname:short)'
     remotes = remote -v
     tags = tag -l
     stashes = stash list
