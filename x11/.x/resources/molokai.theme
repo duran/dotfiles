@@ -5,8 +5,8 @@
 
 ! Background: black, dark grey
 *background: #272822
-*color0: yellow
-*color8: #303030
+*color0: #363636
+*color8: #424242
 ! FIXME: Change red and yellow colour for appropiate stuff
 ! Color1/foreground: light grey: standard files, cursor
 ! Color9: bright pink: soft link e.g. ln -s test1 imaginarytest
