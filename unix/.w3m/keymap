@@ -1,7 +1,7 @@
 # New keybindings
 
-keymap t NEW_TAB
-
+#keymap t NEW_TAB
+keymap t COMMAND "GOTO https://duckduckgo.com/lite/; NEXT_LINK; GOTO_LINK"
 keymap zh HELP
 
 # qutebrowser default keymaps

@@ -1,0 +1,27 @@
+# Mandatory
+# [Desktop Entry]
+# Type=Application|Link|Directory # Basically, program (1/.desktop), URI shortcut (2/.desktop), Path shortcut(3/.directory).
+# Name=template # Name # locale, 1-3
+# Optional
+# Hidden=true # (ignore file) boolean 1-3
+# Exec=echo # string 1
+# Path=/tmp # string 1
+# Terminal=true # bool 1
+# Actions=Potato;Patata; # (Add [Desktop Action %s] with Name/Icon/Exec at least) string 1
+# StartupNotify=false # string 1
+# TryExec=echo # (check if exists) string 1
+# NoDisplay=true # (do not show in menus) bool 1
+# PrefersNonDefaultGPU=true # (use extra GPU) bool 1
+# GenericName=Template File # locale, 1-3
+# Comment=Works as a baseline to files # locale 1-3
+# Keywords=Nothing;Python; # locale 1
+# Icon=example # icon 1-3
+# Version=1.0 # (conf version) string 1-3
+# URL=https://www.example.com/ # string 2
+# TODO
+# OnlyShowIn, NotShowIn  # (TODO) show or not show depending on XDG_CURRENT_DESKTOP string 1-3
+#    DBusActivatable A boolean value specifying if D-Bus activation is supported for this application. If this key is missing, the default value is false. If the value is true then implementations should ignore the Exec key and send a D-Bus message to launch the application. See D-Bus Activation for more information on how this works. Applications should still include Exec= lines in their desktop files for compatibility with implementations that do not understand the DBusActivatable key.     boolean NO   
+#    MimeType    The MIME type(s) supported by this application.     string(s)   NO  1
+#    Categories  Categories in which the entry should be shown in a menu (for possible values see the Desktop Menu Specification).   string(s)   NO  1
+#    Implements  A list of interfaces that this application implements. By default, a desktop file implements no interfaces. See Interfaces for more information on how this works.  string(s)   NO   
+#    StartupWMClass  If specified, it is known that the application will map at least one window with the given string as its WM class or WM name hint (see the Startup Notification Protocol Specification for more details).   string  NO  1
