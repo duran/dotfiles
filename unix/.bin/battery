@@ -1,4 +1,0 @@
-#!/bin/sh
-# gives battery info
-
-upower -i "$(upower -e | grep BAT)"

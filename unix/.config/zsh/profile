@@ -1,0 +1,14 @@
+# Zsh
+#   1. /etc/zshenv
+#   2. ${ZDOTDIR:-$HOME}/.zshenv
+#   3. /etc/zprofile (login)
+#   4. ${ZDOTDIR:-$HOME}/.zprofile (login)
+#   5. /etc/zshrc (interactive)
+#   6. ${ZDOTDIR:-$HOME}/.zshrc (interactive)
+#   7. runs...
+#   8. ${ZDOTDIR:-$HOME}/.zshrc (login)
+#   9. /etc/zlogout (login)
+# (/etc/* can be different sometimes, like /etc/zsh/*)
+# from:  https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html
+
+test "$ENV" && . "${XDG_CONFIG_HOME:-$HOME/.config}/sh/profile"

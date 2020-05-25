@@ -1,8 +1,0 @@
-# Faster tab completion
-set show-all-if-ambiguous on
-
-# Ignore case when completing
-set completion-ignore-case on
-
-# Only show completion endings
-set completion-prefix-display-length 2

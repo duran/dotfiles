@@ -1,36 +1,23 @@
 Actions in this todo list are sorted by degree of difficulty and time:
 
 Under an hour:
-* qutebrowser not linked to terminal and not echoing to stdout
-* modify status line tmux
-* open question nvlc and custom mappings
 * think where to put loadkeys and setxkb
 * check setkdbmap with -device, xinput and /usr/include/X11/keysymdef.h
 * also xvkdb (to modify stuff) and xbindkeys (to run shell commands, globally) xbindkeys ( http://xahlee.info/linux/linux_set_F2_F3_F4_to_cut_copy_paste.html
 * git reflog
 * :help undo-persistence
-* sync piknik and x clipboard
 * turn on gnupg
-* mime.types
 * aria2c
 * check different line disciplines in Linux/Unix
 * git with patches
-* perf command in linux
-* joblib check out
-* alias for git ls-tree, cat-file, hash-object, write-tree, ls-files, show-branch, git orphan, git stash, git-fsck
-* add kebab-case, camel-case, snake-case, etc.
 * harden ssh vps
 * add epdfview, pcmanfm and nmtui
-* revise desktop folder + remove TODO + i3 + nitrogen/feh
 
 Under a day:
-* Try POSIXLY_CORRECT
 * mpv and vlc configuration, specially keybindings
 * mpd + npmpdpp or cmus
 * torrent client CLI/TUI
-* test nixos
-* :help map-alt-keys, how metakeys and mod keys work?
-* move to Manjaro Architech
+* move to Arch
 * create flexget basic configuration
 
 
@@ -44,19 +31,4 @@ Under a long weekend:
 
 
 Long
-* qutebrowser
-    - editor in qutebrowser
-    - custom url click in qutebrowser
-    - noscript in qutebrowser
-    - classical terminal keybindings in x? c-j c-m to return etc
 * check all possible bash options and add them to {set,shopt}
-* Try to set up mutt, MAIL, MAILPATH, etc etc...
-    - compose keys mutt, reread section 1/2 mutt
-    - mutt native editor + message index key
-    - mutt how to sign a messages or use pgp/smime keys
-    - mutt threated mode
-    - patten modifier preference in mutt
-* imagetrick
-    - check HN
-* ffmpeg
-    - how to broadcast (ls)

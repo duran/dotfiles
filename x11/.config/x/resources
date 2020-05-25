@@ -1,0 +1,117 @@
+!!!!!!!
+! Xft !
+!!!!!!!
+! https://en.wikipedia.org/wiki/Xft
+! TODO: I have seen this all over, I am copying the config.
+
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcdfilter
+
+
+
+!!!!!!!!!
+! Xterm !
+!!!!!!!!!
+
+! Use modern terminal emulation to get Sixel support
+XTerm*decTerminalID: vt340
+
+! Show that we can accept 256 colors.
+XTerm.termName: xterm-256color
+
+! UTF-8 support.
+XTerm*utf8: 2
+
+! Connect primary with clipboard in this terminal
+XTerm*selectToClipboard: true
+
+! Select paths/url on 2-3 clicks
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+
+! Make Alt send a escape key (^[) like most terminals
+! XTerm*altIsNotMeta:    true
+! XTerm*altSendsEscape:  true
+XTerm*metaSendsEscape: true
+
+
+
+! Increase the buffer.
+XTerm*saveLines: 4096
+
+! Do not scroll when there is new input e.g. tail -f /var/syslog
+XTerm*scrollTtyOutput: false
+
+! Do not scroll when inside an secondary screen (like less)
+XTerm*alternateScroll: true
+
+! Change refresh rate when scrolling over high amounts of text.
+XTerm*fastScroll: true
+
+! Show scrollbar
+! XTerm*scrollBar: true
+! XTerm*scrollBar.width: 8
+! XTerm*rightScrollBar: true
+! Xfont 1-6 for sizes
+
+! Do not add Alt-Enter to fullscreen
+XTerm*fullscreen: never
+
+! New keybindings
+! FIXME: Remove ctrl-mouse keybindings
+XTerm*translations: #override \
+    <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
+    Shift <Btn1Up>: exec-formatted("firefox-developer-edition '%t'", CLIPBOARD) \n\
+    Shift <Btn2Up>: exec-formatted("xdg-open '%t'", CLIPBOARD)
+    Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>C:    copy-selection(CLIPBOARD) \n\
+
+! XTerm*faceName: xft:Mononoki Nerd Font, \
+!                 xft:JoyPixels:size=12, \
+!                 xft:Monospace:style=Medium:size=12
+! XTerm*faceSize: 20
+! XTerm*locale: true
+
+! FIXME: Remove
+
+! Colors
+! XTerm*background:   white
+! XTerm*foreground:   black
+! XTerm*pointerColor: white
+
+! XTerm*color0: black
+! XTerm*color1: red3
+! XTerm*color2: green3
+! XTerm*color3: yellow3
+! XTerm*color4: darkblue
+! XTerm*color5: magenta3
+! XTerm*color6: cyan3
+! XTerm*color7: gray90
+! 
+! XTerm*color8:  gray30
+! XTerm*color9:  red
+! XTerm*color10: green
+! XTerm*color11: yellow
+! XTerm*color12: blue
+! XTerm*color13: magenta
+! XTerm*color14: cyan
+! XTerm*color15: white
+
+! XTerm*scrollTtyOutput: true
+!XTerm*faceName: SF Mono
+!XTerm*faceSize: 11
+!XTerm*faceName: Unifont:pixelsize=14
+! Xterm*loginshell: true
+! XTerm*faceName: Terminus:pixelsize=14
+
+! XTerm*renderFont: false
+! XTerm*font: *-fixed-*-*-*-14-*
+XTerm*font: -*-terminus-medium-r-*-*-16-*-*-*-*-*-iso10646-1
+XTerm*allowBoldFonts: false
+

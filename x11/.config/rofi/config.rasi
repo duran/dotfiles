@@ -6,6 +6,10 @@
    Modified: Mon Feb 12 2018 06:06:47 PST -0800
    ========================================================================== */
 
+configuration {
+    modi: "window,drun,ssh";
+}
+
 window {
     background-color: @background;
     border:           2;
@@ -125,3 +129,17 @@ textbox-prompt-sep {
     text-color: @normal-foreground;
     margin:     0 0.3em 0 0;
 }
+
+
+
+* {
+    highlight: bold;
+    scrollbar: false;
+
+    background: #FFFFFF;
+    foreground:#000000;
+    separatorcolor: #FFFFFF;
+    selected-normal-background: #0080FF;
+    selected-normal-foreground: #FDF6E3;
+}
+

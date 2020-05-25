@@ -1,0 +1,4 @@
+#!/bin/sh
+# filter stdin (disown process)
+
+test "$1" && setsid "${@}" &

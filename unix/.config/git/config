@@ -2,6 +2,7 @@
     # I do not care about merge message
     mergeoptions = --no-edit
     # Ignore files related with editors, etc.
+    # TODO: Make this portable
     excludesfile = ~/.config/git/ignore
 [push]
     # Merge without leaving add parent to new commit (aka forget dev branch)
@@ -19,6 +20,7 @@
     interactive = true
 [commit]
     # Change default git template
+    # TODO: Make this portable
     template = ~/.config/git/message
 [merge]
     # vimdiff is great

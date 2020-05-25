@@ -1,4 +1,0 @@
-#!/bin/sh
-# search something in the web
-
-w3m https://duckduckgo.com/lite?q="$*&kd=-1"

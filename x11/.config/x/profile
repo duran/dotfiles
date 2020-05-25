@@ -1,0 +1,42 @@
+#!/bin/sh
+# Technically this should be in .xprofile
+# If this does not work with your distribution you could try to put this thing in .xsession, .xinitrc, or .profile_local
+
+
+# TODO: Check that this works
+# https://www.daniloaz.com/en/how-to-prevent-the-xsession-errors-file-from-growing-to-huge-size/
+ERRFILE=/dev/null
+
+
+export TERMCMD=xterm   # Terminal
+export TERMINAL=xterm  # Terminal
+export BROWSER=firefox # Browser
+
+# NOTE: This does not seems to work anymore.
+if command -v wmname >/dev/null 2>&1; then
+  # FOr no re-parenting window managers
+  # https://en.wikipedia.org/wiki/Re-parenting_window_manager
+  export _JAVA_AWT_WM_NONREPARTENTING=1
+  export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
+  # JDK programs (mostly swing) might fail even if you tell them bout
+  # reparenting.
+  # Make them think that they are in some old Sun 3D Desktop environment.
+  # https://tools.suckless.org/x/wmname/
+  wmname LG3D
+fi
+
+# Make the keyboard repead delay and speed
+#xset r rate 220 160
+xset m 2 0
+# Change layout to US International English
+setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
+# Ctrl -> CapsLock -> LeftShift; OS -> Alt
+xmodmap "$HOME/.config/x/modmap"
+
+# Load X config local configuration
+test -f "$HOME/.xrc" && . "$HOME/.xrc"
+
+# If we have redshift, we will use it
+if command -v redshift >/dev/null 2>&1; then
+  redshift >/dev/null 2>&1 &
+fi

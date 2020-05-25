@@ -117,13 +117,19 @@ bindsym $mod+Shift+r restart
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
-# FIXME: check out this section
+# Special rules for not well-behaved software
 for_window [urgent=latest] focus
-# for_window [class="Manjaro-hello"] floating enable
-# for_window [title="Manjaro-hello"] floating enable
+for_window [class="jetbrains-.*" title="win0"] floating enable;
+# FIXME: check out this section
 # Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; notify-send -t 500 \\"Brightness at $(xbacklight -get | grep -Po '^[0-9]+')%\\""
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send -t 500 \\"Brightness at $(xbacklight -get | grep -Po '^[0-9]+')%\\""
+# Audio controls
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 5%+; notify-send -t 500 \\"Volume at $(amixer sget Master | grep -Po '[[][0-9]+%[]]')\\""
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master 5%-; notify-send -t 500 \\"Volume at $(amixer sget Master | grep -Po '[[][0-9]+%[]]')\\""
+bindsym XF86AudioMute exec "amixer -q sset Master toggle; notify-send -t 500 \\"Volume at $(amixer sget Master | grep -Po '[[][0-9]+%[]]')\\""
+
+#bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send 'brightness down'"
 # Open specific applications in floating mode
 # for_window [title="alsamixer"] floating enable border pixel 1
 # for_window [class="(?i)virtualbox"] floating enable border normal
@@ -189,13 +195,13 @@ bindsym $mod+z exec --no-startup-id i3blurlock
 bindsym $mod+Return  exec "$TERMCMD"
 bindsym $mod+Shift+Return exec env ENV=/dev/null xterm sh
 #
-bindsym $mod+o       exec --no-startup-id rofi -show run
+bindsym $mod+o       exec --no-startup-id rofi -show drun -drun-show-actions
 bindsym $mod+Shift+o exec --no-startup-id rofi -show ssh
 #
 bindsym $mod+0 exec --no-startup-id rofi -show window
 
 # Clipboard (edit)
-bindsym $mod+e exec "$TERMCMD -e clipboard -e"
+bindsym $mod+e exec "$TERMCMD -e /bin/sh -c 'xsel --clipboard --output | vipe | xsel --clipboard --input'"
 
 # Screenshot
 bindsym Print                      exec --no-startup-id scrot    -e 'mv $f '"${TMPDIR:-$HOME}"; exec notify-send 'screenshot saved in '"${TMPDIR:-$HOME}" 
@@ -221,7 +227,6 @@ bindsym $mod+F11 exec true
 bindsym $mod+F12 exec true
 
 # FIXME: Revise these options
-bindsym $mod+Ctrl+b exec "$TERMCMD -e bmenu"
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -236,8 +241,7 @@ new_float none # NOTE: changed from normal
 hide_edge_borders none
 
 # Fonts
-# FIXME: check how fonts are managed, choose font
-font xft:URWGothic-Book 11
+font xft:DejaVu Sans Mono 11
 
 # FIXME: Finish this section
 bar {
@@ -248,7 +252,6 @@ bar {
 
     bindsym button4 nop
     bindsym button5 nop
-    font xft:URWGothic-Book 11
     strip_workspace_numbers yes
 
     colors {
@@ -297,17 +300,6 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
-# Theme colors
-# FIXME: Change this
-# class                 border  backgr. text    indic.   child_border
-client.focused          #556064 #556064 #80FFF9 #FDF6E3
-client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-client.placeholder      #000000 #0c0c0c #ffffff #000000 
-
-client.background       #2B2C2B
-
 
 ################################################################################
 # Autostart applications
@@ -317,15 +309,10 @@ client.background       #2B2C2B
 exec --no-startup-id xautolock -time 120 -locker blurlock
 
 # Set backgroud
-# FIXME: Do I need picom? Substitute nitrogen with feh.
-# Check https://faq.i3wm.org/question/3279/do-i-need-a-composite-manager-compton.1.html
+# NOTE: xsetroot does not work with picom. If you want images use feh or nitrogen.
 # exec --no-startup-id xsetroot -solid "#333333"
-# exec --no-startup-id feh --bg-scale /path/to/image
+exec --no-startup-id hsetroot -solid '#FFFFFF'; sleep 1; picom -b
 
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
-
-# FIXME: Pamac monitorizes and messages when there is something to upadate. It is daemon and run constantly. Change this for a pacman command that says how many packages I need just once
-# exec --no-startup-id pamac-tray
 
 # FIXME: I do not know if this is neccesary
 exec --no-startup-id nm-applet

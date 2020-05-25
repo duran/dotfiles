@@ -1,0 +1,78 @@
+#!/bin/sh
+
+# Waiting for a command
+if test "$SSH_CLIENT" -o "$SSH_TTY"; then
+  PS1="[$USER@$(uname -n)]"' ${PWD##*/}$ '
+else
+  PS1='${PWD##*/}$ '
+fi
+# Waiting to complete command
+PS2='> '  
+
+
+# Modify workstation (terminal) behavior
+# Give back c-s and c-q. Check out XOFF and XON:(https://en.wikipedia.org/wiki/Software_flow_control)
+stty -ixon  -ixoff   
+
+
+# Aliases
+alias cal='cal --monday'
+alias diff='diff --color=auto'
+alias grep='grep --color=auto' # https://beyondgrep.com/feature-comparison/
+alias ssh-keygen='ssh-keygen -o -a 100 -t ed25519'
+
+# - _
+# + -
+#alias ,='mark default'
+# alias a=ask
+alias b='$BROWSER'
+alias c=compress
+alias d=cd
+alias e='$EDITOR'
+alias f=fg
+alias g=git
+alias h=htop
+# - i
+alias j=jobs
+alias k=man
+#alias k=khal
+alias l='ls -CF'
+alias m='$MAILER'
+#alias n=notes
+alias o=rifle
+alias p='$PAGER'
+alias q=exit
+alias r='R --vanilla --quiet'
+alias s='$SHELL'
+alias t='type -a'
+alias u='$BROWSER'
+#alias u='sniper-rifle'
+alias v='$VISUAL'
+# + w - who is logged and what they do
+alias x=extract
+# - y
+# + z - jump around
+
+alias ..='cd ..'
+alias ,.=', .'
+alias ga='g a'
+alias gc='g c'
+alias gd='g d'
+alias gl='g l'
+alias gu='g update'
+alias gp='g p'
+alias ka='killall -9'
+alias la='ls -A'
+alias ll='ls -ahlF'
+alias gs='g s'
+
+#alias di=popd
+#alias do=pushd
+alias open=rifle
+alias edit='rifle -l editor'
+alias js=node
+#alias rs='Rscript --vanilla'
+#alias sc=shellcheck
+#alias gai='g a -i'
+#alias gap='g a -p'
+#alias pls='sudo $(fc -ln -1)'

@@ -1,30 +1,34 @@
 # New keybindings
 
-keymap t NEW_TAB
-
+#keymap t NEW_TAB
+keymap t COMMAND "GOTO https://duckduckgo.com/lite/; NEXT_LINK; GOTO_LINK"
 keymap zh HELP
 
 # qutebrowser default keymaps
 # cheatsheet: https://qutebrowser.org/img/cheatsheet-big.png
 
-# FIXME: w missing web inspector
+# TODO: w missing web inspector
+# FIXME: Copy paste with kitty
+# FIXME: Copy paste with tmux buffers
+# FIXME: Copy paste with piknik
+# FIXME: Copy paste with temp files
 keymap r RELOAD
 keymap T TAB_MENU
 keymap yy EXTERN      '(printf %s | clipboard -i)'
 keymap YY EXTERN_LINK '(printf %s | clipboard -i)'
-# FIXME: Missing Yy yank
-# FIXME: Missing u undo clossing tab
+# TODO: Missing Yy yank
+# TODO: Missing u undo clossing tab
 # NOTE: Cannot scroll half page up (C-u)
-# FIXME: Missing i insert mode
+# TODO: Missing i insert mode
 keymap O TAB_GOTO
 keymap o GOTO
-# FIXME: Missing Pp paste
-# FIXME: Missing {}[] navigation commands
+# TODO: Missing Pp paste
+# TODO: Missing {}[] navigation commands
 
-# FIXME: Missing a cancel download Ss set configuration
+# TODO: Missing a cancel download Ss set configuration
 # NOTE: Cannot scroll half page down (C-d)
 keymap d CLOSE_TAB
-# FIXME: Missing F open link in new tab
+# TODO: Missing F open link in new tab
 keymap f LIST_MENU
 keymap C-f NEXT_PAGE
 keymap H PREV
@@ -34,11 +38,11 @@ keymap K PREV_TAB
 #keymap K TAB_LEFT
 keymap L NEXT
 keymap : COMMAND
-# FIXME: Missing extended hint mode
+# TODO: Missing extended hint mode
 
-# FIXME: Missing c close other tabs
-# FIXME: Missing Bb quickmarks
+# TODO: Missing c close other tabs
+# TODO: Missing Bb quickmarks
 keymap C-b PREV_PAGE
-# FIXME: Missing m save quickmarks
+# TODO: Missing m save quickmarks
 
-# FIXME: Missing modifier commands
+# TODO: Missing modifier commands

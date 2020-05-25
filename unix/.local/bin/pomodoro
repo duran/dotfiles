@@ -1,0 +1,10 @@
+#!/bin/sh
+# poor's man pomodoro
+# FIXME: Improve
+
+while true; do
+  notify-send 'WORK. You have 25 minutes'
+  sleep 1500 
+  notify-send 'BREAK. You have 5 minutes'
+  sleep 300;
+done;

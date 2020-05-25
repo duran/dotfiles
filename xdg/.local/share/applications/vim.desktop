@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=vim
+Exec=vim -- %F
+TryExec=vim
+GenericName=Text Editor
+Terminal=true

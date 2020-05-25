@@ -1,7 +1,0 @@
-! Theme
-#include ".x/resources/molokai.theme"
-
-! Terminals
-#include ".x/resources/urxvt"
-#include ".x/resources/uxterm"
-#include ".x/resources/xterm"

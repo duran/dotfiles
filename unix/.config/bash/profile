@@ -1,0 +1,12 @@
+# Bash
+#   1. /etc/profile (login) OR /etc/bash.bashrc (non-login, interactive)
+#   2. ~/.bashrc (remote like scp OR non-login, interactive) OR ~/.bash_profile (login) OR ~/.bash_login (login) OR ~/.profile (login)
+#   3. $BASH_ENV (non-login, non-interactive)
+#   3. runs...
+#   4. ~/.bash_logout (login)
+# from:  https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html
+
+# Load POSIX interactive conf.
+test "$ENV" && . "${XDG_CONFIG_HOME:-$HOME/.config}/sh/profile"
+
+. "${XDG_CONFIG_HOME:-$HOME/.config}/bash/interactive"

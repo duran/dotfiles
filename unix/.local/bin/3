@@ -1,0 +1,4 @@
+#!/bin/sh
+# fork and ignore
+
+0 1 2 "$@"

@@ -1,0 +1,44 @@
+# TODO: Copy this to a .bashrc template
+# bash uses .bashrc if called from ssh
+test "${-#*i}" = "$-" && return
+
+# Load POSIX interactive instructions
+test "$ENV" && . "$ENV"
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+# NOTE: MacOS do not update Bash from 3 to 4 so I cannot use this unfortunately
+# shopt -s globstar
+
+# add completition to things that I use all time
+complete -c sudo man k
+complete -acb -A function type t
+
+# go back to last directory
+# alias -=... does not work in new repositories (it has options) while -() and
+# alias -- -=... does not work in old ones, like dash
+
+alias -- -="cd -"
+
+# Add fzf support
+if command -v fzf >/dev/null 2>&1; then
+  _editline_fzf() {
+    READLINE_LINE="$(history | cut -c 8- | fzf --tac --no-sort --query="$READLINE_LINE")"
+    READLINE_POINT="${#READLINE_LINE}"
+  }
+  bind -x '"\C-R": _editline_fzf'
+
+  _rangerbookmarks_fzf() {
+    # TODO: Clean this
+    cd $(grep -Po '(?<=:).+' "$HOME/.local/share/ranger/bookmarks" | fzf)
+  }
+  bind -x '"\C-R": _editline_fzf'
+  bind -x '"\C-Semicolon": _editline_fzf'
+fi

@@ -1,0 +1,104 @@
+# This file represent the environmental variables for a "pet" machine. This
+# setup have been tested in the following situations.
+
+
+# | OS    | Situation         | Login | Interactive |
+# |:------|:------------------|:------|:------------|
+# | Linux | Terminal          | Yes   | Yes         |
+# | Linux | Xorg              | Yes   | No          |
+# |       | Terminal emulator | No    | Yes         |
+# | MacOS | Terminal emulator | Yes   | Yes         |
+
+
+# TODO: Explain XDG Base directory + SSH rc file relationships
+# https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html#introduction
+# https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch08_04.htm
+
+########
+# Base #
+########
+export PATH="$PATH:$HOME/.local/bin" # Personal scripts in path
+
+
+#########
+# Shell #
+#########
+# The configuration of the Bourne shell is straightforwards. We try to maintain
+# compatibility for simplicity sake.
+# Later shells changed where they look for configuration files. Bash (the shell
+# I use) is one of the worse offenders: most of the files in the root folder are
+# there to assure that Bash do what we want it to do.
+
+# Bourne Shell (POSIX)
+#   1. ~/.profile (login)
+#   2. $ENV (interactive)
+#   3. runs...
+# from:  https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html
+# Load POSIX interactive conf.
+export ENV="${XDG_CONFIG_HOME:-$HOME/.config}/sh/interactive"
+# History size
+export HISTSIZE=5000
+# No maximum size in history size
+export HISTFILESIZE=-1
+#ignoreboth:erasedups# no lines starting with space, no dups
+export HISTCONTROL=ignorespace 
+#export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history"
+
+##########
+# Editor #
+##########
+# Line editor conf (readline)
+export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/readline.conf"
+# CLI editor
+export EDITOR='vim -E'
+# TUI editor
+export VISUAL=vim
+
+#########
+# Pager #
+#########
+# TODO: Check key bindings
+export PAGER=less
+
+export LESS=-R
+export LESSHISTFILE=-
+
+LESS_TERMCAP_mb=$(printf '\E[1;31m')     # begin bold
+LESS_TERMCAP_md=$(printf '\E[1;36m')     # begin blink
+LESS_TERMCAP_me=$(printf '\E[0m')        # reset bold/blink
+LESS_TERMCAP_so=$(printf '\E[01;44;33m') # begin reverse video
+LESS_TERMCAP_se=$(printf '\E[0m')        # reset reverse video
+LESS_TERMCAP_us=$(printf '\E[1;32m')     # begin underline
+LESS_TERMCAP_ue=$(printf '\E[0m')        # reset underline
+
+export LESS_TERMCAP_mb
+export LESS_TERMCAP_md
+export LESS_TERMCAP_me
+export LESS_TERMCAP_so
+export LESS_TERMCAP_se
+export LESS_TERMCAP_us
+export LESS_TERMCAP_ue
+
+#########
+# Other #
+#########
+export BROWSER=w3m     # Browser
+export MAILER=mutt     # Mail client
+export TERMCMD=ttyterm # Terminal
+export TERMINAL="$TERMCMD"
+
+# GNU ls (created with dircolors over .dir_colors and used with ls --colors)
+export LS_COLORS='no=00:fi=00:mh=01:ex=01;31:su=31;43:sg=31;43:ca=31;43:di=01;34:st=34;43:ln=01;36:or=36;41:mi=36;41:pi=01;32:so=01;32:do=01;32:bd=01;33:cd=01;33:'
+# BSD ls
+export CLICOLOR=1
+export LSCOLORS=ExGxFxdxCxDxDxxbaDecac
+
+# FZF
+export FZF_DEFAULT_COMMAND='fd --hidden --exclude .git'
+export FZF_DEFAULT_OPTS='--bind=ctrl-j:accept'
+
+# Ipython
+export IPYTHONDIR="${XDG_CONFIG_HOME:-$HOME/.config}/ipython"
+
+# Homebrew
+export HOMEBREW_NO_ANALYTICS=1

@@ -1,0 +1,4 @@
+#!/bin/sh
+# filter stdout
+
+1>/dev/null "${@}"

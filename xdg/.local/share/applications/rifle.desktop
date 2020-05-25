@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Rifle
+Exec=env -u DISPLAY rifle %F
+TryExec=rifle
+GenericName=File Opener

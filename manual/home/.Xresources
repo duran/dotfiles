@@ -1,0 +1,6 @@
+! Theme
+#include ".config/x/themes/molokai"
+
+! Terminals
+#include ".config/x/deprecated/urxvt"
+#include ".config/x/resources"

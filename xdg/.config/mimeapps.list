@@ -1,0 +1,84 @@
+[Default Applications]
+# TODO: scheme handlers
+###############
+# Local files #
+###############
+# Dumped everything from the official MIME handlers to here: https://docs.w3cub.com/http/basics_of_http/mime_types/complete_list_of_mime_types/
+# Text
+text/plain=less.desktop
+application/ecmascript=less.desktop
+application/javascript=less.desktop
+application/json=less.desktop
+text/css=less.desktop
+text/csv=less.desktop
+application/typescript=less.desktop
+text/markdown=less.desktop
+text/calendar=less.desktop
+application/xml=less.desktop
+text/html=firefox.desktop
+application/xhtml+xml=firefox.desktop
+# Documents (containers)
+application/pdf=zathura.desktop
+application/epub+zip=zathura.desktop
+application/postscript=zathura.desktop
+image/vnd.djvu=zathura.desktop
+# Image
+image/bmp=sxiv.desktop
+image/gif=sxiv.desktop
+image/jpeg=sxiv.desktop
+image/png=sxiv.desktop
+image/svg+xml=sxiv.desktop
+image/tiff=sxiv.desktop
+image/webp=sxiv.desktop
+image/x-icon=sxiv.desktop
+# Audio/Video
+audio/aac=mpv.desktop
+audio/ogg=mpv.desktop
+audio/wav=mpv.desktop
+audio/webm=mpv.desktop
+audio/x-midi=mpv.desktop
+video/3gpp2=mpv.desktop
+video/3gpp=mpv.desktop
+video/mpeg=mpv.desktop
+video/ogg=mpv.desktop
+video/webm=mpv.desktop
+video/x-msvideo=mpv.desktop
+video/mp4=mpv.desktop
+
+
+application/java-archive=rifle.desktop
+application/msword=rifle.desktop
+application/octet-stream=rifle.desktop
+application/octet-stream=rifle.desktop
+application/ogg=rifle.desktop
+application/rtf=rifle.desktop
+application/vnd.amazon.ebook=rifle.desktop
+application/vnd.apple.installer+xml=rifle.desktop
+application/vnd.mozilla.xul+xml=rifle.desktop
+application/vnd.ms-excel=rifle.desktop
+application/vnd.ms-fontobject=rifle.desktop
+application/vnd.ms-powerpoint=rifle.desktop
+application/vnd.oasis.opendocument.presentation=rifle.desktop
+application/vnd.oasis.opendocument.spreadsheet=rifle.desktop
+application/vnd.oasis.opendocument.text=rifle.desktop
+application/vnd.openxmlformats-officedocument.presentationml.presentation=rifle.desktop
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=rifle.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=rifle.desktop
+application/vnd.visio=rifle.desktop
+application/x-7z-compressed=rifle.desktop
+application/x-abiword=rifle.desktop
+application/x-bzip2=rifle.desktop
+application/x-bzip=rifle.desktop
+application/x-csh=rifle.desktop
+application/x-rar-compressed=rifle.desktop
+application/x-sh=rifle.desktop
+application/x-shockwave-flash=rifle.desktop
+application/x-tar=rifle.desktop
+application/zip=rifle.desktop
+font/otf=rifle.desktop
+font/ttf=rifle.desktop
+font/woff2=rifle.desktop
+font/woff=rifle.desktop
+
+# TODO:Office
+# X, has libreoffice, ext od[dfgpst]|docx?|sxc|xlsx?|xlt|xlw|gnm|gnumeric, flag f = libreoffice "$@"

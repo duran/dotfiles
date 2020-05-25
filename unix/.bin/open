@@ -1,4 +1,0 @@
-#!/bin/sh
-# Opens a file
-
-rifle "$@"

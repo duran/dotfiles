@@ -1,0 +1,8 @@
+# Load POSIX interactive instructions
+test "$ENV" && . "$ENV"
+
+# Just give me the closest you have to bash
+emulate -R sh
+
+# Including the Emacs-like editor
+bindkey -e

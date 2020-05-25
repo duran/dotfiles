@@ -1,4 +1,0 @@
-#!/bin/sh
-# spawn process, disown it
-
-setsid "$@" >/dev/null 2>&1 &
