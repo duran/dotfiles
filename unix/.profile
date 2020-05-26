@@ -24,7 +24,7 @@
 # Enviromental variables
 
 export ENV="$HOME/.config/sh/rc" # If interactive, load POSIX configuration
-export PATH="$PATH:$HOME/.bin"   # Personal scripts in path
+export PATH="$PATH:$HOME/.local/bin"   # Personal scripts in path
 export LANG='en_IE.utf8'         # Main locale: language and standarization 
 export LANGUAGE='en_US.utf8'     # Fallback locale (you can overwrite both setting with LC_ALL)
 

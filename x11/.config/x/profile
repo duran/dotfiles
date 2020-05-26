@@ -16,7 +16,7 @@ xset m 2 0
 # Change layout to US International English
 setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
 # Ctrl -> CapsLock -> LeftShift; OS -> Alt
-xmodmap "$HOME/.x/modmap"
+xmodmap "$HOME/.config/x/modmap"
 
 # Load X config local configuration
 test -f "$HOME/.xrc" && . "$HOME/.xrc"

@@ -1,0 +1,8 @@
+#!/bin/sh
+# Opens a file
+
+if "$TERM" = linux; then
+  rifle -p framebuffer -- "$@"
+else
+  rifle -- "$@"
+fi
