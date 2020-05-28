@@ -1,7 +1,7 @@
 #!/bin/sh
 # Opens a file
 
-if "$TERM" = linux; then
+if test "$TERM" = linux; then
   rifle -p framebuffer -- "$@"
 else
   rifle -- "$@"
