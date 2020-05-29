@@ -29,8 +29,10 @@ complete -acb -A function type t
 alias -- -="cd -"
 
 # Add fzf support
-if test -d "$FZF_HOME"; then
-  . "$FZF_HOME/shell/completion.bash" 2> /dev/null 
-  . "$FZF_HOME/shell/key-bindings.bash"
-  test -f "$HOME/.fzf.bash" && . "$HOME/.fzf.bash"
+if command -v fzf >/dev/null 2>&1; then
+  _editline_fzf() {
+    READLINE_LINE="$(history | cut -c 8- | fzf --tac --query="$READLINE_LINE")"
+    READLINE_POINT="${#READLINE_LINE}"
+  }
+  bind -x '"\C-R": _editline_fzf'
 fi

@@ -119,8 +119,7 @@ bindsym $mod+m bar mode toggle
 
 # FIXME: check out this section
 for_window [urgent=latest] focus
-# for_window [class="Manjaro-hello"] floating enable
-# for_window [title="Manjaro-hello"] floating enable
+for_window [class="jetbrains-idea" title="win0"] floating enable;
 # Screen brightness controls
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
@@ -221,7 +220,6 @@ bindsym $mod+F11 exec true
 bindsym $mod+F12 exec true
 
 # FIXME: Revise these options
-bindsym $mod+Ctrl+b exec "$TERMCMD -e bmenu"
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -317,15 +315,10 @@ client.background       #2B2C2B
 exec --no-startup-id xautolock -time 120 -locker blurlock
 
 # Set backgroud
-# FIXME: Do I need picom? Substitute nitrogen with feh.
-# Check https://faq.i3wm.org/question/3279/do-i-need-a-composite-manager-compton.1.html
+# NOTE: xsetroot does not work with picom. If you want images use feh or nitrogen.
 # exec --no-startup-id xsetroot -solid "#333333"
-# exec --no-startup-id feh --bg-scale /path/to/image
+exec --no-startup-id hsetroot -solid '#FFFFFF'; sleep 1; picom -b
 
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
-
-# FIXME: Pamac monitorizes and messages when there is something to upadate. It is daemon and run constantly. Change this for a pacman command that says how many packages I need just once
-# exec --no-startup-id pamac-tray
 
 # FIXME: I do not know if this is neccesary
 exec --no-startup-id nm-applet
