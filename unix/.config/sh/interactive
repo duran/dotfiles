@@ -17,6 +17,3 @@ PS2='> '
 
 # functions
 . "$HOME/.config/sh/functions"
-
-# local configuration
-test -f "$HOME/.shrc" && . "$HOME/.shrc"

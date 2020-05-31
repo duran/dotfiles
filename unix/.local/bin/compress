@@ -1,10 +1,10 @@
 #!/bin/sh
 # Compress files
 
-if command -v rifle >/dev/null 2>&1; then
-  rifle -p compressor "$@"
-elif command -v tar >/dev/null 2>&1; then
+if command -v tar >/dev/null 2>&1; then
   tar cJf archive.tar.xz "$@"     
+elif command -v tar >/dev/null 2>&1; then
+  tar czf archive.tar.bz "$@"     
 elif command -v zip >/dev/null 2>&1; then
-  zip archive.zip "$@"
+  zip -r archive.zip "$@"
 fi

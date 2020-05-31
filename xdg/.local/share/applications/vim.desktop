@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Vim
-Exec=vim -- %F
-TryExec=vim
-Terminal=true
-GenericName=Text Editor
-Comment=Classic Vi Improved in terminal
-Keywords=C;TUI;Vim;

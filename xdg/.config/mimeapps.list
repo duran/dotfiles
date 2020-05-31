@@ -1,56 +1,70 @@
 [Default Applications]
-#########
-# Files #
-#########
-# Generics
-# TODO: Pager, Editor, Visual, Browser, File Manager, etc.
-# Documents
-text/plain=vim.desktop
-text/markdown=vim.desktop
-application/pdf=zathura.desktop
-application/postscript=zathura.desktop
-application/epub+zip=zathura.desktop
-# Video
-# TODO
-# Audio
-# TODO
-# Webpages
-# TODO
-
-########
-# URIs #
-########
-
-epub
-
-# TODO: djvu, mobi
-# TODO: terminal pdftotext | ps2ascii | epub2txt | 
-
-
-# TODO
-x-scheme-handler/http=firefox-developer-edition.desktop
-x-scheme-handler/https=firefox-developer-edition.desktop
-x-scheme-handler/ftp=firefox-developer-edition.desktop
-x-scheme-handler/chrome=firefox-developer-edition.desktop
-text/html=firefox-developer-edition.desktop
-application/x-extension-htm=firefox-developer-edition.desktop
-application/x-extension-html=firefox-developer-edition.desktop
-application/x-extension-shtml=firefox-developer-edition.desktop
-application/xhtml+xml=firefox-developer-edition.desktop
-application/x-extension-xhtml=firefox-developer-edition.desktop
-application/x-extension-xht=firefox-developer-edition.desktop
-text
-
-[Added Associations]
-# TODO
-x-scheme-handler/http=firefox-developer-edition.desktop;
-x-scheme-handler/https=firefox-developer-edition.desktop;
-x-scheme-handler/ftp=firefox-developer-edition.desktop;
-x-scheme-handler/chrome=firefox-developer-edition.desktop;
-text/html=firefox-developer-edition.desktop;
-application/x-extension-htm=firefox-developer-edition.desktop;
-application/x-extension-html=firefox-developer-edition.desktop;
-application/x-extension-shtml=firefox-developer-edition.desktop;
-application/xhtml+xml=firefox-developer-edition.desktop;
-application/x-extension-xhtml=firefox-developer-edition.desktop;
-application/x-extension-xht=firefox-developer-edition.desktop;
+# TODO: scheme handlers
+# Dumped everything from the official MIME handlers to here: https://docs.w3cub.com/http/basics_of_http/mime_types/complete_list_of_mime_types/
+application/ecmascript=fo.desktop
+application/epub+zip=fo.desktop
+application/java-archive=fo.desktop
+application/javascript=fo.desktop
+application/json=fo.desktop
+application/msword=fo.desktop
+application/octet-stream=fo.desktop
+application/octet-stream=fo.desktop
+application/ogg=fo.desktop
+application/pdf=fo.desktop
+application/rtf=fo.desktop
+application/typescript=fo.desktop
+application/vnd.amazon.ebook=fo.desktop
+application/vnd.apple.installer+xml=fo.desktop
+application/vnd.mozilla.xul+xml=fo.desktop
+application/vnd.ms-excel=fo.desktop
+application/vnd.ms-fontobject=fo.desktop
+application/vnd.ms-powerpoint=fo.desktop
+application/vnd.oasis.opendocument.presentation=fo.desktop
+application/vnd.oasis.opendocument.spreadsheet=fo.desktop
+application/vnd.oasis.opendocument.text=fo.desktop
+application/vnd.openxmlformats-officedocument.presentationml.presentation=fo.desktop
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=fo.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=fo.desktop
+application/vnd.visio=fo.desktop
+application/x-7z-compressed=fo.desktop
+application/x-abiword=fo.desktop
+application/x-bzip2=fo.desktop
+application/x-bzip=fo.desktop
+application/x-csh=fo.desktop
+application/x-rar-compressed=fo.desktop
+application/x-sh=fo.desktop
+application/x-shockwave-flash=fo.desktop
+application/x-tar=fo.desktop
+application/xhtml+xml=fo.desktop
+application/xml=fo.desktop
+application/zip=fo.desktop
+audio/aac=fo.desktop
+audio/ogg=fo.desktop
+audio/wav=fo.desktop
+audio/webm=fo.desktop
+audio/x-midi=fo.desktop
+font/otf=fo.desktop
+font/ttf=fo.desktop
+font/woff2=fo.desktop
+font/woff=fo.desktop
+image/bmp=fo.desktop
+image/gif=fo.desktop
+image/jpeg=fo.desktop
+image/png=fo.desktop
+image/svg+xml=fo.desktop
+image/tiff=fo.desktop
+image/webp=fo.desktop
+image/x-icon=fo.desktop
+text/calendar=fo.desktop
+text/css=fo.desktop
+text/csv=fo.desktop
+text/html=fo.desktop
+text/plain=fo.desktop
+video/3gpp2=fo.desktop
+video/3gpp=fo.desktop
+video/mpeg=fo.desktop
+video/ogg=fo.desktop
+video/webm=fo.desktop
+video/x-msvideo=fo.desktop
+video=fo.desktop
+video=fo.desktop

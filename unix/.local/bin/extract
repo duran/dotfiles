@@ -1,11 +1,6 @@
 #!/bin/sh
 # extract archive
 
-if command -v rifle >/dev/null 2>&1; then
-  rifle -p extractor "$@"
-  exit $?
-fi
-
 for f in "$@"; do
   if [ -f "$f" ] ; then
     case "$f" in

@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=less
-Exec=less -- %F
-TryExec=less
-Terminal=true
-GenericName=Text Pager
-Comment=Standard TUI pager for *nix systems
-Keywords=C;TUI;BSD;

@@ -1,4 +1,0 @@
-#!/bin/sh
-# Spellchecker for programming and natural languages
-
-rifle -p linter "$@"

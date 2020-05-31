@@ -11,13 +11,11 @@ Under an hour:
 * :help undo-persistence
 * sync piknik and x clipboard
 * turn on gnupg
-* mime.types
 * aria2c
 * check different line disciplines in Linux/Unix
 * git with patches
 * perf command in linux
 * joblib check out
-* alias for git ls-tree, cat-file, hash-object, write-tree, ls-files, show-branch, git orphan, git stash, git-fsck
 * add kebab-case, camel-case, snake-case, etc.
 * harden ssh vps
 * add epdfview, pcmanfm and nmtui
@@ -39,8 +37,6 @@ Under a long weekend:
 * urlview + rifle
 * autodownload with youtube-dl and put everything in place
     - newsboat check gotbletu to make it a general download manager
-
-
 
 * learn the basics of remote system control as Ansible or Saltstack 
 * Add man pages to my stuff
