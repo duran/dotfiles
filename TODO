@@ -2,14 +2,13 @@ Actions in this todo list are sorted by degree of difficulty and time:
 
 Under an hour:
 * qutebrowser not linked to terminal and not echoing to stdout
-* modify status line tmux
 * open question nvlc and custom mappings
 * think where to put loadkeys and setxkb
 * check setkdbmap with -device, xinput and /usr/include/X11/keysymdef.h
 * also xvkdb (to modify stuff) and xbindkeys (to run shell commands, globally) xbindkeys ( http://xahlee.info/linux/linux_set_F2_F3_F4_to_cut_copy_paste.html
 * git reflog
 * :help undo-persistence
-* sync piknik and x clipboard
+* sync piknik, vim, tmux and x clipboard
 * turn on gnupg
 * aria2c
 * check different line disciplines in Linux/Unix

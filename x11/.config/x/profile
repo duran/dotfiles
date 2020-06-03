@@ -2,12 +2,14 @@
 # Technically this should be in .xprofile
 # If this does not work with your distribution you could try to put this thing in .xsession, .xinitrc, or .profile_local
 
-# FIXME: I am not 100% sure that I should put this here instead in .profile,
-# first I am wary of race conditions, second, I do not need a WM in a desktop
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
+
+# TODO: Check that this works
+# https://www.daniloaz.com/en/how-to-prevent-the-xsession-errors-file-from-growing-to-huge-size/
+ERRFILE=/dev/null
+
 
 export TERMCMD=uxterm                               # Terminal
+export TERMINAL=uxterm                              # Terminal
 export BROWSER='qutescript open_url_in_instance.sh' # Browser
 
 # Make the keyboard repead delay and speed
