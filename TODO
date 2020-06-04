@@ -14,11 +14,9 @@ Under an hour:
 * check different line disciplines in Linux/Unix
 * git with patches
 * perf command in linux
-* joblib check out
-* add kebab-case, camel-case, snake-case, etc.
 * harden ssh vps
 * add epdfview, pcmanfm and nmtui
-* revise desktop folder + remove TODO + i3 + nitrogen/feh
+* remove TODO + i3
 
 Under a day:
 * Try POSIXLY_CORRECT

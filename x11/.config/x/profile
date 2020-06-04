@@ -12,6 +12,19 @@ export TERMCMD=uxterm                               # Terminal
 export TERMINAL=uxterm                              # Terminal
 export BROWSER='qutescript open_url_in_instance.sh' # Browser
 
+# NOTE: This does not seems to work anymore.
+if command -v wmname >/dev/null 2>&1; then
+  # FOr no re-parenting window managers
+  # https://en.wikipedia.org/wiki/Re-parenting_window_manager
+  export _JAVA_AWT_WM_NONREPARTENTING=1
+  export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
+  # JDK programs (mostly swing) might fail even if you tell them bout
+  # reparenting.
+  # Make them think that they are in some old Sun 3D Desktop environment.
+  # https://tools.suckless.org/x/wmname/
+  wmname LG3D
+fi
+
 # Make the keyboard repead delay and speed
 #xset r rate 220 160
 xset m 2 0

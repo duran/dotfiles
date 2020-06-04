@@ -1,17 +1,17 @@
-|                 |Terminal Emulator|Terminal|X11|
-|:--              |:--|:--|:--|
-|Web Browser      |-|w3m|Firefox|
-|Terminal Emulator|N/A|N/A|UXTerm|
-|Basic Text Editor|Vim|Vim|gVim|
-|IDE              |-|-|IDEA|
-|File manager     |Ranger|Midnight Commander|PCMan|
-|Window Manager   |Tmux|Tmux|i3|
-|PDF Reader       |pdftotext|Fbpdf|Zathura|
-|Photo Viewer     |-|Fbi|SXIV|
-|Video Player     |mpv|mpv|mpv|
-|Music Player     |mpv|mpv|mpv|
-|Email Client     |-|-|-|
-|Messaging Client |-|-|-|
-|Calendar         |-|-|-|
-|Screen recording |-|-|-|
-|Office Suite     |-|-|-|
+|                 |\*nix                                    |X11|
+|:----------------|:----------------------------------------|:--|
+|Web Browser      |[w3m](http://w3m.sourceforge.net/)       |[Firefox](https://www.mozilla.org/en-US/firefox/new/)|
+|Terminal Emulator|[Tmux](https://github.com/tmux/tmux/wiki)|[XTerm](https://invisible-island.net/xterm/)|
+|Basic Text Editor|[Vim](https://www.vim.org/)              |[Vim](https://www.vim.org/)|
+|IDE              |                                         |[IDEA](https://www.jetbrains.com/idea/)|
+|File manager     |[Ranger](https://ranger.github.io/)      |[PCManFM](https://wiki.lxde.org/en/PCManFM)|
+|Window Manager   |[Tmux](https://github.com/tmux/tmux/wiki)|[i3](https://i3wm.org/)|
+|PDF Reader       |pdftotext                                |[Zathura](https://pwmt.org/projects/zathura/)|
+|Photo Viewer     |                                         |[SXIV](https://github.com/muennich/sxiv)|
+|Video Player     |[mpv](https://mpv.io/)                   |[mpv](https://mpv.io/)|
+|Music Player     |[mpv](https://mpv.io/)                   |[mpv](https://mpv.io/)|
+|Email Client     |||
+|Messaging Client |||
+|Calendar         |||
+|Screen recording |||
+|Office Suite     |||

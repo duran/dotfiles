@@ -1,6 +1,38 @@
 [Default Applications]
 # TODO: scheme handlers
+###############
+# Local files #
+###############
 # Dumped everything from the official MIME handlers to here: https://docs.w3cub.com/http/basics_of_http/mime_types/complete_list_of_mime_types/
+# Text
+text/calendar=less.desktop
+text/css=less.desktop
+text/csv=less.desktop
+text/html=less.desktop
+text/plain=less.desktop
+# Image
+image/bmp=sxiv.desktop
+image/gif=sxiv.desktop
+image/jpeg=sxiv.desktop
+image/png=sxiv.desktop
+image/svg+xml=sxiv.desktop
+image/tiff=sxiv.desktop
+image/webp=sxiv.desktop
+image/x-icon=sxiv.desktop
+# Audio/Video
+audio/aac=mpv.desktop
+audio/ogg=mpv.desktop
+audio/wav=mpv.desktop
+audio/webm=mpv.desktop
+audio/x-midi=mpv.desktop
+video/3gpp2=mpv.desktop
+video/3gpp=mpv.desktop
+video/mpeg=mpv.desktop
+video/ogg=mpv.desktop
+video/webm=mpv.desktop
+video/x-msvideo=mpv.desktop
+video/mp4=mpv.desktop
+# Applications
 application/ecmascript=fo.desktop
 application/epub+zip=fo.desktop
 application/java-archive=fo.desktop
@@ -38,33 +70,7 @@ application/x-tar=fo.desktop
 application/xhtml+xml=fo.desktop
 application/xml=fo.desktop
 application/zip=fo.desktop
-audio/aac=fo.desktop
-audio/ogg=fo.desktop
-audio/wav=fo.desktop
-audio/webm=fo.desktop
-audio/x-midi=fo.desktop
 font/otf=fo.desktop
 font/ttf=fo.desktop
 font/woff2=fo.desktop
 font/woff=fo.desktop
-image/bmp=fo.desktop
-image/gif=fo.desktop
-image/jpeg=fo.desktop
-image/png=fo.desktop
-image/svg+xml=fo.desktop
-image/tiff=fo.desktop
-image/webp=fo.desktop
-image/x-icon=fo.desktop
-text/calendar=fo.desktop
-text/css=fo.desktop
-text/csv=fo.desktop
-text/html=fo.desktop
-text/plain=fo.desktop
-video/3gpp2=fo.desktop
-video/3gpp=fo.desktop
-video/mpeg=fo.desktop
-video/ogg=fo.desktop
-video/webm=fo.desktop
-video/x-msvideo=fo.desktop
-video=fo.desktop
-video=fo.desktop

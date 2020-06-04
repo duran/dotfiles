@@ -5,3 +5,4 @@ Exec=open %F
 TryExec=open
 GenericName=File Opener
 Comment=Custom (non-XDG) file opener
+

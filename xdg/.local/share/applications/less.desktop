@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=less
+Exec=less -- %F
+TryExec=less
+GenericName=Text Pager
+Comment=Vim-like text pager
+Terminal=true
