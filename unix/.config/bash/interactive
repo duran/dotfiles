@@ -1,4 +1,4 @@
-# TODO: Move this to a .bashrc template
+# TODO: Copy this to a .bashrc template
 # bash uses .bashrc if called from ssh
 test "${-#*i}" = "$-" && return
 

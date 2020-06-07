@@ -10,10 +10,10 @@ fi
 PS2='> '  
 
 # modify workstation (terminal) parameters
-. "$HOME/.config/sh/tty"
+. "${XDG_CONFIG_HOME:-$HOME/.config}/sh/tty"
 
 # aliases
-. "$HOME/.config/sh/aliases"
+. "${XDG_CONFIG_HOME:-$HOME/.config}/sh/aliases"
 
 # functions
-. "$HOME/.config/sh/functions"
+. "${XDG_CONFIG_HOME:-$HOME/.config}/sh/functions"

@@ -1,4 +1,4 @@
-" Abbreviations
+" Machine custom config
 "
 " Only not related to any particular filetype
 
