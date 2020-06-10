@@ -8,9 +8,9 @@
 ERRFILE=/dev/null
 
 
-export TERMCMD=uxterm                               # Terminal
-export TERMINAL=uxterm                              # Terminal
-export BROWSER='qutescript open_url_in_instance.sh' # Browser
+export TERMCMD=xterm   # Terminal
+export TERMINAL=xterm  # Terminal
+export BROWSER=firefox # Browser
 
 # NOTE: This does not seems to work anymore.
 if command -v wmname >/dev/null 2>&1; then

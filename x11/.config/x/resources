@@ -19,6 +19,8 @@ Xft.lcdfilter: lcdfilter
 ! Xterm !
 !!!!!!!!!
 
+! Use modern terminal emulation to get Sixel support
+XTerm*decTerminalID: vt340
 
 ! Show that we can accept 256 colors.
 XTerm.termName: xterm-256color
@@ -38,8 +40,6 @@ XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]]
 ! XTerm*altSendsEscape:  true
 XTerm*metaSendsEscape: true
 
-! Do not add Alt-Enter to fullscreen
-XTerm*fullscreen: never
 
 
 ! Increase the buffer.
@@ -51,12 +51,17 @@ XTerm*scrollTtyOutput: false
 ! Do not scroll when inside an secondary screen (like less)
 XTerm*alternateScroll: true
 
+! Change refresh rate when scrolling over high amounts of text.
+XTerm*fastScroll: true
+
 ! Show scrollbar
 ! XTerm*scrollBar: true
 ! XTerm*scrollBar.width: 8
 ! XTerm*rightScrollBar: true
 ! Xfont 1-6 for sizes
 
+! Do not add Alt-Enter to fullscreen
+XTerm*fullscreen: never
 
 ! New keybindings
 XTerm*translations: #override \
@@ -71,6 +76,8 @@ XTerm*translations: #override \
 !                 xft:Monospace:style=Medium:size=12
 ! XTerm*faceSize: 20
 ! XTerm*locale: true
+
+! FIXME: Remove
 
 ! Colors
 ! XTerm*background:   white
@@ -110,4 +117,5 @@ XTerm*faceName: Terminus:pixelsize=14
 ! XTerm*font: -*-terminus-medium-r-*-*-14-*-*-*-*-*-iso10646-1
 !XTerm*font: -*-terminus-medimm-*-*-*-18-*-*-*-*-*-iso10646-1
 ! Xterm*loginshell: true
+
 
