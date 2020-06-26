@@ -64,6 +64,7 @@ XTerm*fastScroll: true
 XTerm*fullscreen: never
 
 ! New keybindings
+! FIXME: Remove ctrl-mouse keybindings
 XTerm*translations: #override \
     <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
     Shift <Btn1Up>: exec-formatted("firefox-developer-edition '%t'", CLIPBOARD) \n\
@@ -102,20 +103,15 @@ XTerm*translations: #override \
 ! XTerm*color14: cyan
 ! XTerm*color15: white
 
-! Default font
-! XTerm*fonts: .VT100.font5
-! XTerm*faceName: .VT100.font5
-! XTerm*faceSize: 10
-
-
 ! XTerm*scrollTtyOutput: true
 !XTerm*faceName: SF Mono
 !XTerm*faceSize: 11
-XTerm*faceName: Terminus:pixelsize=14
 !XTerm*faceName: Unifont:pixelsize=14
-! *faceName: Terminus
-! XTerm*font: -*-terminus-medium-r-*-*-14-*-*-*-*-*-iso10646-1
-!XTerm*font: -*-terminus-medimm-*-*-*-18-*-*-*-*-*-iso10646-1
 ! Xterm*loginshell: true
+! XTerm*faceName: Terminus:pixelsize=14
 
+! XTerm*renderFont: false
+! XTerm*font: *-fixed-*-*-*-14-*
+XTerm*font: -*-terminus-medium-r-*-*-16-*-*-*-*-*-iso10646-1
+XTerm*allowBoldFonts: false
 
