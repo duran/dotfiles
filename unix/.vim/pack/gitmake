@@ -1,1 +1,1 @@
-clone https://github.com/junegunn/fzf.vim.git git/opt/fzf.vim
+clone https://github.com/junegunn/fzf.vim.git git/start/fzf.vim
