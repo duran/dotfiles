@@ -97,6 +97,9 @@ export TERMINAL="$TERMCMD"
 
 # GNU ls (created with dircolors over .dir_colors and used with ls --colors)
 export LS_COLORS='no=00:fi=00:mh=01:ex=01;31:su=31;43:sg=31;43:ca=31;43:di=01;34:st=34;43:ln=01;36:or=36;41:mi=36;41:pi=01;32:so=01;32:do=01;32:bd=01;33:cd=01;33:'
+# BSD ls
+export CLICOLOR=1
+export LSCOLORS=ExGxFxdxCxDxDxxbaDecac
 
 # FZF
 # TODO: Check if FZF_HOME neccesary in vim
