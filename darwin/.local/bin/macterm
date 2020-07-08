@@ -1,0 +1,16 @@
+#!/usr/bin/osascript -l JavaScript
+// A launcher for Terminal.app
+// Still a little bit rough in the edges
+ObjC.import("stdlib");
+
+const path = $.getenv("PWD");
+const term = Application("Terminal");
+
+function run(argv){
+    const command = argv
+        .slice(argv.indexOf('-e') + 1) // get main command (if caller follows Xterm/Linux traditional flags)
+        .map(v => v.replace(/[^a-zA-Z0-9,._+:@%/-]/g, "\\\$1")) // escape all but a subset of safe characters
+        .join(" "); // create the string
+
+    term.doScript(` cd ${path}; exec ` + command);
+};
