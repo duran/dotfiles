@@ -1,9 +1,0 @@
-#!/bin/sh
-# Archives a webpage
-# FIXME: It only works in youtube at the moment
-
-youtube-dl --download-archive archive.txt --no-post-overwrites -ciw "$@"
-#alias archive='wget --recursive --level=1 --no-directories --wait 5 --no-host-directories --accept'
-# httrack 
-# sniper-rifle
-# html2pdf

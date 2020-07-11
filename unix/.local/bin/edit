@@ -1,4 +1,0 @@
-#!/bin/sh
-# Edits a file
-
-rifle -p editor "$@"

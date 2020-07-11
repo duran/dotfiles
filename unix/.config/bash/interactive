@@ -34,4 +34,11 @@ if command -v fzf >/dev/null 2>&1; then
     READLINE_POINT="${#READLINE_LINE}"
   }
   bind -x '"\C-R": _editline_fzf'
+
+  _rangerbookmarks_fzf() {
+    # TODO: Clean this
+    cd $(grep -Po '(?<=:).+' "$HOME/.local/share/ranger/bookmarks" | fzf)
+  }
+  bind -x '"\C-R": _editline_fzf'
+  bind -x '"\C-Semicolon": _editline_fzf'
 fi

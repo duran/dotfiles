@@ -1,9 +1,0 @@
-#!/bin/sh
-# list files in pager
-
-if [ $# -ne 0 ]
-then
-  find "$@" -maxdepth 1 -ls | $PAGER
-else
-  find .    -maxdepth 1 -ls | $PAGER
-fi

@@ -1,5 +1,0 @@
-#!/bin/sh
-# modify workstation (terminal) behavior
-
-# give back c-s and c-q. Check out XOFF and XON:(https://en.wikipedia.org/wiki/Software_flow_control)
-stty -ixon  -ixoff   
