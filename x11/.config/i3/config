@@ -122,8 +122,8 @@ for_window [urgent=latest] focus
 for_window [class="jetbrains-.*" title="win0"] floating enable;
 # FIXME: check out this section
 # Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 # Open specific applications in floating mode
 # for_window [title="alsamixer"] floating enable border pixel 1
 # for_window [class="(?i)virtualbox"] floating enable border normal
@@ -195,7 +195,7 @@ bindsym $mod+Shift+o exec --no-startup-id rofi -show ssh
 bindsym $mod+0 exec --no-startup-id rofi -show window
 
 # Clipboard (edit)
-bindsym $mod+e exec "$TERMCMD -e clipboard -e"
+bindsym $mod+e exec "$TERMCMD -e /bin/sh -c 'xsel --clipboard --output | vipe | xsel --clipboard --input'"
 
 # Screenshot
 bindsym Print                      exec --no-startup-id scrot    -e 'mv $f '"${TMPDIR:-$HOME}"; exec notify-send 'screenshot saved in '"${TMPDIR:-$HOME}" 

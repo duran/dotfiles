@@ -4,16 +4,10 @@
 echo "Started $(date +'%F at %T')"
 START=$(date +%s)
 
-while true
+while ! "$@"
 do
-  if "$@"
-  then
-    echo 'Done.'
-    exit
-  else
-    echo 'Failed, trying again in a minute.'
-    sleep 60
-  fi
+  echo 'Failed, trying again in a minute.'
+  sleep 60
 done
 
 echo "Finished $(date +'%F at %T')"
