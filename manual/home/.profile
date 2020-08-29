@@ -13,3 +13,6 @@ export LC_ALL=C
 
 # In the future we might to change the default config file
 export XDG_CONFIG_HOME="$HOME/.config"
+
+# For Bash only
+shopt -s globstar # recursive global match

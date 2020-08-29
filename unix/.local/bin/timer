@@ -1,4 +1,31 @@
 #!/bin/sh
-# A simple timer
+# A simple timer (accurate until seconds).
+# +infinite tries
 
-printf 'Timer started. Stop with Ctrl-D.\n' && date '+%a, %d %b %H:%M:%S' && time cat && date '+%a, %d %b %H:%M:%S'
+COMMAND="${@:-printf 'Timer started. Stop with Ctrl-D.\n';time cat}"
+
+printf "Started $(date +'%F at %T')\n\n"
+START=$(date +%s)
+while ! eval "$COMMAND"
+do
+  echo 'Failed, trying again in a minute.'
+  sleep 60
+done
+END=$(date +%s)
+printf "Finished $(date +'%F at %T')\n\n"
+
+TIME=$((END - START))
+printf 'It took %d days and %02d:%02d:%02d\n' $((TIME/86400)) $((TIME/3600)) $(((TIME%3600)/60)) $((TIME%60))
+
+exit
+
+
+
+while ! "$@"
+do
+  echo 'Failed, trying again in a minute.'
+  sleep 60
+done
+
+
+
