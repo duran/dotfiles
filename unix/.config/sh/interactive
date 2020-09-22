@@ -24,7 +24,6 @@ alias ssh-keygen='ssh-keygen -o -a 100 -t ed25519'
 # - _
 # + -
 #alias ,='mark default'
-alias 0='printf "$0\n"'
 # alias a=ask
 alias b='$BROWSER'
 alias c=compress
@@ -39,7 +38,7 @@ alias k=man
 #alias k=khal
 alias l='ls -CF'
 alias m='$MAILER'
-alias n=notes
+#alias n=notes
 alias o=open
 alias p='$PAGER'
 alias q=exit

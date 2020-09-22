@@ -17,7 +17,7 @@
 ########
 # Base #
 ########
-export PATH="$PATH:$HOME/.local/bin" # Personal scripts in path # TODO: Make this portable
+export PATH="$PATH:$HOME/.local/bin" # Personal scripts in path
 export LANG='en_IE.utf8'             # Main locale: language and standarization 
 export LANGUAGE='en_US.utf8'         # Fallback locale (you can overwrite both setting with LC_ALL)
 
@@ -96,8 +96,6 @@ export CLICOLOR=1
 export LSCOLORS=ExGxFxdxCxDxDxxbaDecac
 
 # FZF
-# TODO: Check if FZF_HOME neccesary in vim
-export FZF_HOME="$HOME/.fzf"
 export FZF_DEFAULT_COMMAND='fd --hidden --exclude .git'
 export FZF_DEFAULT_OPTS='--bind=ctrl-j:accept'
 

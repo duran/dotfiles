@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Firefox
+Exec=firefox -- %F
+TryExec=firefox
+GenericName=Web Browser
+Comment=Mozilla is going downhill :(

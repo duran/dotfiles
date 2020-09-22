@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Zathura
+Exec=zathura -- %F
+Terminal=false
+TryExec=zathura
+GenericName=Document Viewer
+Comment=VIM-style document viewer
+
