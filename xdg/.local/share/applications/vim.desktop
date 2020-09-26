@@ -4,5 +4,4 @@ Name=vim
 Exec=vim -- %F
 TryExec=vim
 GenericName=Text Editor
-Comment=Vim-like text editor
 Terminal=true

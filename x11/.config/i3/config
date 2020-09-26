@@ -195,7 +195,7 @@ bindsym $mod+z exec --no-startup-id i3blurlock
 bindsym $mod+Return  exec "$TERMCMD"
 bindsym $mod+Shift+Return exec env ENV=/dev/null xterm sh
 #
-bindsym $mod+o       exec --no-startup-id rofi -show drun
+bindsym $mod+o       exec --no-startup-id rofi -show drun -drun-show-actions
 bindsym $mod+Shift+o exec --no-startup-id rofi -show ssh
 #
 bindsym $mod+0 exec --no-startup-id rofi -show window

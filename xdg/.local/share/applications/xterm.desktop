@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=xterm
+Exec=xterm
+TryExec=xterm
+GenericName=Terminal Emulator

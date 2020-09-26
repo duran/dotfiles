@@ -4,5 +4,3 @@ Name=sxiv
 Exec=sxiv -- %F
 TryExec=sxiv
 GenericName=Image Viewer
-Comment=Simple X Image Viewer
-

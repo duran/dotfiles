@@ -4,4 +4,10 @@ Name=Firefox
 Exec=firefox -- %F
 TryExec=firefox
 GenericName=Web Browser
-Comment=Mozilla is going downhill :(
+Actions=new-private-window;
+
+[Desktop Action new-private-window]
+Name=New Private Window
+Exec=firefox --private-window -- %F
+TryExec=firefox
+GenericName=Web Browser

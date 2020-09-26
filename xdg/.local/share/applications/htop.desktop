@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Htop
+Exec=htop
+TryExec=htop
+GenericName=Process Viewer
+Terminal=true

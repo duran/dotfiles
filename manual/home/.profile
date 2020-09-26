@@ -16,3 +16,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 # For Bash only
 shopt -s globstar # recursive global match
+
+# TODO: Update this
+# export LANG='en_IE.utf8'             # Main locale: language and standarization 
+# export LANGUAGE='en_US.utf8'         # Fallback locale (you can overwrite both setting with LC_ALL)

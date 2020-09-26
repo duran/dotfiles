@@ -11,8 +11,10 @@ application/javascript=less.desktop
 application/json=less.desktop
 text/css=less.desktop
 text/csv=less.desktop
+application/typescript=less.desktop
 text/markdown=less.desktop
 text/calendar=less.desktop
+application/xml=less.desktop
 text/html=firefox.desktop
 application/xhtml+xml=firefox.desktop
 # Documents (containers)
@@ -50,7 +52,6 @@ application/octet-stream=rifle.desktop
 application/octet-stream=rifle.desktop
 application/ogg=rifle.desktop
 application/rtf=rifle.desktop
-application/typescript=rifle.desktop
 application/vnd.amazon.ebook=rifle.desktop
 application/vnd.apple.installer+xml=rifle.desktop
 application/vnd.mozilla.xul+xml=rifle.desktop
@@ -73,9 +74,11 @@ application/x-rar-compressed=rifle.desktop
 application/x-sh=rifle.desktop
 application/x-shockwave-flash=rifle.desktop
 application/x-tar=rifle.desktop
-application/xml=rifle.desktop
 application/zip=rifle.desktop
 font/otf=rifle.desktop
 font/ttf=rifle.desktop
 font/woff2=rifle.desktop
 font/woff=rifle.desktop
+
+# TODO:Office
+# X, has libreoffice, ext od[dfgpst]|docx?|sxc|xlsx?|xlt|xlw|gnm|gnumeric, flag f = libreoffice "$@"

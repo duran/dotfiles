@@ -18,8 +18,6 @@
 # Base #
 ########
 export PATH="$PATH:$HOME/.local/bin" # Personal scripts in path
-export LANG='en_IE.utf8'             # Main locale: language and standarization 
-export LANGUAGE='en_US.utf8'         # Fallback locale (you can overwrite both setting with LC_ALL)
 
 
 #########

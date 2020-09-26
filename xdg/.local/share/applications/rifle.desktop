@@ -4,5 +4,3 @@ Name=Rifle
 Exec=env -u DISPLAY rifle %F
 TryExec=rifle
 GenericName=File Opener
-Comment=Custom (non-XDG) file opener
-

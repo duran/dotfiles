@@ -4,4 +4,3 @@ Name=mpv
 Exec=mpv -- %F
 TryExec=mpv
 GenericName=Media Player
-Comment=Keyword based media player
