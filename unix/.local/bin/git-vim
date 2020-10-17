@@ -3,14 +3,20 @@
 # Poor's man Vundle
 # You better know what you are doing before using this command
 
-cd "$HOME/.vim/pack"
+cd "$HOME/.vim/pack/git"
 
-if   test "$1" = "make"; then
-  xargs -L1 < gitmake git
-elif "$1" = "clone"; then
+if test "$1" = "sh"; then
+  shift
+  "$@"
+elif test "$1" = "ls"; then
+  find . -maxdepth 2 -mindepth 1 -type d 
+elif test "$1" = "clone"; then
   git "$@"
-elif "$1" = "rm"; then
+elif test "$1" = "rm"; then
+  shift
   rm -rf "$@"
+elif test "$1" = "install"; then
+  < list xargs -L1 git clone
 else
-  git recursive "$@"
+  echo "Use ls, clone, rm, install or sh please..." 1>&2
 fi

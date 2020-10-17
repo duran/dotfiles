@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # substitute regular expression global (s/re/g in s?ed)
 # but with POSIX extended regular expresions
+# TODO: This can be translated to sh
 
 if [ $# -lt 2 ]
 then

@@ -1,5 +1,6 @@
 #!/bin/sh
 # extract archive
+# TODO: tar does not need format
 
 for f in "$@"; do
   if [ -f "$f" ] ; then

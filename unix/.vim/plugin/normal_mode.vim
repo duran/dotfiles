@@ -52,18 +52,6 @@ nnoremap gw :execute ':silent !$BROWSER <cWORD>' <c-j> :redraw! <c-j>
 nnoremap Q @@
 nnoremap \ @:
 
-" Spell corrector
-" For more information, check spell_mode.vim
-" TODO: spell mode shortcut.
-" noremap <m-`> :call ToggleSpellMode()<c-j>
-noremap ~ :call ToggleSpell()<c-j>
-noremap ` z=
-noremap <left> [s
-noremap <right> ]s
-noremap <up> zw
-noremap <down> zg
-
-
 " Normal mode, with metakey
 
 " Windows and tabs
@@ -119,11 +107,3 @@ nnoremap <leader>m zM
 " Toggle search highlighting
 nnoremap <leader><c-l> :nohlsearch<c-j>
 
-" Fast copy/paste to clipboard
-noremap <leader>~ :call ToggleSystemClipboard()<c-j>
-
-" fzf.vim plugin 
-" nnoremap <leader>o :e ./**/
-nnoremap <leader>o :Files .<c-j>
-nnoremap <leader>t :Tags<c-j>
-nnoremap <leader>/ :Lines<c-j>
