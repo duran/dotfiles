@@ -4,6 +4,8 @@
 # Local files #
 ###############
 # Dumped everything from the official MIME handlers to here: https://docs.w3cub.com/http/basics_of_http/mime_types/complete_list_of_mime_types/
+# Folders
+inode/directory=ranger.desktop
 # Text
 text/plain=less.desktop
 application/ecmascript=less.desktop

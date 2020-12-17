@@ -6,7 +6,7 @@ CMD="${@/*-e}"
 if command -v tmux >/dev/null; then
   tmux new-window  -d -t terminal "$CMD" >/dev/null 2>&1
   tmux new-session -d -s terminal "$CMD" >/dev/null 2>&1
-  if test -t 1; then
+  if test -t 1 -a ! "$TMUX"; then
     tmux attach-session -t terminal
   else
     printf 'Added window in tmux session "terminal"\n' 1>&2
@@ -14,21 +14,21 @@ if command -v tmux >/dev/null; then
   exit $?
 fi
 
-if command -v screen >/dev/null; then
-  screen -d -m -S terminal "$CMD" >/dev/null 2>&1
-  printf 'Added window in screen session "terminal"\n' 1>&2
-  if test -t 1; then
-    screen -x terminal
-  else
-    printf 'Added window in screen session "terminal"\n' 1>&2
-  fi
-  exit $?
-fi
-
-printf 'No terminal multiplexer found\n' 1>&2
-if test -t 1; then
-  "$CMD"
-else
-  printf 'Aborted command\n' 1>&2
-  exit 1
-fi
+#if command -v screen >/dev/null; then
+#  screen -d -m -S terminal "$CMD" >/dev/null 2>&1
+#  printf 'Added window in screen session "terminal"\n' 1>&2
+#  if test -t 1; then
+#    screen -x terminal
+#  else
+#    printf 'Added window in screen session "terminal"\n' 1>&2
+#  fi
+#  exit $?
+#fi
+#
+#printf 'No terminal multiplexer found\n' 1>&2
+#if test -t 1; then
+#  "$CMD"
+#else
+#  printf 'Aborted command\n' 1>&2
+#  exit 1
+#fi

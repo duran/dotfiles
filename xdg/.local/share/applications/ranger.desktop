@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Ranger
+Exec=ranger
+TryExec=ranger
+GenericName=File Manager
+Actions=turn-off;
+Terminal=true

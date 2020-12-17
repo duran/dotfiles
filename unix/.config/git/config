@@ -43,6 +43,8 @@
 [am]
     # Never used this, maybe I should remove it
     threeWay = true
+[submodule]
+    recurse = true
 [alias]
     # [DEFAULT]
 

@@ -32,13 +32,11 @@ nnoremap cw dwi
 
 " Fast common edits, save, etc.
 nnoremap <c-s> :update<c-[>
-nnoremap S :update<c-[>
+" TODO: Think what to do with S and X
+"nnoremap S :update<c-[>
 nnoremap <c-h> i<c-h><c-[>l
 nnoremap <c-j> o<c-[>
 
-" Move screen line and not file line
-nnoremap + gj
-nnoremap - gk
 
 " Next/previous buffer
 nnoremap <c-n> :bnext<c-j>
@@ -65,19 +63,24 @@ noremap <m-l> <c-w>l
 noremap <m-s> <c-w>s
 noremap <m-v> <c-w>v
 
+noremap <tab> gt
+noremap <s-tab> gT
+nnoremap + :tabnew<c-j>
+nnoremap - :tabclose<c-j>
+
 noremap <m-t> :tabnew<c-j>
 noremap <m-n> gt
 noremap <m-p> gT
-noremap <m-1> :tabnext  1<c-j>
-noremap <m-2> :tabnext  2<c-j>
-noremap <m-3> :tabnext  3<c-j>
-noremap <m-4> :tabnext  4<c-j>
-noremap <m-5> :tabnext  5<c-j>
-noremap <m-6> :tabnext  6<c-j>
-noremap <m-7> :tabnext  7<c-j>
-noremap <m-8> :tabnext  8<c-j>
-noremap <m-9> :tabnext  9<c-j>
-noremap <m-0> :tabnext 10<c-j>
+noremap <m-1> 1gt
+noremap <m-2> 2gt
+noremap <m-3> 3gt
+noremap <m-4> 4gt
+noremap <m-5> 5gt
+noremap <m-6> 6gt
+noremap <m-7> 7gt
+noremap <m-8> 8gt
+noremap <m-9> 9gt
+noremap <m-0> 10gt
 
 " Shortcut to rapidly toggle `set list`
 " nnoremap <m-l> :set list!<c-j>
@@ -106,4 +109,19 @@ nnoremap <leader>m zM
 
 " Toggle search highlighting
 nnoremap <leader><c-l> :nohlsearch<c-j>
+
+
+" Shortcuts system yank
+nmap <leader>d "+d
+nmap <leader>D "+D
+nmap <leader>p "+p
+nmap <leader>P "+P
+nmap <leader>y "+y
+nmap <leader>Y "+Y
+nmap <leader>c "+c
+nmap <leader>C "+C
+nmap <leader>x "+x
+nmap <leader>X "+X
+nmap <leader>s "+s
+nmap <leader>S "+S
 

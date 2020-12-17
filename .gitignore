@@ -1,0 +1,8 @@
+unix/.config/ipython/*/db
+unix/.config/ipython/profile_default
+unix/.config/ipython/*/history.sqlite
+unix/.config/ipython/*/startup/README
+unix/.vim/pack
+unix/.w3m/cookie
+unix/.w3m/history
+unix/.vim/tmp

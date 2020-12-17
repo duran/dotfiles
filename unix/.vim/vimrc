@@ -1,5 +1,5 @@
 " Basic stuff
-" set nocompatible   " unlocks vim upgrades over vi, not needed usually
+set nocompatible   " unlocks vim upgrades over vi, not needed usually
 filetype plugin on " load filetype specific options 
 
 " Visual options
@@ -16,11 +16,11 @@ set ruler          " show line and column
 " Identation
 set backspace=2       " join lines when using backspace
 set expandtab         " tabs to spaces
-set shiftwidth=4      " Indent using 4 spaces
-set softtabstop=4     " I do not know what this does
 set autoindent        " add identation when you press <start>
 set foldmethod=indent " fold things using identation
-set formatoptions=c,j " wrap only in commens
+set formatoptions=c,j " wrap only in comments
+set shiftwidth=4      " Indent using 4 spaces
+set softtabstop=4     " Make sure that we are using 4 spaces
 
 " Better search
 set nomagic             " Only literals that must be escaped are \ and $
