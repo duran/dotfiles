@@ -1,20 +1,13 @@
-# i3status configuration file.
-
-# It is important that this file is edited as UTF-8.
-# The following line should contain a sharp s:
-# ß (snitchel symbol)
-# If the above line is not correctly displayed, fix your editor first!
-
 general {
-    colors = true
     interval = 5
-    color_bad = "#586E75"
     color_good = "#000000"
-    color_degraded = "#DC322F"
 }
 
 order += "cpu_usage"
+order += "cpu_temperature 0"
+order += "memory"
 order += "disk /"
+order += "ethernet _first_"
 order += "wireless _first_"
 order += "battery all"
 order += "tztime local"
@@ -23,42 +16,52 @@ cpu_usage {
     format = " cpu  %usage "
 }
 
+cpu_temperature 0 {
+    format = ""
+    format_above_threshold = "(temperature %degrees °C) "
+}
+
+memory {
+    format = " ram %used / %total "
+    threshold_critical = "25%"
+}
+
 disk "/" {
-    # format = " hdd %avail "
-    format = " ⛁ %avail "
-}
-
-ethernet _first_ {
-    # %speed needs root privileges
-    format_up = " lan: %ip %speed "
-    format_down = " no lan "
-}
-
-wireless _first_ {
-    format_up = " %essid %quality "
-    # format_up = "📶 %bitrate at %essid %quality"
-    format_down = " no wifi "
+    format = " disk %used / %total "
+    threshold_type = percentage_free
+    low_threshold = 15
 }
 
 battery all {
-    # format = "%status %percentage %remaining %emptytime"
-    format = " %status %percentage"
-    format_down = "No battery"
+    format = " battery %status %percentage "
+    #format = "%status %percentage %remaining %emptytime"
+    format_down = ""
     last_full_capacity = true
     integer_battery_capacity = true
+    low_threshold = 25
+    threshold_type = percentage
     # status_chr = ""
-    status_chr = "⚡"
-    # status_bat = "bat"
+    # status_chr = "⚡"
+    status_chr = " (charging)"
+    status_bat = ""
     # status_bat = "☉"
-    status_bat = ""
+    # status_bat = ""
     # status_unk = "?"
     status_unk = ""
     # status_full = ""
     status_full = "☻"
-    low_threshold = 15
-    threshold_type = time
+}
+
+ethernet _first_ {
+    format_up = " lan %ip %speed "
+    format_down = ""
+}
+
+wireless _first_ {
+    format_up = " %essid %quality "
+    format_down = ""
 }
 
 tztime local {
-    format = " %d.%m. %H:%M "
+    format = " %F %R "
 }

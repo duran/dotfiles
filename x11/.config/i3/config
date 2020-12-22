@@ -6,8 +6,9 @@
 # Basics: i3 options and keybindings
 # Applications: applications keybinding
 # Ricing: themes
-# Autostart applications: what is in the title
 # i3 gaps: anything i3-gaps related
+# Autostart applications: what is in the title
+
 
 ################################################################################
 # Basics
@@ -118,7 +119,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+m bar mode toggle
 
 # Special rules for not well-behaved software
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 4
 for_window [urgent=latest] focus
 for_window [class="jetbrains-.*" title="win0"] floating enable;
 # FIXME: check out this section
@@ -236,6 +237,9 @@ bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart du
 # Ricing
 ################################################################################
 
+# FIXME: Finish this section
+# TODO Fix yellow
+
 # Borders
 new_window none # NOTE: Changed from pixel 1
 new_float none # NOTE: changed from normal
@@ -244,7 +248,18 @@ hide_edge_borders none
 # Fonts
 font xft:DejaVu Sans Mono 11
 
-# FIXME: Finish this section
+set_from_resource $background background
+set_from_resource $foreground foreground
+set_from_resource $bad_dark color1
+set_from_resource $good_bright color2
+set_from_resource $muted_bright color7
+
+# <colorclass>          <border> <background>  <text>  <indicator> <child_border>
+client.focused          #FFC300  $good_bright  #FFC300 #FFC300
+client.focused_inactive #FFC300  $info_bright  #FFC300 #FFC300
+client.unfocused        #FFC300  $muted_bright #FFC300 #FFC300
+#client.urgent          #FFC300  #d33682       #fdf6e3 #dc322f
+#client.background      #ffffff
 bar {
     mode hide
     i3bar_command i3bar
@@ -256,76 +271,18 @@ bar {
     strip_workspace_numbers yes
 
     colors {
-        background #FFFFFF
-        statusline #000000
-        separator  #FFFFFF
+        background $foreground
+        statusline $background
+        separator  $background
 
-    #                      border  backgr. text
-        focused_workspace  #808080 #0080FF #000000
-        active_workspace   #808080 #FFFF00 #000000
-        inactive_workspace #808080 #D3D3D3 #000000
-        binding_mode       #808080 #32CD32 #000000
-        urgent_workspace   #808080 #DC322F #000000
+    #                      border       backgr.     text
+        focused_workspace  $background $good_bright $background
+        active_workspace   $background #FFC300      $background
+        inactive_workspace $background $foreground  $background
+        binding_mode       $background #FFC300      $background
+        urgent_workspace   $background $bad_dark    $background
     }
 }
-
-# FIXME: I do not understand how Xresources work and how this extract info fro xresoruces
-# Color palette used for the terminal ( ~/.Xresources file )
-# Colors are gathered based on the documentation:
-# https://i3wm.org/docs/userguide.html#xresources
-# Change the variable name at the place you want to match the color
-# of your terminal like this:
-# [example]
-# If you want your bar to have the same background color as your 
-# terminal background change the line 362 from:
-# background #14191D
-# to:
-# background $term_background
-# Same logic applied to everything else.
-set_from_resource $term_background background
-set_from_resource $term_foreground foreground
-set_from_resource $term_color0     color0
-set_from_resource $term_color1     color1
-set_from_resource $term_color2     color2
-set_from_resource $term_color3     color3
-set_from_resource $term_color4     color4
-set_from_resource $term_color5     color5
-set_from_resource $term_color6     color6
-set_from_resource $term_color7     color7
-set_from_resource $term_color8     color8
-set_from_resource $term_color9     color9
-set_from_resource $term_color10    color10
-set_from_resource $term_color11    color11
-set_from_resource $term_color12    color12
-set_from_resource $term_color13    color13
-set_from_resource $term_color14    color14
-set_from_resource $term_color15    color15
-
-
-################################################################################
-# Autostart applications
-################################################################################
-
-# Lock computer automatically
-exec --no-startup-id xautolock -time 120 -locker blurlock
-
-# Set backgroud
-# NOTE: xsetroot does not work with picom. If you want images use feh or nitrogen.
-# exec --no-startup-id xsetroot -solid "#333333"
-exec --no-startup-id hsetroot -solid '#FFFFFF'; sleep 1; picom -b
-
-
-# FIXME: I do not know if this is neccesary
-exec --no-startup-id nm-applet
-# FIXME: I do not know if this is neccesary
-exec --no-startup-id xfce4-power-manager
-exec --no-startup-id conky -q -c ~/.config/conky/manjaro
-exec --no-startup-id conky -q -c ~/.config/conky/shortcuts
-# FIXME: I do not know what is this
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# Stuff that is nice to have, but not that much
-# exec --no-startup-id clipit
-exec --no-startup-id volumeicon
 
 
 
@@ -400,4 +357,40 @@ bindsym $mod+Ctrl+m exec "$TERMCMD -e alsamixer"
 #bindsym $mod+Ctrl+m exec pavucontrol
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
+
+
+#client.focused #6c71c4 #6c71c4 #fdf6e3 #6c71c4
+#client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
+#client.unfocused #073642 #073642 #93a1a1 #586e75
+#client.urgent #d33682 #d33682 #fdf6e3 #dc322f
+
+
+
+
+
+
+################################################################################
+# Autostart applications
+################################################################################
+
+# Lock computer automatically
+exec --no-startup-id xautolock -time 120 -locker blurlock
+
+# Set backgroud
+# NOTE: xsetroot does not work with picom. If you want images use feh or nitrogen.
+# exec --no-startup-id xsetroot -solid "#333333"
+exec --no-startup-id hsetroot -solid $foreground ; sleep 1; picom -b
+
+
+# FIXME: I do not know if this is neccesary
+exec --no-startup-id nm-applet
+# FIXME: I do not know if this is neccesary
+exec --no-startup-id xfce4-power-manager
+#exec --no-startup-id conky -q -c ~/.config/conky/manjaro
+#exec --no-startup-id conky -q -c ~/.config/conky/shortcuts
+# FIXME: I do not know what is this
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# Stuff that is nice to have, but not that much
+# exec --no-startup-id clipit
+exec --no-startup-id volumeicon
 

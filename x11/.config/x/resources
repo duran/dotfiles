@@ -78,30 +78,7 @@ XTerm*translations: #override \
 ! XTerm*faceSize: 20
 ! XTerm*locale: true
 
-! FIXME: Remove
-
-! Colors
-! XTerm*background:   white
-! XTerm*foreground:   black
 ! XTerm*pointerColor: white
-
-! XTerm*color0: black
-! XTerm*color1: red3
-! XTerm*color2: green3
-! XTerm*color3: yellow3
-! XTerm*color4: darkblue
-! XTerm*color5: magenta3
-! XTerm*color6: cyan3
-! XTerm*color7: gray90
-! 
-! XTerm*color8:  gray30
-! XTerm*color9:  red
-! XTerm*color10: green
-! XTerm*color11: yellow
-! XTerm*color12: blue
-! XTerm*color13: magenta
-! XTerm*color14: cyan
-! XTerm*color15: white
 
 ! XTerm*scrollTtyOutput: true
 !XTerm*faceName: SF Mono
@@ -115,3 +92,39 @@ XTerm*translations: #override \
 XTerm*font: -*-terminus-medium-r-*-*-16-*-*-*-*-*-iso10646-1
 XTerm*allowBoldFonts: false
 
+! Colors
+! From https://gist.github.com/vreon/845878
+*background: #101010
+*foreground: #d0d0d0
+*cursorColor: #d0d0d0
+! (black) darkest color / grayish
+*color0: #101010
+*color8: #303030
+
+! (red) errors / soft links
+*color1: #960050
+*color9: #ff0090
+
+! (green) world read/write dir like tmp /  binaries user can execute
+*color2: #66aa11
+*color10: #80ff00
+
+! (brown) fifo / block special files
+*color3: #c47f2c
+*color11: #ffba68
+
+! (blue) unused? / directory
+*color4: #30309b
+*color12: #5f5fee
+
+! (dark purple) no idea? / socket file
+*color5: #7e40a5
+*color13: #bb88dd
+
+! (magenta) unused? / symbolic links
+*color6: #3579a8
+*color14: #4eb4fa
+
+! (grey) setuid file / background color setgui files 
+*color7: #9999aa
+*color15: #d0d0d0

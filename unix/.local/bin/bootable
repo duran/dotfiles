@@ -8,4 +8,4 @@ fi
 
 umount "$2"
 
-dd bs=4M if="$1" of="$2" conv=fdatasync
+dd bs=4M if="$1" of="$2" conv=fdatasync status=progress oflag=sync
