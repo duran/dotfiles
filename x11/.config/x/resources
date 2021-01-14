@@ -19,7 +19,9 @@ Xft.lcdfilter: lcdfilter
 ! Xterm !
 !!!!!!!!!
 
-! Use modern terminal emulation to get Sixel support
+! Basics
+
+! Emulate modern terminal to get Sixel support
 XTerm*decTerminalID: vt340
 
 ! Show that we can accept 256 colors.
@@ -28,25 +30,15 @@ XTerm.termName: xterm-256color
 ! UTF-8 support.
 XTerm*utf8: 2
 
-! Connect primary with clipboard in this terminal
-XTerm*selectToClipboard: true
-
-! Select paths/url on 2-3 clicks
-XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
-XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
-
 ! Make Alt send a escape key (^[) like most terminals
-! XTerm*altIsNotMeta:    true
-! XTerm*altSendsEscape:  true
 XTerm*metaSendsEscape: true
-
-
 
 ! Increase the buffer.
 XTerm*saveLines: 4096
 
-! Do not scroll when there is new input e.g. tail -f /var/syslog
-XTerm*scrollTtyOutput: false
+! Do not scroll when there is new input e.g. tail -f /var/syslog, but go down as soon as you press a key
+! XTerm*scrollTtyOutput: false
+! XTerm*ScrollKey: true
 
 ! Do not scroll when inside an secondary screen (like less)
 XTerm*alternateScroll: true
@@ -54,45 +46,44 @@ XTerm*alternateScroll: true
 ! Change refresh rate when scrolling over high amounts of text.
 XTerm*fastScroll: true
 
-! Show scrollbar
-! XTerm*scrollBar: true
-! XTerm*scrollBar.width: 8
-! XTerm*rightScrollBar: true
-! Xfont 1-6 for sizes
-
 ! Do not add Alt-Enter to fullscreen
 XTerm*fullscreen: never
 
-! New keybindings
-! FIXME: Remove ctrl-mouse keybindings
-XTerm*translations: #override \
-    <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
-    Shift <Btn1Up>: exec-formatted("firefox-developer-edition '%t'", CLIPBOARD) \n\
-    Shift <Btn2Up>: exec-formatted("xdg-open '%t'", CLIPBOARD)
-    Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
-    Ctrl Shift <Key>C:    copy-selection(CLIPBOARD) \n\
-
-! XTerm*faceName: xft:Mononoki Nerd Font, \
-!                 xft:JoyPixels:size=12, \
-!                 xft:Monospace:style=Medium:size=12
-! XTerm*faceSize: 20
-! XTerm*locale: true
-
-! XTerm*pointerColor: white
-
-! XTerm*scrollTtyOutput: true
-!XTerm*faceName: SF Mono
-!XTerm*faceSize: 11
-!XTerm*faceName: Unifont:pixelsize=14
-! Xterm*loginshell: true
-! XTerm*faceName: Terminus:pixelsize=14
-
-! XTerm*renderFont: false
-! XTerm*font: *-fixed-*-*-*-14-*
+! Use pretty font
 XTerm*font: -*-terminus-medium-r-*-*-16-*-*-*-*-*-iso10646-1
 XTerm*allowBoldFonts: false
 
-! Colors
+! Keybindings
+
+! Printer command
+XTerm*printerCommand: xterm -T History -e sh -c 'less -r <&3' 3<&0
+
+! Connect primary with clipboard in this terminal
+XTerm*selectToClipboard: true
+
+! Smart select +2 clicks
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+XTerm*on4Clicks: line
+XTerm*on5Clicks: all
+
+XTerm*translations: #override \
+    <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
+    Shift <Btn1Up>: exec-formatted("firefox-developer-edition '%t'", CLIPBOARD) \n\
+    Shift <Btn2Up>: exec-formatted("xdg-open '%t'", PRIMARY)  select-start() select-end() \n\
+    Ctrl <Key>slash: print-everything() \n\
+    Ctrl <Key>T: spawn-new-terminal() \n\
+    <Key>Prior: scroll-back(1, page-2) \n\
+    <Key>Next: scroll-forw(1, page-2) \n\
+    Ctrl Shift <Key>H: set-altscreen(toggle)
+
+
+
+!!!!!!!!!!
+! Colors !
+!!!!!!!!!!
+
+! Colors !
 ! From https://gist.github.com/vreon/845878
 *background: #101010
 *foreground: #d0d0d0

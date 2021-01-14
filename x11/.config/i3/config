@@ -393,4 +393,5 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Stuff that is nice to have, but not that much
 # exec --no-startup-id clipit
 exec --no-startup-id volumeicon
-
+# Launch ranger
+exec --no-startup-id "$TERMCMD -e ranger"
