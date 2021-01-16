@@ -97,8 +97,11 @@ export LSCOLORS=ExGxFxdxCxDxDxxbaDecac
 export FZF_DEFAULT_COMMAND='fd --hidden --exclude .git'
 export FZF_DEFAULT_OPTS='--bind=ctrl-j:accept'
 
-# Ipython
+# Python
 export IPYTHONDIR="${XDG_CONFIG_HOME:-$HOME/.config}/ipython"
+
+# R
+export R_ENVIRON="${XDG_CONFIG_HOME:-$HOME/.config}/r/env"
 
 # Homebrew
 export HOMEBREW_NO_ANALYTICS=1

@@ -1,0 +1,8 @@
+# TODO, add XDG options
+R_BROWSER=${BROWSER}
+R_PROFILE=${HOME}/.local/lib/r/profile.r
+R_LIBS=${HOME}/.local/lib/r
+R_LIBS_USER=${HOME}/.local/lib/r
+R_HISTFILE=${HOME}/.local/share/r/history
+R_DEFAULT_PACKAGES=tidyverse
+

@@ -351,12 +351,15 @@ mode "$mode_gaps_outer" {
 
 
 
+# TODO: Revise
 bindsym $mod+Ctrl+m exec "$TERMCMD -e alsamixer"
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
+# exec --no-startup-id i3-msg 'workspace 3; exec iceweasel; workspace 1'
+# focus_on_window_activation smart|urgent|focus|none
 
 
 #client.focused #6c71c4 #6c71c4 #fdf6e3 #6c71c4
