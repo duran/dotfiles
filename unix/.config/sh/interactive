@@ -65,14 +65,9 @@ alias ka='killall -9'
 alias la='ls -A'
 alias ll='ls -ahlF'
 alias gs='g s'
+alias py='python3'
+alias js=node
 
-#alias di=popd
-#alias do=pushd
 alias open=rifle
 alias edit='rifle -l editor'
-alias js=node
-#alias rs='Rscript --vanilla'
-#alias sc=shellcheck
-#alias gai='g a -i'
-#alias gap='g a -p'
 #alias pls='sudo $(fc -ln -1)'

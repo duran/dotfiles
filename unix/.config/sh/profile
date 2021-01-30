@@ -98,6 +98,7 @@ export FZF_DEFAULT_COMMAND='fd --hidden --exclude .git'
 export FZF_DEFAULT_OPTS='--bind=ctrl-j:accept'
 
 # Python
+export PYTHONSTARTUP="${XDG_CONFIG_HOME:-$HOME/.config}/python/interactive"
 export IPYTHONDIR="${XDG_CONFIG_HOME:-$HOME/.config}/ipython"
 
 # R

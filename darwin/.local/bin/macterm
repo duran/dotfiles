@@ -1,16 +1,25 @@
-#!/usr/bin/osascript -l JavaScript
-// A launcher for Terminal.app
-// Still a little bit rough in the edges
-ObjC.import("stdlib");
+#!/usr/bin/osascript
+# NOTE: Opens a new tab if terminal maximized, otherwise an window. No good way to fix.
 
-const path = $.getenv("PWD");
-const term = Application("Terminal");
 
-function run(argv){
-    const command = argv
-        .slice(argv.indexOf('-e') + 1) // get main command (if caller follows Xterm/Linux traditional flags)
-        .map(v => v.replace(/([^a-zA-Z0-9,._+:@%/-])/g, "\\\$1")) // escape all but a subset of safe characters
-        .join(" "); // create the string
+on run argv
+    set commandStart to false
+    set commandString to ""
 
-    term.doScript(` cd ${path}; exec ` + command);
-};
+    repeat with parameter in argv
+        if commandStart then set commandString to commandString & quoted form of parameter & " "
+        if parameter as string is equal to "-e" then set commandStart to true
+    end repeat
+
+    if commandStart then set commandString to commandString & ";exit"
+
+    tell application "Terminal"
+        # If does not exist, open
+        if not (exists window 1) then reopen
+        # Lauch command
+        tell window 1 to set newTab to do script commandString
+        # Focus
+        activate
+    end tell
+end run
+
