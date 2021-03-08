@@ -48,39 +48,21 @@ video/x-msvideo=mpv.desktop
 video/mp4=mpv.desktop
 
 
-application/java-archive=rifle.desktop
-application/msword=rifle.desktop
-application/octet-stream=rifle.desktop
-application/octet-stream=rifle.desktop
-application/ogg=rifle.desktop
-application/rtf=rifle.desktop
-application/vnd.amazon.ebook=rifle.desktop
-application/vnd.apple.installer+xml=rifle.desktop
-application/vnd.mozilla.xul+xml=rifle.desktop
-application/vnd.ms-excel=rifle.desktop
-application/vnd.ms-fontobject=rifle.desktop
-application/vnd.ms-powerpoint=rifle.desktop
-application/vnd.oasis.opendocument.presentation=rifle.desktop
-application/vnd.oasis.opendocument.spreadsheet=rifle.desktop
-application/vnd.oasis.opendocument.text=rifle.desktop
-application/vnd.openxmlformats-officedocument.presentationml.presentation=rifle.desktop
-application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=rifle.desktop
-application/vnd.openxmlformats-officedocument.wordprocessingml.document=rifle.desktop
-application/vnd.visio=rifle.desktop
-application/x-7z-compressed=rifle.desktop
-application/x-abiword=rifle.desktop
-application/x-bzip2=rifle.desktop
-application/x-bzip=rifle.desktop
-application/x-csh=rifle.desktop
-application/x-rar-compressed=rifle.desktop
-application/x-sh=rifle.desktop
-application/x-shockwave-flash=rifle.desktop
-application/x-tar=rifle.desktop
-application/zip=rifle.desktop
-font/otf=rifle.desktop
-font/ttf=rifle.desktop
-font/woff2=rifle.desktop
-font/woff=rifle.desktop
+########
+# URIs #
+########
+
+# Web
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/ftp=firefox.desktop
+x-scheme-handler/chrome=firefox.desktop
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-extension-xht=firefox.desktop
+
 
 # TODO:Office
 # X, has libreoffice, ext od[dfgpst]|docx?|sxc|xlsx?|xlt|xlw|gnm|gnumeric, flag f = libreoffice "$@"

@@ -1,13 +1,13 @@
 [Desktop Entry]
 Type=Application
 Name=Firefox
-Exec=firefox -- %F
+Exec=firefox -- %U
 TryExec=firefox
 GenericName=Web Browser
 Actions=new-private-window;
 
 [Desktop Action new-private-window]
 Name=New Private Window
-Exec=firefox --private-window -- %F
+Exec=firefox --private-window -- %U
 TryExec=firefox
 GenericName=Web Browser

@@ -1,17 +1,21 @@
 # More info in
 # http://i3wm.org/docs/userguide.html 
 
+
+
+################################################################################
 # Sections
 ################################################################################
-# Basics: i3 options and keybindings
-# Applications: applications keybinding
-# Ricing: themes
+# Window Manager: Fundamental options and keybindings
+# Launchers: Applications keybinding
+# Themes: Ricing
 # i3 gaps: anything i3-gaps related
 # Autostart applications: what is in the title
 
 
+
 ################################################################################
-# Basics
+# Window Manager
 ################################################################################
 
 # Set Mod key
@@ -22,13 +26,15 @@
 # Mod5 = Mode Swith
 set $mod Mod4
 
-# Moving floating windows arrow with the mouse
-floating_modifier $mod
+# Layout control
+bindsym $mod+t layout tabbed
+bindsym $mod+d layout stacking
+bindsym $mod+s layout splitv
+bindsym $mod+v layout splith
+bindsym $mod+Shift+s split v;exec notify-send 'tile horizontally'
+bindsym $mod+Shift+v split h;exec notify-send 'tile vertically'
 
-# Kill app
-bindsym $mod+q kill
-
-# Container (pane) control
+# Vim-like control flow
 bindsym $mod+h       focus left
 bindsym $mod+j       focus down
 bindsym $mod+k       focus up
@@ -37,13 +43,32 @@ bindsym $mod+Shift+h move  left
 bindsym $mod+Shift+j move  down
 bindsym $mod+Shift+k move  up
 bindsym $mod+Shift+l move  right
-#
-bindsym $mod+s split v;exec notify-send 'tile horizontally'
-bindsym $mod+v split h;exec notify-send 'tile vertically'
-#bindsym $mod+Shift+equal     split toggle
+# Excel-like control flow
+bindsym $mod+Tab             focus right
+bindsym $mod+Shift+Tab       focus left
+# FIXME:
+bindsym $mod+Backspace       focus up
+bindsym $mod+Shift+Backspace focus down
 
-# Zoom in and out 
+# Floating,backlog and pinned windows
+floating_modifier $mod
+bindsym $mod+grave focus mode_toggle
+bindsym $mod+Shift+asciitilde floating toggle
+#
+bindsym $mod+0 scratchpad show
+bindsym $mod+Shift+0 move scratchpad
+#
+bindsym $mod+backslash sticky toggle
+#
 bindsym $mod+f fullscreen toggle
+
+# Tree movements
+bindsym $mod+p focus parent
+bindsym $mod+n focus child
+
+# Kill app
+bindsym $mod+w kill
+bindsym $mod+q kill
 
 # Workspace control
 set $ws1 1
@@ -66,9 +91,6 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
-bindsym $mod+Tab workspace next
-bindsym $mod+Shift+Tab workspace prev
-bindsym $mod+b workspace back_and_forth
 #
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
@@ -79,17 +101,8 @@ bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
-bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
-#
-bindsym $mod+Ctrl+1  move container to workspace $ws1
-bindsym $mod+Ctrl+2  move container to workspace $ws2
-bindsym $mod+Ctrl+3  move container to workspace $ws3
-bindsym $mod+Ctrl+4  move container to workspace $ws4
-bindsym $mod+Ctrl+5  move container to workspace $ws5
-bindsym $mod+Ctrl+6  move container to workspace $ws6
-bindsym $mod+Ctrl+7  move container to workspace $ws7
-bindsym $mod+Ctrl+8  move container to workspace $ws8
-bindsym $mod+Ctrl+9  move container to workspace $ws9
+
+# TODO: Fix from here
 
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
@@ -116,57 +129,12 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
-
-# Special rules for not well-behaved software
-for_window [class="^.*"] border pixel 4
-for_window [urgent=latest] focus
-for_window [class="jetbrains-.*" title="win0"] floating enable;
-# FIXME: check out this section
-# Screen brightness controls
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; notify-send -t 500 \\"Brightness at $(xbacklight -get | grep -Po '^[0-9]+')%\\""
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send -t 500 \\"Brightness at $(xbacklight -get | grep -Po '^[0-9]+')%\\""
-# Audio controls
-bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 5%+; notify-send -t 500 \\"Volume at $(amixer sget Master | grep -Po '[[][0-9]+%[]]')\\""
-bindsym XF86AudioLowerVolume exec "amixer -q sset Master 5%-; notify-send -t 500 \\"Volume at $(amixer sget Master | grep -Po '[[][0-9]+%[]]')\\""
-bindsym XF86AudioMute exec "amixer -q sset Master toggle; notify-send -t 500 \\"Volume at $(amixer sget Master | grep -Po '[[][0-9]+%[]]')\\""
-
-#bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send 'brightness down'"
-# Open specific applications in floating mode
-# for_window [title="alsamixer"] floating enable border pixel 1
-# for_window [class="(?i)virtualbox"] floating enable border normal
-# Open applications on specific workspaces
-# assign [class="Thunderbird"] $ws1
-# assign [class="Pale moon"] $ws2
-
-# FIXME: Turn on this
-# change container layout (stacked, tabbed, toggle split)
-# bindsym $mod+s layout stacking
-# bindsym $mod+w layout tabbed
-# bindsym $mod+e layout toggle split
-# bindsym $mod+a focus parent
-# toggle tiling / floating
-# bindsym $mod+Shift+space floating toggle
-# change focus between tiling / floating windows
-# bindsym $mod+space focus mode_toggle
-# toggle sticky
-# bindsym $mod+Shift+s sticky toggle
-
-# scratchpad
-bindsym $mod+p scratchpad show
-bindsym $mod+Shift+p move scratchpad
-
-
-# Workspace names
-# to display names or symbols instead of plain workspace numbers you can use
-# something like: set $ws1 1:mail
-#                 set $ws2 2:
-
+bindsym $mod+b bar mode toggle
 
 
 
 ################################################################################
-# Applications
+# Launcher
 ################################################################################
 
 # Turn off, logout, etc.
@@ -191,7 +159,7 @@ mode "$mode_system" {
 
 # Lockout
 # Change for xdg-screensaver
-bindsym $mod+z exec --no-startup-id i3blurlock
+#bindsym $mod+z exec --no-startup-id i3blurlock
 
 
 # Terminal + program lauchers (and switchers)
@@ -201,10 +169,10 @@ bindsym $mod+Shift+Return exec env ENV=/dev/null xterm sh
 bindsym $mod+o       exec --no-startup-id rofi -show drun -drun-show-actions
 bindsym $mod+Shift+o exec --no-startup-id rofi -show ssh
 #
-bindsym $mod+0 exec --no-startup-id rofi -show window
+#bindsym $mod+0 exec --no-startup-id rofi -show window
 
 # Clipboard (edit)
-bindsym $mod+e exec "$TERMCMD -e /bin/sh -c 'xsel --clipboard --output | vipe | xsel --clipboard --input'"
+#bindsym $mod+e exec "$TERMCMD -e /bin/sh -c 'xsel --clipboard --output | vipe | xsel --clipboard --input'"
 
 # Screenshot
 bindsym Print                      exec --no-startup-id scrot    -e 'mv $f '"${TMPDIR:-$HOME}"; exec notify-send 'screenshot saved in '"${TMPDIR:-$HOME}" 
@@ -215,40 +183,51 @@ bindsym $mod+Shift+Print --release exec --no-startup-id scrot -s -e 'mv $f '"${T
 # Kill xpane
 bindsym $mod+Ctrl+q --release exec --no-startup-id xkill
 
-# Start Applications
-bindsym $mod+F1  exec "xdg-open ~"
-bindsym $mod+F2  exec "$TERMCMD -e mutt"
-bindsym $mod+F3  exec "$TERMCMD -e newsboat"
-bindsym $mod+F4  exec pcmanfm
-bindsym $mod+F5  exec thunderbird
-bindsym $mod+F6  exec false
-bindsym $mod+F7  exec qutebrowser
-bindsym $mod+F8  exec chromium
-bindsym $mod+F9  exec true 
-bindsym $mod+F10 exec true
-bindsym $mod+F11 exec true
-bindsym $mod+F12 exec true
 
 # FIXME: Revise these options
-bindsym $mod+t exec --no-startup-id pkill picom
-bindsym $mod+Ctrl+t exec --no-startup-id picom -b
+#bindsym $mod+t exec --no-startup-id pkill picom
+#bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 
+# FIXME: check out this section
+# Screen brightness controls
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; notify-send -t 500 \\"Brightness at $(xbacklight -get | grep -Po '^[0-9]+')%\\""
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send -t 500 \\"Brightness at $(xbacklight -get | grep -Po '^[0-9]+')%\\""
+# Audio controls
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 5%+; notify-send -t 500 \\"Volume at $(amixer sget Master | grep -Po '[[][0-9]+%[]]')\\""
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master 5%-; notify-send -t 500 \\"Volume at $(amixer sget Master | grep -Po '[[][0-9]+%[]]')\\""
+bindsym XF86AudioMute exec "amixer -q sset Master toggle; notify-send -t 500 \\"Volume at $(amixer sget Master | grep -Po '[[][0-9]+%[]]')\\""
+
+
+
 ################################################################################
-# Ricing
+# Themes
 ################################################################################
 
-# FIXME: Finish this section
-# TODO Fix yellow
 
-# Borders
-new_window none # NOTE: Changed from pixel 1
-new_float none # NOTE: changed from normal
-hide_edge_borders none
+# Default values
+default_border pixel 4
+
+# Special cases
+# FIXME: Move
+for_window [urgent=latest] focus
+for_window [class="jetbrains-.*" title="win0"] floating enable;
+
+
+#bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send 'brightness down'"
+# Open specific applications in floating mode
+# for_window [title="alsamixer"] floating enable border pixel 1
+# for_window [class="(?i)virtualbox"] floating enable border normal
+# Open applications on specific workspaces
+# assign [class="Thunderbird"] $ws1
+# assign [class="Pale moon"] $ws2
+
 
 # Fonts
 font xft:DejaVu Sans Mono 11
 
+
+# Colors from X
 set_from_resource $background background
 set_from_resource $foreground foreground
 set_from_resource $bad_dark color1
@@ -288,7 +267,6 @@ bar {
 
 
 
-
 ################################################################################
 # i3-gaps
 ################################################################################
@@ -297,10 +275,6 @@ bar {
 gaps inner 10
 gaps outer -4
 
-# Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
-# gaps inner|outer current|all set|plus|minus <px>
-# gaps inner all set 10
-# gaps outer all plus 5
 
 # Gaps and borders only if more than one container in workspace
 smart_gaps on
@@ -370,12 +344,13 @@ bindsym $mod+Ctrl+m exec "$TERMCMD -e alsamixer"
 
 
 
-
-
-
 ################################################################################
-# Autostart applications
+# Startup
 ################################################################################
+
+# FIXME: TODO
+
+workspace_layout tabbed
 
 # Lock computer automatically
 exec --no-startup-id xautolock -time 120 -locker blurlock
@@ -398,4 +373,8 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # exec --no-startup-id clipit
 exec --no-startup-id volumeicon
 # Launch ranger
-exec --no-startup-id "$TERMCMD -e ranger"
+#exec --no-startup-id "$TERMCMD -e ranger"
+
+exec --no-startup-id xdg-open "$HOME"
+exec --no-startup-id $BROWSER
+

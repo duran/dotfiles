@@ -1,0 +1,13 @@
+#!/bin/sh
+# Search in Firefox
+
+
+FILE=$(mktemp)
+KEYWORD="$1"
+shift 1
+
+cp "$HOME"/.mozilla/firefox/*default/places.sqlite "$FILE"
+
+sqlite3 "$FILE" 'select url from moz_places p, moz_keywords k where p.id = k.place_id and keyword = "'"$KEYWORD"'";' | sed "s;%s;$*;" | sed 's; ;+;g' | xargs firefox
+
+rm "$FILE"
