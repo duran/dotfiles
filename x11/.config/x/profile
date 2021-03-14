@@ -33,8 +33,6 @@ setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
 # Ctrl -> CapsLock -> LeftShift; OS -> Alt
 xmodmap "$HOME/.config/x/modmap"
 
-# Load X config local configuration
-test -f "$HOME/.xrc" && . "$HOME/.xrc"
 
 # If we have redshift, we will use it
 if command -v redshift >/dev/null 2>&1; then

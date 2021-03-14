@@ -210,8 +210,10 @@ default_border pixel 4
 
 # Special cases
 # FIXME: Move
-for_window [urgent=latest] focus
+#for_window [urgent=latest] focus
 for_window [class="jetbrains-.*" title="win0"] floating enable;
+for_window [class="firefox*" title="Export Bookmarks File"] floating disable;
+for_window [class="firefox*" title="File Upload"] floating disable;
 
 
 #bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send 'brightness down'"

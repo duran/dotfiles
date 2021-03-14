@@ -83,7 +83,6 @@ export LESS_TERMCAP_ue
 # Other #
 #########
 export BROWSER=w3m     # Browser
-export MAILER=mutt     # Mail client
 export TERMCMD=ttyterm # Terminal
 export TERMINAL="$TERMCMD"
 

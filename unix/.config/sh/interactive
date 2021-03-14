@@ -39,7 +39,7 @@ alias k=man
 alias l='ls -CF'
 alias m='$MAILER'
 #alias n=notes
-alias o=rifle
+alias o=open
 alias p='$PAGER'
 alias q=exit
 alias r='R --quiet'
@@ -68,6 +68,5 @@ alias gs='g s'
 alias py='python3'
 alias js=node
 
-alias open=rifle
 alias edit='rifle -l editor'
 #alias pls='sudo $(fc -ln -1)'

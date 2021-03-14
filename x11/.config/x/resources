@@ -67,7 +67,7 @@ XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]]
 XTerm*on4Clicks: line
 XTerm*on5Clicks: all
 
-XTerm*translations: #override \
+XTerm*vt340*translations: #override \
     <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
     Shift <Btn1Up>: exec-formatted("firefox-developer-edition '%t'", CLIPBOARD) \n\
     Shift <Btn2Up>: exec-formatted("xdg-open '%t'", PRIMARY)  select-start() select-end() \n\
