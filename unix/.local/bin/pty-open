@@ -1,0 +1,24 @@
+#!/bin/sh
+
+case "$1" in
+  'https?://*')
+    #FIXME: Does not work
+    w3m "$@"
+  ;;
+  *.pdf)
+    pdftotext -- "$@" - | "$PAGER"
+  ;;
+  *.ps)
+    ps2ascii -- "$@" - | "$PAGER"
+  ;;
+  *.epub)
+    epub2txt -- "$@" | "$PAGER"
+  ;;
+  *.html)
+    w3m -- "$@"
+  ;;
+  *)
+    "$PAGER" "$@"
+  ;;
+esac
+

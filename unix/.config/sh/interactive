@@ -26,7 +26,7 @@ alias ssh-keygen='ssh-keygen -o -a 100 -t ed25519'
 #alias ,='mark default'
 # alias a=ask
 alias b='$BROWSER'
-alias c=compress
+# - c
 alias d=cd
 alias e='$EDITOR'
 alias f=fg
@@ -51,7 +51,7 @@ alias v='$VISUAL'
 # + w - who is logged and what they do
 alias x=extract
 # - y
-# + z - jump around
+alias z=compress
 
 alias ..='cd ..'
 alias ,.=', .'
@@ -68,5 +68,4 @@ alias gs='g s'
 alias py='python3'
 alias js=node
 
-alias edit='rifle -l editor'
 #alias pls='sudo $(fc -ln -1)'

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+TERMCMD='cmd.exe /c wt.exe -w 0 -p Ubuntu'
+
+# FIXME: This is wrong, revise all changes:
+# CMD="${@/*-e}"
+# FIXME: Quite ugly, change
+while test $# -ne 0
+do
+  if test $1 = "-e"
+  then
+    shift
+    $TERMCMD "bash -c '$@'"
+    exit $?
+  fi
+  shift
+done
+
+$TERMCMD
