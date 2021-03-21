@@ -1,10 +1,36 @@
 #!/bin/sh
+# TODO: Check gobling equivalent of ? in regexp
+# terminal, has w3m, ext x?html? = w3m "$@"
+#terminal, has als, ext 7z|ace|ar|arc|bz2?|cab|cpio|cpt|deb|dgc|dmg|gz = als -- "$@" | "$PAGER"
+#terminal, has als, ext iso|jar|msi|pkg|rar|shar|tar|tgz|xar|xpi|xz|zip = als -- "$@" | "$PAGER"
+#  terminal, ext 1, has man = man "$1"
 
 case "$1" in
-  'https?://*')
-    #FIXME: Does not work
-    w3m "$@"
+  ########
+  # URIs #
+  ########
+  # Web
+  https://*|http://*|*.html)
+    "$BROWSER" "$@"
   ;;
+  #########
+  # Files #
+  #########
+  # Archives
+  *.tar)
+    tar vvtf "$@" | "$PAGER"
+  ;;
+  *.zip)
+    unzip -l "$@" '*' | "$PAGER"
+  ;;
+  # Images, audio, and video
+  *.JPG|*.jpg|*.jpeg|*.png)
+    imgcat  "$@"
+  ;;
+  *.WAV|*.mp?|*.avi)
+    mpv -vo caca "$@"
+  ;;
+  # Richly formatted documents
   *.pdf)
     pdftotext -- "$@" - | "$PAGER"
   ;;
@@ -14,11 +40,17 @@ case "$1" in
   *.epub)
     epub2txt -- "$@" | "$PAGER"
   ;;
-  *.html)
-    w3m -- "$@"
-  ;;
+  # If everything fails, open file or use a pager
   *)
-    "$PAGER" "$@"
+    if test -d "$1"
+    then
+      ranger -- "$@"
+    elif test -e "$1"
+    then
+      "$PAGER" "$@"
+    else
+      echo 'Could not understand URI. Return to exit'
+      read _
+    fi
   ;;
 esac
-

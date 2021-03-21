@@ -1,0 +1,22 @@
+#!/bin/sh
+
+case "$1" in
+  # Images, audio, and video
+  *.JPG|*.jpg|*.jpeg|*.png)
+    fbi -- "$@"
+  ;;
+  *.WAV|*.mp?|*.avi)
+    mpv -vo drm "$@"
+  ;;
+  # Richly formatted documents
+  *.pdf)
+    fbpdf -- "$@"
+  ;;
+  *.ps)
+    fbps -- "$@"
+  ;;
+  # If everything fails, default to PTY strategies
+  *)
+    pty-open "$@"
+  ;;
+esac

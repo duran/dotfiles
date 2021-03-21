@@ -45,8 +45,7 @@ alias q=exit
 alias r='R --quiet'
 alias s='$SHELL'
 alias t='type -a'
-alias u='$BROWSER'
-#alias u='sniper-rifle'
+# - u
 alias v='$VISUAL'
 # + w - who is logged and what they do
 alias x=extract

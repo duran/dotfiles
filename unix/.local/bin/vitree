@@ -1,0 +1,4 @@
+#!/bin/sh
+# Edit whole tree
+
+find -- "$@" -type d -exec vidir {} +
