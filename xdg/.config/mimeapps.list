@@ -7,6 +7,7 @@
 # Folders
 inode/directory=ranger.desktop
 # Text
+application/octet-stream=less.desktop
 text/plain=less.desktop
 application/ecmascript=less.desktop
 application/javascript=less.desktop
@@ -46,12 +47,9 @@ video/ogg=mpv.desktop
 video/webm=mpv.desktop
 video/x-msvideo=mpv.desktop
 video/mp4=mpv.desktop
-
-
 ########
 # URIs #
 ########
-
 # Web
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
@@ -62,7 +60,5 @@ application/x-extension-html=firefox.desktop
 application/x-extension-shtml=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
-
-
 # TODO:Office
 # X, has libreoffice, ext od[dfgpst]|docx?|sxc|xlsx?|xlt|xlw|gnm|gnumeric, flag f = libreoffice "$@"
