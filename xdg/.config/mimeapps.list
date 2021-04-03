@@ -7,17 +7,17 @@
 # Folders
 inode/directory=ranger.desktop
 # Text
-application/octet-stream=less.desktop
-text/plain=less.desktop
-application/ecmascript=less.desktop
-application/javascript=less.desktop
-application/json=less.desktop
-text/css=less.desktop
-text/csv=less.desktop
-application/typescript=less.desktop
-text/markdown=less.desktop
-text/calendar=less.desktop
-application/xml=less.desktop
+application/octet-stream=pty-open.desktop
+text/plain=pty-open.desktop
+application/ecmascript=pty-open.desktop
+application/javascript=pty-open.desktop
+application/json=pty-open.desktop
+text/css=pty-open.desktop
+text/csv=pty-open.desktop
+application/typescript=pty-open.desktop
+text/markdown=pty-open.desktop
+text/calendar=pty-open.desktop
+application/xml=pty-open.desktop
 text/html=firefox.desktop
 application/xhtml+xml=firefox.desktop
 # Documents (containers)

@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Rifle
-Exec=env -u DISPLAY rifle %F
-TryExec=rifle
-GenericName=File Opener
-# TODO: Remove when mimelist.app without rifle
