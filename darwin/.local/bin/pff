@@ -1,0 +1,9 @@
+#!/usr/bin/osascript
+# FIXME: Only works with one selected file
+
+tell application "Finder"
+  set filePath to (POSIX path of (target of front window as alias))
+  set fileAlias to the selection as alias
+  set fileName to name of fileAlias
+  POSIX path of filePath & fileName
+end tell

@@ -223,6 +223,7 @@ for_window [class="firefox*" title="File Upload"] floating disable;
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
 # assign [class="Pale moon"] $ws2
+assign [class="firefoxdeveloperedition"] $ws2
 
 
 # Fonts
