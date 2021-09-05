@@ -1,10 +1,13 @@
 #!/bin/sh
 # Compress files
 
-if command -v tar >/dev/null 2>&1; then
-  tar cJf archive.tar.xz "$@"     
-elif command -v tar >/dev/null 2>&1; then
-  tar czf archive.tar.bz "$@"     
-elif command -v zip >/dev/null 2>&1; then
-  zip -r archive.zip "$@"
-fi
+METHOD="$1"
+NAME="$2"
+shift 2
+
+case "$METHOD" in
+  "xz") tar cJf "$NAME".tar.xz "$@";;     
+  "bz") tar czf "$NAME".tar.bz "$@";;     
+  "zip") zip -r "$NAME".zip "$@";;     
+  *) >&2 echo 'Usage is [method] [out-file] [files...]'; exit 22;;
+esac

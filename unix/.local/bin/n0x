@@ -1,0 +1,4 @@
+#!/bin/sh
+# make xargs work with filepaths with spaces (but not linebreaks)
+
+tr '\n' '\0' | xargs -0 "$@"
