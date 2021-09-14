@@ -15,9 +15,7 @@ Under an hour:
 
 
 Under a long weekend:
-* understand how use iptables
 * autodownload with youtube-dl and put everything in place
     - newsboat check gotbletu to make it a general download manager
 * learn the basics of remote system control as Ansible or Saltstack 
-* Add man pages to my stuff
-* check all possible bash options and add them to {set,shopt}
+* check all possible bash options and add them to {set}

@@ -12,20 +12,22 @@ shopt -s histappend
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
-# NOTE: MacOS do not update Bash from 3 to 4 so I cannot use this unfortunately
-# shopt -s globstar
+# use paths as cd
+shopt -s autocd
 
-# add completition to things that I use all time
-complete -c sudo man k
-complete -acb -A function type t
+# if set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+shopt -s globstar
 
 # go back to last directory
 # alias -=... does not work in new repositories (it has options) while -() and
 # alias -- -=... does not work in old ones, like dash
 
 alias -- -="cd -"
+
+# add completition to things that I use all time
+complete -c sudo man k
+complete -acb -A function type t
 
 # Add fzf support
 if command -v fzf >/dev/null 2>&1; then

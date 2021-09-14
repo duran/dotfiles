@@ -23,22 +23,21 @@ alias ssh-keygen='ssh-keygen -o -a 100 -t ed25519'
 
 # - _
 # + -
-#alias ,='mark default'
-# alias a=ask
+# - ,
+# - a
 alias b='$BROWSER'
-# - c
-alias d=cd
+alias c=compress
+# - d
 alias e='$EDITOR'
 alias f=fg
 alias g=git
-alias h=htop
+alias h=help
 # - i
 alias j=jobs
 alias k=man
-#alias k=khal
 alias l='ls -CF'
 alias m='$MAILER'
-#alias n=notes
+# - n
 alias o=open
 alias p='$PAGER'
 alias q=exit
@@ -50,9 +49,8 @@ alias v='$VISUAL'
 # + w - who is logged and what they do
 alias x=extract
 # - y
-alias z=compress
+# - z
 
-alias ..='cd ..'
 alias ,.=', .'
 alias ga='g a'
 alias gc='g c'
@@ -64,7 +62,7 @@ alias ka='killall -9'
 alias la='ls -A'
 alias ll='ls -ahlF'
 alias gs='g s'
-alias py='python3'
+alias py=python3
 alias js=node
 
 #alias pls='sudo $(fc -ln -1)'
