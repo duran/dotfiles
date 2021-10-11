@@ -1,0 +1,4 @@
+#/bin/sh
+# show help
+
+$PAGER -f <(help "$1" || "$@" --help || man "$1" || info "$1")

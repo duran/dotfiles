@@ -1,3 +1,42 @@
+" misc
+set notimeout  " not timeout
+set nottimeout " never
+set virtualedit=all " Move to places without characters
+set nostartofline " stop changing the cursor when I fire a command
+" set listchars=tab:▸\ ,eol:¬ 
+"  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+" set encoding=utf-8
+set autoread " read files on change
+" set autowrite " write when  moving from file
+
+" Set system clipboard as default register
+" set clipboard=unnamedplus
+
+" diff.vim
+" Diff mode in VIM
+" TODO: This should turn/on off automatically when you get in and out of diff
+" mode
+
+" if &diff
+"     " Turn off syntax, as it comes as confusing
+"     syntax off
+"     colorscheme elflord
+" 
+"     " Moving around easier
+"     nnoremap du     :wincmd w<c-j>:normal u<c-j>:wincmd w<c-j>
+"     nnoremap d<c-l> :diffupdate<c-j>
+"     nnoremap <Leader>1 :diffget LOCAL<c-j>
+"     nnoremap <Leader>2 :diffget BASE<c-j>
+"     nnoremap <Leader>3 :diffget REMOTE<c-j>
+" endif
+
+" command-line_window.vim
+" Command-line window
+
+" autocmd CmdwinEnter * nnoremap <buffer> <leader>q <c-c><c-c>
+" autocmd CmdwinEnter * nnoremap <buffer> <c-j> <cr>
+
+" spell_checker.vim
 " Spell checker triggers and options
 
 " Better colors
@@ -10,7 +49,7 @@ hi SpellCap    ctermfg=3    cterm=underline
 hi SpellRare   ctermfg=13   cterm=underline
 hi SpellLocal  cterm=None
 
-autocmd FileType markdown,tex,markdown,mail setlocal spell complete+=kspell nocursorline
+autocmd FileType markdown,tex,mail setlocal spell complete+=kspell nocursorline
 
 " noremap ~ :call ToggleSpell()<c-j>
 " noremap ` z=

@@ -6,13 +6,15 @@
 # TODO: Check that this works
 # https://www.daniloaz.com/en/how-to-prevent-the-xsession-errors-file-from-growing-to-huge-size/
 ERRFILE=/dev/null
+# GTK use Xorg compose key
+export XMODIFIERS="@im=none"
 
 
 export TERMCMD=xterm   # Terminal
 export TERMINAL=xterm  # Terminal
 export BROWSER=firefox # Browser
 
-# NOTE: This does not seems to work anymore.
+# TODO: Check if this works at all
 if command -v wmname >/dev/null 2>&1; then
   # FOr no re-parenting window managers
   # https://en.wikipedia.org/wiki/Re-parenting_window_manager

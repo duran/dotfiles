@@ -5,7 +5,6 @@ if exists('g:loaded_fzf')
     let &t_TI = ""
     let &t_TE = ""
 
-    " nnoremap <leader>o :e ./**/
     nnoremap <leader>o :Files .<c-j>
     nnoremap <leader>t :Tags<c-j>
 endif

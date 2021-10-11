@@ -4,6 +4,9 @@
     # Ignore files related with editors, etc.
     # TODO: Make this portable
     excludesfile = ~/.config/git/ignore
+[status]
+    # Show submodule change summary
+    submoduleSummary = true
 [push]
     # Merge without leaving add parent to new commit (aka forget dev branch)
     default = simple
