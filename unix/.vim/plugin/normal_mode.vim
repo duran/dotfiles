@@ -1,34 +1,17 @@
-" Normal mode maps
-"
-" TODO: move vim inside https://stackoverflow.com/questions/10884520/move-file-within-vim
-" TODO: ctags command
+" Inconsistent behaviour
+nnoremap Y y$
+nnoremap cw dwi
 
-
-" Meta stuff
-"
-" The main points in the mapping strategy are the following.
-" * We use space as the leader key.
-" * We use ESC as escape key to type the metakey in xterm-like terminals.
+" Easy get out from insert mode
+inoremap jk <c-[>
 
 " Turning off space so it can be used as leader key without side effects.
 let mapleader = ' '
 noremap <space> <nop>
 
-" Turning off escape in most modes, but allowing escaped keys to be used as
-" meta-keys, See plugin/escape_to_metakey.vim
-noremap  <c-[><c-[> <nop>
-noremap! <c-[><c-[> <nop>
-
-" We however, still want the escape key in some modes.
-inoremap jk <c-[>
-vnoremap jk <c-[>
-
 
 " Normal mode, no leader.
 
-" Inconsistent behaviour
-nnoremap Y y$
-nnoremap cw dwi
 
 " Fast common edits, save, etc.
 nnoremap <c-s> :update<c-[>
@@ -44,7 +27,7 @@ nnoremap <c-p> :bprev<c-j>
 
 " Go to places
 nnoremap gb :ls<c-j>:b
-nnoremap gw :execute ':silent !$BROWSER <cWORD>' <c-j> :redraw! <c-j>
+nnoremap gx :execute ':silent !open <cWORD>' <c-j> :redraw! <c-j>
 
 " Repeat macros and commands faster
 nnoremap Q @@
@@ -124,4 +107,8 @@ nmap <leader>x "+x
 nmap <leader>X "+X
 nmap <leader>s "+s
 nmap <leader>S "+S
+
+" Navigation
+nnoremap <leader>o :find 
+" nnoremap <leader>t :Tags<c-j>
 

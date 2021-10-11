@@ -1,3 +1,3 @@
-" Mails
+" mails
 
 set formatoptions+=w
