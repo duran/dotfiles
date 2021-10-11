@@ -1,4 +1,6 @@
+# Plugins, vim/netrw temp files
 unix/.vim/pack
+unix/.vim/.netrwhist
+# w3m temp files
 unix/.w3m/cookie
 unix/.w3m/history
-unix/.vim/tmp

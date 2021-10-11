@@ -2,8 +2,10 @@
     # I do not care about merge message
     mergeoptions = --no-edit
     # Ignore files related with editors, etc.
-    # TODO: Make this portable
     excludesfile = ~/.config/git/ignore
+[status]
+    # Show submodule change summary
+    submoduleSummary = true
 [push]
     # Merge without leaving add parent to new commit (aka forget dev branch)
     default = simple
@@ -20,7 +22,6 @@
     interactive = true
 [commit]
     # Change default git template
-    # TODO: Make this portable
     template = ~/.config/git/message
 [merge]
     # vimdiff is great
@@ -123,7 +124,6 @@
     # pretty tree (with exa)
     tree = !exa --long --all --header --tree --git --git-ignore --ignore-glob=.git --color=always | $PAGER
 
-    # TODO: clean this part
     unpushed = !git diff origin/$(git rev-parse --abbrev-ref HEAD)..HEAD
     create-graph = !git show-ref -s | git commit-graph write --stdin-commits
     rmrbranch = push origin --delete

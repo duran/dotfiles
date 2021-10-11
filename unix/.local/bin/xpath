@@ -1,0 +1,4 @@
+#!/bin/sh
+# extract xml
+
+xmlstarlet -t -v "$@"

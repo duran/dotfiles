@@ -7,7 +7,7 @@ keymap zh HELP
 # qutebrowser default keymaps
 # cheatsheet: https://qutebrowser.org/img/cheatsheet-big.png
 
-# TODO: w missing web inspector
+# MISSING: w missing web inspector
 # FIXME: Copy paste with kitty
 # FIXME: Copy paste with tmux buffers
 # FIXME: Copy paste with piknik
@@ -16,19 +16,19 @@ keymap r RELOAD
 keymap T TAB_MENU
 keymap yy EXTERN      '(printf %s | clipboard -i)'
 keymap YY EXTERN_LINK '(printf %s | clipboard -i)'
-# TODO: Missing Yy yank
-# TODO: Missing u undo clossing tab
+# MISSING: Missing Yy yank
+# MISSING: Missing u undo clossing tab
 # NOTE: Cannot scroll half page up (C-u)
-# TODO: Missing i insert mode
+# MISSING: Missing i insert mode
 keymap O TAB_GOTO
 keymap o GOTO
-# TODO: Missing Pp paste
-# TODO: Missing {}[] navigation commands
+# MISSING: Missing Pp paste
+# MISSING: Missing {}[] navigation commands
 
-# TODO: Missing a cancel download Ss set configuration
+# MISSING: Missing a cancel download Ss set configuration
 # NOTE: Cannot scroll half page down (C-d)
 keymap d CLOSE_TAB
-# TODO: Missing F open link in new tab
+# MISSING: Missing F open link in new tab
 keymap f LIST_MENU
 keymap C-f NEXT_PAGE
 keymap H PREV
@@ -38,11 +38,11 @@ keymap K PREV_TAB
 #keymap K TAB_LEFT
 keymap L NEXT
 keymap : COMMAND
-# TODO: Missing extended hint mode
+# MISSING: Missing extended hint mode
 
-# TODO: Missing c close other tabs
-# TODO: Missing Bb quickmarks
+# MISSING: Missing c close other tabs
+# MISSING: Missing Bb quickmarks
 keymap C-b PREV_PAGE
-# TODO: Missing m save quickmarks
+# MISSING: Missing m save quickmarks
 
-# TODO: Missing modifier commands
+# MISSING: Missing modifier commands
