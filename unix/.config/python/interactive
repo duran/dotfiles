@@ -1,8 +1,9 @@
+# No history
+import readline
+readline.write_history_file = lambda *args: None
+
+# Ipython if possible
 if not hasattr(__builtins__, '__IPYTHON__'):
-    # No history
-    import readline
-    readline.write_history_file = lambda *args: None
-    # Ipython if possible
     import os, IPython
     IPython.start_ipython(argv=['--profile', 'terminal'])
     # Exit always

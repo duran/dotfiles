@@ -9,3 +9,6 @@ set ruler          " show line and column
 set splitbelow     " reverse horizontal split
 set splitright     " reverse vertical split
 set lazyredraw     " do not draw before macros and autocommands
+" TODO: set markers for special, invisible characters
+" set listchars=tab:▸\ ,eol:¬ 
+"  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+

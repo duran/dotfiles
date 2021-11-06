@@ -18,6 +18,7 @@
 ########
 # Base #
 ########
+# TODO: missing XDG path
 export PATH="$PATH:$HOME/.local/bin" # Personal scripts in path
 
 
@@ -112,4 +113,6 @@ export IPYTHONDIR="${XDG_CONFIG_HOME:-$HOME/.config}/ipython"
 export R_ENVIRON="${XDG_CONFIG_HOME:-$HOME/.config}/r/env"
 
 # Homebrew
-export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_ANALYTICS=1       # no telemery
+export HOMEBREW_NO_AUTO_UPDATE=1     # no automatic update of homebrew
+export HOMEBREW_NO_INSTALL_UPGRADE=1 # no automatic update of homebrew packages

@@ -1,21 +1,28 @@
-Actions in this todo list are sorted by degree of difficulty and time:
+xcape + x general cleanup
+vim
+    - move to neovim and embed in vscode and firefox
+    - make possible to do the following:
+        1. Check multiple cursor solution for vim (shift+alt+...)
+        2. IntelliSense: Ctrl+Space
+        3. Move lines up and down
+        4. Comment block of code with Ctrl+/
+        5. Rename refactoring 
+        6. Formatting (again)
+        7. Folding (again)
+        8. Errors and warnings
+        9. Snippeds
+        10. Emmets VIM
+        11. Terminal (again) (ctrl+`)
+        12. Version control (ctrl+shift+G) (again)
+        13. Edit, build, test and debug
+    - :options + usr_01... + quickfix mksession
 
-Under an hour:
-* think where to put loadkeys and setxkb
+
+================================================================================
+* loadkeys
 * check setkdbmap with -device, xinput and /usr/include/X11/keysymdef.h
 * also xvkdb (to modify stuff) and xbindkeys (to run shell commands, globally) xbindkeys ( http://xahlee.info/linux/linux_set_F2_F3_F4_to_cut_copy_paste.html
-* git reflog
-* :help undo-persistence
-* turn on gnupg
 * aria2c
-* check different line disciplines in Linux/Unix
-* git with patches
-* harden ssh vps
 * add epdfview, pcmanfm and nmtui
-
-
-Under a long weekend:
-* autodownload with youtube-dl and put everything in place
-    - newsboat check gotbletu to make it a general download manager
-* learn the basics of remote system control as Ansible or Saltstack 
+* check different line disciplines in Linux/Unix
 * check all possible bash options and add them to {set}

@@ -18,6 +18,7 @@ application/typescript=pty-open.desktop
 text/markdown=pty-open.desktop
 text/calendar=pty-open.desktop
 application/xml=pty-open.desktop
+application/x-shellscript=pty-open.desktop
 text/html=firefox.desktop
 application/xhtml+xml=firefox.desktop
 # Documents (containers)

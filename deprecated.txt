@@ -1,0 +1,216 @@
+-------> manual/systemd/etc/systemd/logind.conf
+[Login]
+HandleLidSwitch=ignore
+-------> manual/home/.shrc
+#!/bin/sh
+# Turn on colors when using GNU ls
+
+alias ls='ls --color'
+
+
+# Check if Tmux is in the machine and, if it is, log in
+
+if tmux has-session 2>/dev/null
+then
+  test -v TMUX && tmux attach
+else
+  tmux
+fi
+-------> manual/home/.Xresources
+! Theme
+#include ".config/x/themes/molokai"
+
+! Terminals
+#include ".config/x/deprecated/urxvt"
+#include ".config/x/resources"
+-------> manual/home/.gitconfig
+[user]
+    name = NAME
+    email = EMAIL
+[sendemail]
+    smtpserver = HOST
+    smtpuser = USER
+    smtpencryption = tls
+    smtpserverport = PORT
+    smtpPass = OPTIONAL_PASSWORD
+-------> manual/home/crontab
+#=====================================================================#
+#     0-23   0-59               0-30  0-6   1-12                      #
+#     |_    _|                 _|    _|    _|                         #
+#       |  |                  |     |     |            * any          #
+#    At HH:MM on day-of-month MD on WD in M            - range        #
+#       |  |                  |     |     |            , array        #
+#     __|__|            ______|     |   __|            / step         #
+#    |  |            __|         ___|__|                              #
+#   _|  |__         |         __|   |__                               #
+#  |       |        |        |         |                              #
+#  |       |        |        |         |                              #
+#=====================================================================#
+#  Min  |  Hour  |  Mday  |  Month  |  Wday  |  Command               #
+#=====================================================================#
+PATH='/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin'
+@reboot HOME/bin/backlock HISTFILE
+0 * * * * /usr/bin/find TMPDIR -mindepth 1 -atime +2 -delete
+#@reboot transmission-daemon
+#0 * * * * newsboat -x reload
+# */30 * * * * flexget --cron execute
+-------> manual/home/.screenrc
+# Disable the startup message
+startup_message off
+# Automatically detach all screens on accidental hangup
+autodetach on
+# Set a large scrollback buffer
+defscrollback 10000
+# Always start `screen` with UTF-8 enabled (`screen -U`)
+defutf8 on
+# Set the terminal color to 256color
+term "screen-256color"
+-------> manual/home/.hushlogin
+# The mere presence of this file in the home directory disables the system
+# copyright notice, the date and time of the last login, the message of the
+# day as well as other information that may otherwise appear on login.
+# See `man login`.
+-------> manual/home/.profile
+#!/bin/sh
+
+# Temporal file directory
+# NOTE: For some reason, this bloks ssh login in AWS
+export TMPDIR="$HOME/tmp"  
+
+# Timezone. Some alias can be found in Linux in
+# /usr/share/zoneinfo
+export TZ='Europe/Berlin'
+
+# This can speed considerably some text CLI tools
+export LC_ALL=C
+
+# In the future we might to change the default config file
+export XDG_CONFIG_HOME="$HOME/.config"
+
+# For Bash only
+shopt -s globstar # recursive global match
+
+# TODO: Update this
+# export LANG='en_IE.utf8'             # Main locale: language and standarization 
+# export LANGUAGE='en_US.utf8'         # Fallback locale (you can overwrite both setting with LC_ALL)
+-------> manual/gnu/etc/resolv.conf
+# Cloudflare 
+nameserver 1.1.1.1
+nameserver 2606:4700:4700::1111
+
+# Quad9
+nameserver 9.9.9.10
+nameserver 2620:fe::10
+
+# Google (level3 seems fast, but I do not know if it is secure)
+nameserver 8.8.8.8
+nameserver 2001:4860:4860::8888
+
+# Set timeoupt borked DNS
+options timeout:1
+-------> manual/gnu/etc/locale.conf
+LANG=en_US.UTF-8
+LC_ADDRESS=en_IE.UTF-8
+LC_IDENTIFICATION=en_IE.UTF-8
+LC_MEASUREMENT=en_IE.UTF-8
+LC_MONETARY=en_IE.UTF-8
+LC_NAME=en_IE.UTF-8
+LC_NUMERIC=en_IE.UTF-8
+LC_PAPER=en_IE.UTF-8
+LC_TELEPHONE=en_IE.UTF-8
+LC_TIME=en_IE.UTF-8
+
+# Another options for locale-gen
+
+en_IE.UTF-8 UTF-8  
+en_US.UTF-8 UTF-8  
+es_ES.UTF-8 UTF-8  
+gl_ES.UTF-8 UTF-8  
+pt_PT.UTF-8 UTF-8  
+-------> manual/gnu/etc/hostname
+localname
+-------> manual/gnu/etc/vconsole.conf
+# This is only for the Virtual Terminal (without X)
+# You can access with Ctrl+Alt+F1..7
+# You can map several keyboards KEYMAP="us,ru"
+# And change with something like KEYMAP_TOGGLE="grp:alt_shift_toggle"
+ 
+KEYMAP=us-acentos
+KEYMAP_TOGGLE=
+FONT=
+FONT_MAP=
+FONT_UNIMAP=
+-------> manual/gnu/LS_COLORS
+# File to use with GNU or Slackware dircolors
+# This create an LS_COLORS than can be used with ls --color
+# Just use dircolors <this file>
+
+# Basic codes:
+# none bold underscore blink reverse concealed
+#   00   01         04    05      07        08
+#
+# Text color codes:
+#            black red green yellow blue magenta cyan white 
+# foreground  30    31    32     33   34      35   36    37
+# background  40    41    42     43   44      45   46    47
+
+NORMAL        00    # nonfilename text
+FILE          00    # regular file
+MULTIHARDLINK 01    # regular file with more than one hard link
+EXEC          01;31 # regular executable files
+SETUID        31;43 # file that is setuid (u+s)
+SETGID        31;43 # file that is setgid (g+s)
+CAPABILITY    31;43 # file with capability
+
+DIR    01;34 # directory
+STICKY 34;43 # dir with the sticky bit set (+t) and not other-writable
+
+LINK    01;36 # symbolic link  
+ORPHAN  36;41 # orphaned syminks
+MISSING 36;41 # ... and the files they point to
+
+FIFO 01;32 # named pipe
+SOCK 01;32 # socket
+DOOR 01;32 # door
+
+BLK 01;33 # block device driver
+CHR 01;33 # character device driver
+
+#STICKY_OTHER_WRITABLE 30;42 # dir that is sticky and other-writable (+t,o+w)
+#OTHER_WRITABLE 34;42 # dir that is other-writable (o+w) and not sticky
+#RESET 0  # reset to "normal" color
+
+
+-------> manual/deprecated_install
+#!/bin/sh
+# Installs (copy) dotfiles to target server
+# By default intstall them in $HOME
+
+if [ $# -eq 0 ]; then
+  DEST="$HOME"
+elif [ $# -eq 1 ]; then
+  DEST="$1"
+else
+  printf 'You must give one parameter at most\n' 1>&2
+  exit 1
+fi
+
+while true; do
+  printf 'Send home/ dotfiles to %s?\n' "$DEST"
+  read REPLY 
+  case $REPLY in
+    [Yy]* ) break;;
+    [Nn]* ) exit;;
+    [Ww]* ) find home -type f;;
+    * ) echo "Please answer yes, no or what.";;
+  esac
+done
+
+if command -v rsync > /dev/null; then
+  rsync --archive --compress --verbose -P home/ "$DEST"
+elif command -v scp > /dev/null; then
+  scp -r home/.[!.]* "$DEST"
+else
+  printf 'Cannot find rsync or scp\n' 1>&2
+  exit 1
+fi

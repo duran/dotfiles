@@ -77,3 +77,12 @@ inoremap <c-k> <c-o>"_d$
 
 " Mode
 " MISSING: c-x extra functionality not implemented
+
+
+
+
+
+" Misc
+" MISSING: verbatim char c-v  and c-q
+" NOTE: c-[ turn off 
+" MISSING: set mark c-@

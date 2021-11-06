@@ -1,0 +1,4 @@
+#!/bin/sh
+# find files, echo the name, and print all of them
+
+find "$@" -type f -exec echo '------->' {} \; -exec cat {} \;
