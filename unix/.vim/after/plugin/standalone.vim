@@ -1,4 +1,7 @@
-" FIXME
+" Only runs when vim is used standalone (so no embedding)
+" For the moment being, this is always
+
+" TODO: Clean up some day
 if exists('g:loaded_fzf')
     set rtp+=$FZF_HOME
     " Fix Xterm incompatibilities

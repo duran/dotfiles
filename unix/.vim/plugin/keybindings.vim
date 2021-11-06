@@ -130,3 +130,57 @@ xnoremap <leader>< xi<><c-[>P
 
 " noremap! <c-g> <c-c>
 inoremap <c-z> <c-o>:suspend<c-j>
+
+" TODO: command line window keys
+" command-line_window.vim
+" Command-line window
+" autocmd CmdwinEnter * nnoremap <buffer> <leader>q <c-c><c-c>
+" autocmd CmdwinEnter * nnoremap <buffer> <c-j> <cr>
+" TODO: Spell
+" Spell checker triggers and options
+" Better colors
+" hi clear SpellBad
+" hi clear SpellCap
+" hi clear SpellRare
+" hi clear SpellLocal
+" hi SpellBad    ctermfg=9
+" hi SpellCap    ctermfg=3    cterm=underline
+" hi SpellRare   ctermfg=13   cterm=underline
+" hi SpellLocal  cterm=None
+" autocmd FileType markdown,tex,mail setlocal spell complete+=kspell nocursorline
+"" WYGIWYS
+"nunmap <buffer> j
+"nunmap <buffer> k
+"nunmap <buffer> ^
+"nunmap <buffer> $
+"nunmap <buffer> 0
+"nunmap <buffer> gj
+"nunmap <buffer> gk
+"nunmap <buffer> g^
+"nunmap <buffer> g$
+"nunmap <buffer> g0
+"nnoremap <buffer> j gj
+"nnoremap <buffer> k gk
+"nnoremap <buffer> ^ g^
+"nnoremap <buffer> $ g$
+"nnoremap <buffer> 0 g0
+"nnoremap <buffer> gj j
+"nnoremap <buffer> gk k
+"nnoremap <buffer> g^ ^
+"nnoremap <buffer> g$ $
+"nnoremap <buffer> g0 0
+" noremap ~ :call ToggleSpell()<c-j>
+" noremap ` z=
+" noremap <left> [s
+" noremap <right> ]s
+" noremap <up> zw
+" noremap <down> zg
+" softwrap in vim is a hack
+"augroup softwrap
+"    autocmd VimResized * if (exists('b:softwrap') && &columns > 80) | set columns=80 | endif
+"    autocmd BufEnter * set columns=999
+"augroup END
+"set spelllang=en,es,gl
+" colorscheme desert elflord slate
+
+" :w !sudo tee % > /dev/null 

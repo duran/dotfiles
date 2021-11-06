@@ -11,8 +11,12 @@ set backupdir^=~/.local/share/vim/backup// " where to store temporary backups
 " set nobackup
 " set noundofile
 
+
 " Put cursor in the same place it was when we reopen a file
 au BufReadPost *
  \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
  \ |   exe "normal! g`\""
  \ | endif
+
+ " Now netrw history
+ let g:netrw_dirhistmax = 0

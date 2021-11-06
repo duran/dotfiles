@@ -15,6 +15,7 @@ vim
         11. Terminal (again) (ctrl+`)
         12. Version control (ctrl+shift+G) (again)
         13. Edit, build, test and debug
+    - :options + usr_01... + quickfix mksession
 
 
 ================================================================================
