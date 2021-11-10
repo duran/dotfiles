@@ -1,2 +1,3 @@
 #!/bin/sh
+
 test -t 0 && xsel -bo || xsel -bi

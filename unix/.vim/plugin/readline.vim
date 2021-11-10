@@ -8,7 +8,7 @@ inoremap <c-l> <c-o><c-l>
 " MISSING: No list completed m-? and m-+
 " filename extension
 " MISSING: No filename expansion m+/ for command mode
-inoremap <m-/> <c-x><c-f>
+inoremap <a-/> <c-x><c-f>
 
 " Motion
 " NOTE: Overwrite in command line mode
@@ -18,10 +18,10 @@ noremap! <c-b> <left>
 noremap! <c-f> <right>
 " NOTE: m-f already in both modes, but is no exactly the same in insert mode
 " move one word to the left
-noremap! <m-b> <s-left>
+noremap! <a-b> <s-left>
 " move one word to the right
-noremap! <m-f> <s-right>
-" MISSING: Should I fix <m-f>? 
+noremap! <a-f> <s-right>
+" MISSING: Should I fix <a-f>? 
 " NOTE: m-b seems mapped in us-acentos...
 " move to the start of the line
 " should I use <c-o>^ for insert mode?
@@ -49,9 +49,9 @@ noremap! <c-e> <end>
 " Change
 " MISSING: Move char c-t
 " MISSING: Move word m-t
-inoremap <m-u> <c-o>gUe
-inoremap <m-l> <c-o>gue
-inoremap <m-c> <c-o>gUl<c-o>e
+inoremap <a-u> <c-o>gUe
+inoremap <a-l> <c-o>gue
+inoremap <a-c> <c-o>gUl<c-o>e
 " MISSING: Upcase word m-u (command mode)
 " MISSING: Lowcase word m-l (command mode)
 " MISSING: Capitalise word m-c (command mode)
@@ -67,7 +67,7 @@ inoremap <m-c> <c-o>gUl<c-o>e
 " Delete
 noremap! <c-d> <delete>
 " c-h and c-w in both modes, but no yank mode
-inoremap <m-d> <c-o>"_de
+inoremap <a-d> <c-o>"_de
 " MISSING: missing m-d in c-mode
 " c-u already in both modes, but no yank mode
 inoremap <c-k> <c-o>"_d$

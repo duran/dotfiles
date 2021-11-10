@@ -20,12 +20,12 @@ nnoremap <c-h> i<c-h><c-[>l
 nnoremap <c-j> o<c-[>
 
 " TODO: Move lines up and down like in VSCode
-nnoremap <m-j> :m .+1<CR>==
-nnoremap <m-k> :m .-2<CR>==
-inoremap <m-j> <Esc>:m .+1<CR>==gi
-inoremap <m-k> <Esc>:m .-2<CR>==gi
-vnoremap <m-j> :m '>+1<CR>gv=gv
-vnoremap <m-k> :m '<-2<CR>gv=gv
+nnoremap <a-j> :m .+1<CR>==
+nnoremap <a-k> :m .-2<CR>==
+inoremap <a-j> <Esc>:m .+1<CR>==gi
+inoremap <a-k> <Esc>:m .-2<CR>==gi
+vnoremap <a-j> :m '>+1<CR>gv=gv
+vnoremap <a-k> :m '<-2<CR>gv=gv
 
 
 
@@ -41,8 +41,8 @@ nnoremap \ @:
 
 " Windows and tabs
 " TODO: Fix the alt-gr H
-" noremap <m-o> :ls<c-j>:b
-" noremap <m-d> ZZ
+" noremap <a-o> :ls<c-j>:b
+" noremap <a-d> ZZ
         
 " noremap ï <c-w>j
 " noremap œ <c-w>k
@@ -57,22 +57,22 @@ nnoremap \ @:
 " nnoremap - :tabclose<c-j>
 
 
-" noremap <m-t> :tabnew<c-j>
-" noremap <m-n> gt
-" noremap <m-p> gT
-" noremap <m-1> 1gt
-" noremap <m-2> 2gt
-" noremap <m-3> 3gt
-" noremap <m-4> 4gt
-" noremap <m-5> 5gt
-" noremap <m-6> 6gt
-" noremap <m-7> 7gt
-" noremap <m-8> 8gt
-" noremap <m-9> 9gt
-" noremap <m-0> 10gt
+" noremap <a-t> :tabnew<c-j>
+" noremap <a-n> gt
+" noremap <a-p> gT
+" noremap <a-1> 1gt
+" noremap <a-2> 2gt
+" noremap <a-3> 3gt
+" noremap <a-4> 4gt
+" noremap <a-5> 5gt
+" noremap <a-6> 6gt
+" noremap <a-7> 7gt
+" noremap <a-8> 8gt
+" noremap <a-9> 9gt
+" noremap <a-0> 10gt
 
 " Shortcut to rapidly toggle `set list`
-" nnoremap <m-l> :set list!<c-j>
+" nnoremap <a-l> :set list!<c-j>
 
 
 " Turning off space so it can be used as leader key without side effects.

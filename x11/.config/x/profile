@@ -32,8 +32,9 @@ fi
 xset m 2 0
 # Change layout to US International English
 setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
-# Ctrl -> CapsLock -> LeftShift; OS -> Alt
+# Regular keyboard without Scroll_Lock/Pause/Break, most mod keys send special combination when tapped
 xmodmap "$HOME/.config/x/modmap"
+xcape -e 'ISO_Level3_Shift=Multi_key;Super_L=Control_L|space;Control_L=Caps_Lock;Shift_L=Escape'
 
 
 # If we have redshift, we will use it
