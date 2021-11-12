@@ -1,0 +1,3 @@
+#!/bin/sh
+
+$PAGER -- /usr/share/X11/locale/$LANG/Compose

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+EXECUTABLES=$(type -Pa $1)
+
+test -n EXECUTABLES && $VISUAL $EXECUTABLES

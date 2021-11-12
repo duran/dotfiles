@@ -17,6 +17,10 @@ vim
         13. Edit, build, test and debug
     - :options + usr_01... + quickfix mksession
 
+xdg-* utilities, including:
+    - gio
+    - exa
+
 
 ================================================================================
 * loadkeys

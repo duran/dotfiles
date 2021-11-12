@@ -1,10 +1,9 @@
 #!/bin/sh
 # downloads a webpage as a pdf
 
-if test $# -eq 0 -o $# -ge 3
-then
-  printf 'Usage: html2pdf url [pdf_path]\n' 1>&2
-  exit $?
+if test $# -eq 0 -o $# -ge 3; then
+    printf 'Usage: html2pdf url [pdf_path]\n' 1>&2
+    exit $?
 fi
 
 chromium --headless --disable-gpu --print-to-pdf="${2:-download.pdf}" "$1"

@@ -1,8 +1,4 @@
-# This file represent the environmental variables for a "pet" machine. This
-# setup have been tested in the following situations.
-
-
-# | OS    | Situation         | Login | Interactive |
+# This file represent the environmental variables for a "pet" machine. This setup have been tested in the following situations.  | OS    | Situation         | Login | Interactive |
 # |:------|:------------------|:------|:------------|
 # | Linux | Terminal          | Yes   | Yes         |
 # | Linux | Xorg              | Yes   | No          |
@@ -59,7 +55,7 @@ export VISUAL=vim
 ###########
 # Browser #
 ###########
-export BROWSER=w3m
+export BROWSER=open
 
 #########
 # Pager #

@@ -1,6 +1,6 @@
 #!/bin/sh
-# Search in Firefox
 
+# Search in Firefox
 
 FILE=$(mktemp)
 KEYWORD="$1"

@@ -30,7 +30,7 @@ alias c=compress
 alias e='$EDITOR'
 # - f
 alias g=git
-alias h=help
+# + h
 alias i=invite
 # - j
 alias k=man

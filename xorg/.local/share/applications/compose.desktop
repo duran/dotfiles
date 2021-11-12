@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=xorg-compose
+Exec=xorg-compose
+TryExec=true
+GenericName=Compose File Viewer
+Terminal=true
