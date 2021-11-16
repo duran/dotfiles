@@ -1,4 +1,11 @@
+set window-title-basename true
 set selection-clipboard clipboard
 
 #map o exec 'firefox "%"'
 map <C-s> focus_inputbar ":exec bash -c 'cp $FILE $(xdg-user-dir DOWNLOAD)/$(basename $FILE)'"
+#map <C-o> feedkeys ":exec acroread $FILE<Return>"
+
+set default-bg "#101010" # Background
+set default-fg "#d0d0d0" # Foreground
+
+set recolor true

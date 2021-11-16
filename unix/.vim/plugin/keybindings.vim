@@ -184,3 +184,5 @@ inoremap <c-z> <c-o>:suspend<c-j>
 " colorscheme desert elflord slate
 
 " :w !sudo tee % > /dev/null 
+
+" nnoremap <leader>b :if &binary | set nobinary | %!xxd -r | else | set binary | %!xxd | endif<c-j>

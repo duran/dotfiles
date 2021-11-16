@@ -197,10 +197,10 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send -t 500 \\"Bri
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 5%+; notify-send -t 500 \\"Volume at $(amixer sget Master | grep -Po '[[][0-9]+%[]]')\\""
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master 5%-; notify-send -t 500 \\"Volume at $(amixer sget Master | grep -Po '[[][0-9]+%[]]')\\""
 bindsym XF86AudioMute exec "amixer -q sset Master toggle; notify-send -t 500 \\"Volume at $(amixer sget Master | grep -Po '[[][0-9]+%[]]')\\""
-
-
-
-################################################################################
+# Media buttons
+bindsym XF86AudioPrev exec "exec playerctl previous"
+bindsym XF86AudioPlay exec "exec playerctl play-pause"
+bindsym XF86AudioNext exec "exec playerctl next"
 # Themes
 ################################################################################
 

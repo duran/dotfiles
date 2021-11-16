@@ -1,0 +1,5 @@
+#!/bin/sh
+# cleans display and erase buffer
+# xterm control sequences https://invisible-island.net/xterm/ctlseqs/ctlseqs.html (search for CSP PS)
+
+printf '\033c\e[3J'
