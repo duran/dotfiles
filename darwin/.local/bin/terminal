@@ -14,7 +14,7 @@ on run argv
     if commandStart then set commandString to commandString & ";exit"
 
     tell application "Terminal"
-        # If does not exist, open
+        # If does not exist, launch
         if not (exists window 1) then reopen
         # Lauch command
         tell window 1 to set newTab to do script commandString

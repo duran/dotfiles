@@ -30,14 +30,14 @@ alias c=compress
 alias e='$EDITOR'
 # - f
 alias g=git
-# + h
+alias h=hp
 alias i=invite
 # - j
 alias k=man
 alias l='ls -CF'
 alias m='$MAILER'
 # - n
-alias o=open
+alias o='$BROWSER'
 alias p='$PAGER'
 alias q=exit
 alias r='R --quiet'

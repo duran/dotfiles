@@ -85,7 +85,6 @@ export LESS_TERMCAP_ue
 #########
 # Other #
 #########
-export OPENER=open       # Opener
 export TERMCMD=terminal  # Terminal
 export TERMINAL=terminal # ...2
 

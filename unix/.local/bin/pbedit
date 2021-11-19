@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pbpaste | vipe | pbcopy
+pb | vipe | pb

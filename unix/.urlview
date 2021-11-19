@@ -1,4 +1,4 @@
-# Regexp is missing emails, git, magnets.
+# Fails miserable when we are have a ) at the end of the URI
 #|[-a-zA-Z0-9_.+]+@[-a-zA-Z0-9]+\.[-a-zA-Z0-9.]
-REGEXP (https?|ftp)://[^ ,;\t\n\r<">\):]+
+REGEXP ([a-z0-9.]+)://[^ ,;\t\n\r<">\):]+
 COMMAND "$BROWSER"

@@ -7,12 +7,6 @@
 export GTK_IM_MODULE=xim
 export XMODIFIERS="@im=none"
 
-
-
-export TERMCMD=xterm   # Terminal
-export TERMINAL=xterm  # Terminal
-export BROWSER=firefox # Browser
-
 # TODO: none of this seems to work
 # TODO: Check that this works
 # https://www.daniloaz.com/en/how-to-prevent-the-xsession-errors-file-from-growing-to-huge-size/

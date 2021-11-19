@@ -206,7 +206,7 @@ bindsym XF86AudioNext exec "exec playerctl next"
 
 
 # Default values
-default_border pixel 4
+default_border pixel 2
 
 # Special cases
 # FIXME: Move
@@ -234,15 +234,16 @@ font xft:DejaVu Sans Mono 11
 set_from_resource $background background
 set_from_resource $foreground foreground
 set_from_resource $bad_dark color1
-set_from_resource $good_bright color2
-set_from_resource $muted_bright color7
+set_from_resource $good_dark color2
+set_from_resource $muted_dark color7
+set_from_resource $muted_brigth color15
 
 # <colorclass>          <border> <background>  <text>  <indicator> <child_border>
-client.focused          #FFC300  $good_bright  #FFC300 #FFC300
-client.focused_inactive #FFC300  $info_bright  #FFC300 #FFC300
-client.unfocused        #FFC300  $muted_bright #FFC300 #FFC300
-#client.urgent          #FFC300  #d33682       #fdf6e3 #dc322f
-#client.background      #ffffff
+client.focused          $good_dark  $good_dark  $background #FFC300
+client.focused_inactive $background  $foreground  $background #FFC300
+client.unfocused        $muted_dark  $muted_dark  $background #FFC300
+client.urgent           $bad_dark $bad_dark $background #FFC300
+client.background       #FFC300
 bar {
     mode hide
     i3bar_command i3bar
@@ -254,16 +255,16 @@ bar {
     strip_workspace_numbers yes
 
     colors {
-        background $foreground
-        statusline $background
-        separator  $background
+        background $background
+        statusline $foreground
+        separator  $foreground
 
     #                      border       backgr.     text
-        focused_workspace  $background $good_bright $background
-        active_workspace   $background #FFC300      $background
-        inactive_workspace $background $foreground  $background
-        binding_mode       $background #FFC300      $background
+        focused_workspace  $good_dark  $good_dark   $background
+        active_workspace   $background $foreground  $background
+        inactive_workspace $foreground $background  $foreground
         urgent_workspace   $background $bad_dark    $background
+        binding_mode       $background $foreground  $background
     }
 }
 
@@ -354,7 +355,6 @@ bindsym $mod+Ctrl+m exec "$TERMCMD -e alsamixer"
 # FIXME: TODO
 
 workspace_layout tabbed
-
 # Lock computer automatically
 exec --no-startup-id xautolock -time 120 -locker blurlock
 
@@ -378,6 +378,6 @@ exec --no-startup-id volumeicon
 # Launch ranger
 #exec --no-startup-id "$TERMCMD -e ranger"
 
-exec --no-startup-id xdg-open "$HOME"
-exec --no-startup-id $BROWSER
+exec --no-startup-id true;"$BROWSER" "$HOME"
+exec --no-startup-id true;"$BROWSER" 'https://'
 
