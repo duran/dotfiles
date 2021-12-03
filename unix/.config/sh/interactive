@@ -26,9 +26,9 @@ alias ssh-keygen='ssh-keygen -o -a 100 -t ed25519'
 # - a
 alias b='$BROWSER'
 alias c=compress
-# - d
+alias d=trash
 alias e='$EDITOR'
-# - f
+alias f=flush
 alias g=git
 alias h=hp
 alias i=invite

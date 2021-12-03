@@ -46,9 +46,8 @@ bindsym $mod+Shift+l move  right
 # Excel-like control flow
 bindsym $mod+Tab             focus right
 bindsym $mod+Shift+Tab       focus left
-# FIXME:
-bindsym $mod+Backspace       focus up
-bindsym $mod+Shift+Backspace focus down
+#bindsym $mod+Backspace       focus up
+#bindsym $mod+Shift+Backspace focus down
 
 # Floating,backlog and pinned windows
 floating_modifier $mod
@@ -62,9 +61,10 @@ bindsym $mod+backslash sticky toggle
 #
 bindsym $mod+f fullscreen toggle
 
+# TODO: Add this
 # Tree movements
-bindsym $mod+p focus parent
-bindsym $mod+n focus child
+#bindsym $mod+p focus parent
+#bindsym $mod+n focus child
 
 # Kill app
 bindsym $mod+w kill
@@ -102,10 +102,10 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 
-# TODO: Fix from here
 
+# TODO: Change this one
 # Resize window (you can also use the mouse for that)
-bindsym $mod+r mode "resize"
+bindsym $mod+Ctrl+r mode "resize"
 mode "resize" {
     # Resize
     bindsym h     resize shrink width   5 px or  5 ppt
@@ -125,8 +125,8 @@ mode "resize" {
 }
 
 # Reload and restart
-bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
+bindsym $mod+r reload
 
 # hide/unhide i3status bar
 bindsym $mod+b bar mode toggle
@@ -138,58 +138,34 @@ bindsym $mod+b bar mode toggle
 ################################################################################
 
 # Turn off, logout, etc.
-bindsym $mod+Escape      mode "$mode_system"
-bindsym $mod+bracketleft mode "$mode_system"
-set $mode_system (l)ock, (s)hutdown, (r)eboot, (e)xit, s(u)spend, (h)ibernate 
-mode "$mode_system" {
-    bindsym l exec --no-startup-id       i3exit lock,        mode "default"
-    bindsym s exec --no-startup-id       i3exit shutdown,    mode "default"
-    bindsym r exec --no-startup-id       i3exit reboot,      mode "default"
-    bindsym u exec --no-startup-id       i3exit switch_user, mode "default"
-    bindsym e exec --no-startup-id       i3exit logout,      mode "default"
-    bindsym h exec --no-startup-id       i3exit hibernate,   mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit suspend,     mode "default"
+bindsym $mod+Escape exec i3rofi
+bindsym $mod+z exec --no-startup-id i3blurlock
 
-    # Get out
-    bindsym Return      mode "default"
-    bindsym Escape      mode "default"
-    bindsym bracketleft mode "default"
-    bindsym semicolon   mode "default"
-}
-
-# Lockout
-# Change for xdg-screensaver
-#bindsym $mod+z exec --no-startup-id i3blurlock
-
+# Kill programs
+bindsym $mod+Shift+w --release exec --no-startup-id xkill
+bindsym $mod+Shift+q --release exec --no-startup-id xkill
+bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 
 # Terminal + program lauchers (and switchers)
-bindsym $mod+Return  exec "$TERMCMD"
+bindsym $mod+Return  exec "$TERMINAL"
 bindsym $mod+Shift+Return exec env ENV=/dev/null xterm sh
 #
 bindsym $mod+o       exec --no-startup-id rofi -show drun -drun-show-actions
 bindsym $mod+Shift+o exec --no-startup-id rofi -show ssh
 #
-#bindsym $mod+0 exec --no-startup-id rofi -show window
+bindsym $mod+slash exec --no-startup-id rofi -show window
+#
+bindsym $mod+e exec "$TERMINAL -e pbedit"
+#
+bindsym $mod+y fullscreen disable, floating enable, resize set 400 300, sticky enable, move window to position 1515 20
 
-# Clipboard (edit)
-#bindsym $mod+e exec "$TERMCMD -e /bin/sh -c 'xsel --clipboard --output | vipe | xsel --clipboard --input'"
 
 # Screenshot
 bindsym Print                      exec --no-startup-id scrot    -e 'mv $f '"${TMPDIR:-$HOME}"; exec notify-send 'screenshot saved in '"${TMPDIR:-$HOME}" 
-bindsym $mod+Print       --release exec --no-startup-id scrot -u -e 'mv $f '"${TMPDIR:-$HOME}"; exec notify-send 'screenshot saved in '"${TMPDIR:-$HOME}" 
-# FIXME: This does not work
-bindsym $mod+Shift+Print --release exec --no-startup-id scrot -s -e 'mv $f '"${TMPDIR:-$HOME}"; exec notify-send 'screenshot saved in '"${TMPDIR:-$HOME}" 
-
-# Kill xpane
-bindsym $mod+Ctrl+q --release exec --no-startup-id xkill
+#bindsym $mod+Print       --release exec --no-startup-id scrot -u -e 'mv $f '"${TMPDIR:-$HOME}"; exec notify-send 'screenshot saved in '"${TMPDIR:-$HOME}" 
+#bindsym $mod+Shift+Print --release exec --no-startup-id scrot -s -e 'mv $f '"${TMPDIR:-$HOME}"; exec notify-send 'screenshot saved in '"${TMPDIR:-$HOME}" 
 
 
-# FIXME: Revise these options
-#bindsym $mod+t exec --no-startup-id pkill picom
-#bindsym $mod+Ctrl+t exec --no-startup-id picom -b
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-
-# FIXME: check out this section
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; notify-send -t 500 \\"Brightness at $(xbacklight -get | grep -Po '^[0-9]+')%\\""
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send -t 500 \\"Brightness at $(xbacklight -get | grep -Po '^[0-9]+')%\\""
@@ -201,6 +177,8 @@ bindsym XF86AudioMute exec "amixer -q sset Master toggle; notify-send -t 500 \\"
 bindsym XF86AudioPrev exec "exec playerctl previous"
 bindsym XF86AudioPlay exec "exec playerctl play-pause"
 bindsym XF86AudioNext exec "exec playerctl next"
+
+################################################################################
 # Themes
 ################################################################################
 
@@ -209,20 +187,10 @@ bindsym XF86AudioNext exec "exec playerctl next"
 default_border pixel 2
 
 # Special cases
-# FIXME: Move
-#for_window [urgent=latest] focus
 for_window [class="jetbrains-.*" title="win0"] floating enable;
 for_window [class="firefox*" title="Export Bookmarks File"] floating disable;
 for_window [class="firefox*" title="File Upload"] floating disable;
-
-
-#bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send 'brightness down'"
-# Open specific applications in floating mode
-# for_window [title="alsamixer"] floating enable border pixel 1
-# for_window [class="(?i)virtualbox"] floating enable border normal
-# Open applications on specific workspaces
-# assign [class="Thunderbird"] $ws1
-# assign [class="Pale moon"] $ws2
+#
 assign [class="firefoxdeveloperedition"] $ws2
 
 
@@ -330,23 +298,6 @@ mode "$mode_gaps_outer" {
 
 
 
-# TODO: Revise
-bindsym $mod+Ctrl+m exec "$TERMCMD -e alsamixer"
-#exec --no-startup-id pulseaudio
-#exec --no-startup-id pa-applet
-#bindsym $mod+Ctrl+m exec pavucontrol
-# set default desktop layout (default is tiling)
-# workspace_layout tabbed <stacking|tabbed>
-# exec --no-startup-id i3-msg 'workspace 3; exec iceweasel; workspace 1'
-# focus_on_window_activation smart|urgent|focus|none
-
-
-#client.focused #6c71c4 #6c71c4 #fdf6e3 #6c71c4
-#client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
-#client.unfocused #073642 #073642 #93a1a1 #586e75
-#client.urgent #d33682 #d33682 #fdf6e3 #dc322f
-
-
 
 ################################################################################
 # Startup
@@ -354,16 +305,19 @@ bindsym $mod+Ctrl+m exec "$TERMCMD -e alsamixer"
 
 # FIXME: TODO
 
-workspace_layout tabbed
-# Lock computer automatically
-exec --no-startup-id xautolock -time 120 -locker blurlock
 
-# Set backgroud
-# NOTE: xsetroot does not work with picom. If you want images use feh or nitrogen.
+# i3 specific settings
+# tabbed as default
+workspace_layout tabbed
+# lock automatically
+exec --no-startup-id xautolock -time 120 -locker i3blurlock
+
+# x specific settins
+# background NOTE: xsetroot does not work with picom. If you want images use feh or nitrogen.
 # exec --no-startup-id xsetroot -solid "#333333"
 exec --no-startup-id hsetroot -solid $foreground ; sleep 1; picom -b
 
-
+# unknown
 # FIXME: I do not know if this is neccesary
 exec --no-startup-id nm-applet
 # FIXME: I do not know if this is neccesary
@@ -376,8 +330,9 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # exec --no-startup-id clipit
 exec --no-startup-id volumeicon
 # Launch ranger
-#exec --no-startup-id "$TERMCMD -e ranger"
+#exec --no-startup-id "$TERMINAL -e ranger"
 
+# linux generic commands
 exec --no-startup-id true;"$BROWSER" "$HOME"
 exec --no-startup-id true;"$BROWSER" 'https://'
 

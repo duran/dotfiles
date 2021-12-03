@@ -1,32 +1,37 @@
-xcape + x general cleanup
-vim
-    - move to neovim and embed in vscode and firefox
-    - make possible to do the following:
-        1. Check multiple cursor solution for vim (shift+alt+...)
-        2. IntelliSense: Ctrl+Space
-        3. Move lines up and down
-        4. Comment block of code with Ctrl+/
-        5. Rename refactoring 
-        6. Formatting (again)
-        7. Folding (again)
-        8. Errors and warnings
-        9. Snippeds
-        10. Emmets VIM
-        11. Terminal (again) (ctrl+`)
-        12. Version control (ctrl+shift+G) (again)
-        13. Edit, build, test and debug
-    - :options + usr_01... + quickfix mksession
-
-xdg-* utilities, including:
-    - gio
-    - exa
-
+2021:
+    clean up i3
+    reconf rofi + xterm
+    reformat stream
+        - gio vs exa vs ..
+        - login screen + screensaver
+        - all the confusing x things
+2022:
+    how to create small portable apps macos
+    reconf zathura + firefox + email + vscode + tmux + ...
+    learn systemd + autostart + xdg ...
+    try neovim
+        - move to neovim and embed in vscode and firefox
+        - make possible to do the following:
+            1. Check multiple cursor solution for vim (shift+alt+...)
+            2. IntelliSense: Ctrl+Space
+            3. Move lines up and down
+            4. Comment block of code with Ctrl+/
+            5. Rename refactoring 
+            6. Formatting (again)
+            7. Folding (again)
+            8. Errors and warnings
+            9. Snippeds
+            10. Emmets VIM
+            11. Terminal (again) (ctrl+`)
+            12. Version control (ctrl+shift+G) (again)
+            13. Edit, build, test and debug
+        - :options + usr_01... + quickfix mksession
 
 ================================================================================
-* loadkeys
-* check setkdbmap with -device, xinput and /usr/include/X11/keysymdef.h
-* also xvkdb (to modify stuff) and xbindkeys (to run shell commands, globally) xbindkeys ( http://xahlee.info/linux/linux_set_F2_F3_F4_to_cut_copy_paste.html
-* aria2c
-* add epdfview, pcmanfm and nmtui
-* check different line disciplines in Linux/Unix
-* check all possible bash options and add them to {set}
+XDG all the things
+reconf loadkeys + xmodmap (several keyboards, several layouts) + xdotool
+check setkdbmap with -device, xinput and /usr/include/X11/keysymdef.h
+check different line disciplines in Linux/Unix
+check all possible bash options and add them to {set}
+clipboard manager + aria
+try emacs

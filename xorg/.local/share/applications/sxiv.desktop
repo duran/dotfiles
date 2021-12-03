@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
 Name=sxiv
-Exec=sxiv -- %F
+Exec=sxiv-dir -- %F
 TryExec=sxiv
 GenericName=Image Viewer

@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# cases:
+# 1. several things -> default
+# 2. one directory -> thumbnail mode
+# 3. one file -> open all images in directory, go to openened file
+
+test "$1" = '--' && shift
+
+if test "$#" -ne 1
+then
+    sxiv -- "$@"
+elif test -d "$1"
+then
+    sxiv -t -- "$1"
+else
+    # create tmp file and remove when script exits
+    TMPFILE="${TMPDIR:-/tmp}/sxiv-dir.txt"
+    trap 'rm -rf "$TMPFILE"' EXIT
+    # take filename and dirname of a file
+    DIRNAME="${1%/*}"
+    FILENAME="${1##*/}"
+    test "$DIRNAME" = "$FILENAME" && DIRNAME=.
+    # get all possible images and the file that match with the name
+    set +m 
+    shopt -s lastpipe
+    find "$DIRNAME" -maxdepth 1 -iregex '.*\.\(jpg\|jpeg\|png\|gif\|webp\|tiff\|bmp\)$' | sort | tee "$TMPFILE" | grep -n "$FILENAME" | read -r MATCH
+    # open everything
+    cat "$TMPFILE" | xargs sxiv -n "${MATCH%:*}" -- 
+fi
+
