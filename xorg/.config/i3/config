@@ -157,6 +157,8 @@ bindsym $mod+slash exec --no-startup-id rofi -show window
 #
 bindsym $mod+e exec "$TERMINAL -e pbedit"
 #
+bindsym $mod+Shift+e exec "cd $HOME; $VISUAL"
+#
 bindsym $mod+y fullscreen disable, floating enable, resize set 400 300, sticky enable, move window to position 1515 20
 
 

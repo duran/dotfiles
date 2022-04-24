@@ -25,7 +25,7 @@ alias ssh-keygen='ssh-keygen -o -a 100 -t ed25519'
 # - ,
 # - a
 alias b='$BROWSER'
-alias c=compress
+# - c
 alias d=trash
 alias e='$EDITOR'
 alias f=flush
@@ -46,7 +46,7 @@ alias t='type -a'
 # - u
 alias v='$VISUAL'
 # + w - who is logged and what they do
-alias x=extract
+# - x
 # - y
 # - z
 
@@ -56,12 +56,14 @@ alias gd='g d'
 alias gl='g l'
 alias gu='g update'
 alias gp='g p'
+alias gs='g s'
 alias ka='killall -9'
 alias la='ls -A'
 alias ll='ls -ahlF'
-alias gs='g s'
 alias py=python3
 alias js=node
+alias cf=compress
+alias xf=extract
 
 alias pls='sudo $(fc -ln -1)'
 alias invite='2>/dev/null cd -P ~/.cache/i && rm ~/.cache/i || ln -s "$PWD" ~/.cache/i'

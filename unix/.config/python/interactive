@@ -4,7 +4,9 @@ readline.write_history_file = lambda *args: None
 
 # Ipython if possible
 if not hasattr(__builtins__, '__IPYTHON__'):
-    import os, IPython
-    IPython.start_ipython(argv=['--profile', 'terminal'])
-    # Exit always
-    raise SystemExit
+    try:
+        import IPython
+        IPython.start_ipython(argv=['--profile', 'terminal'])
+        raise SystemExit
+    except ModuleNotFoundError:
+        pass
