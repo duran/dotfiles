@@ -1,4 +1,5 @@
-# This file represent the environmental variables for a "pet" machine. This setup have been tested in the following situations.  | OS    | Situation         | Login | Interactive |
+# This file represent the environmental variables for a "pet" machine. This setup have been tested in the following situations.
+# | OS    | Situation         | Login | Interactive |
 # |:------|:------------------|:------|:------------|
 # | Linux | Terminal          | Yes   | Yes         |
 # | Linux | Xorg              | Yes   | No          |
@@ -6,21 +7,7 @@
 # | MacOS | Terminal emulator | Yes   | Yes         |
 # | W10   | Terminal emulator | Yes   | Yes         |
 
-
-# TODO: Explain XDG Base directory + SSH rc file relationships
-# https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html#introduction
-# https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch08_04.htm
-
-########
-# Base #
-########
-# TODO: missing XDG path
-export PATH="$PATH:$HOME/.local/bin" # Personal scripts in path
-
-
-#########
-# Shell #
-#########
+# TODO: Finish this
 # The configuration of the Bourne shell is straightforwards. We try to maintain
 # compatibility for simplicity sake.
 # Later shells changed where they look for configuration files. Bash (the shell
@@ -32,36 +19,54 @@ export PATH="$PATH:$HOME/.local/bin" # Personal scripts in path
 #   2. $ENV (interactive)
 #   3. runs...
 # from:  https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html
-# Load POSIX interactive conf.
+
+# TODO: Explain XDG Base directory + SSH rc file relationships
+# https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html#introduction
+# https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch08_04.htm
+
+
+#########
+# POSIX #
+#########
+# Executable path(s) for executables
+# TODO: missing XDG path
+export PATH="$PATH:$HOME/.local/bin" # Personal scripts in path
+# Text: Pager, CLI editor, TUI editor
+export PAGER=less
+export EDITOR='vim -E'
+export VISUAL=vim
+# Web browser (and general url/path opener)
+export BROWSER=open
+# Shell, interactive conf, history size
 export ENV="${XDG_CONFIG_HOME:-$HOME/.config}/sh/interactive"
-# History size
 export HISTSIZE=5000
+
+
+#############
+# Non-POSIX #
+#############
+
+# Terminal: several options
+export TERMINAL=terminal # Terminal
+export TERMCMD=terminal  # ...2 
+
+
+##################
+# Other Software #
+##################
+
+# Bash
 # No maximum size in history size
 export HISTFILESIZE=-1
 #ignoreboth:erasedups# no lines starting with space, no dups
 export HISTCONTROL=ignorespace 
 #export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history"
 
-##########
-# Editor #
-##########
-# Line editor conf (readline)
+# Readline
 export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/readline.conf"
-# CLI editor
-export EDITOR='vim -E'
-# TUI editor
-export VISUAL=vim
 
-###########
-# Browser #
-###########
-export BROWSER=open
-
-#########
-# Pager #
-#########
+# Less
 # TODO: Check key bindings
-export PAGER=less
 
 export LESS=-R
 export LESSHISTFILE=-
@@ -82,18 +87,13 @@ export LESS_TERMCAP_se
 export LESS_TERMCAP_us
 export LESS_TERMCAP_ue
 
-#########
-# Other #
-#########
-export TERMINAL=terminal # Terminal
-export TERMCMD=terminal  # ...2 
-export CLIPBOARD=cp      # default clipboard
-
-# GNU ls (created with dircolors over .dir_colors and used with ls --colors) plus date and size
+# GNU ls
+# (colors created with dircolors over .dir_colors and used with ls --colors) plus date and size
 export LS_COLORS='no=00:fi=00:mh=01:ex=01;31:su=31;43:sg=31;43:ca=31;43:di=01;34:st=34;43:ln=01;36:or=36;41:mi=36;41:pi=01;32:so=01;32:do=01;32:bd=01;33:cd=01;33:'
 export TIME_STYLE=long-iso
 export BLOCK_SIZE="'1"
-# BSD ls colors
+
+# BSD ls
 export CLICOLOR=1
 export LSCOLORS=ExGxFxdxCxDxDxxbaDecac
 

@@ -14,10 +14,16 @@ PS2='> '
 # Give back c-s and c-q. Check out XOFF and XON:(https://en.wikipedia.org/wiki/Software_flow_control)
 stty -ixon  -ixoff   
 
+# Keep aliases in subcommand invocations
+alias xargs='xargs '
+alias sudo='sudo '
+
 # Aliases
 alias cal='cal --monday'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto' # https://beyondgrep.com/feature-comparison/
+
+# Other
 alias ssh-keygen='ssh-keygen -o -a 100 -t ed25519'
 
 # - _
@@ -25,7 +31,7 @@ alias ssh-keygen='ssh-keygen -o -a 100 -t ed25519'
 # - ,
 # - a
 alias b='$BROWSER'
-# - c
+alias c=clip
 alias d=trash
 alias e='$EDITOR'
 alias f=flush
@@ -46,7 +52,7 @@ alias t='type -a'
 # - u
 alias v='$VISUAL'
 # + w - who is logged and what they do
-# - x
+alias x=xargs
 # - y
 # - z
 
