@@ -11,6 +11,8 @@
     default = simple
     # Push tags along with the commits
     followTags = true
+[pull]
+    rebase = false
 [rerere]
     # Remember diff resolutions (not sure how it works)
     enabled = true

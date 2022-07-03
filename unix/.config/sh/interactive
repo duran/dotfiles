@@ -31,8 +31,8 @@ alias ssh-keygen='ssh-keygen -o -a 100 -t ed25519'
 # - ,
 # - a
 alias b='$BROWSER'
-alias c=clip
-alias d=trash
+alias c='$CLIPBOARD'
+# - d
 alias e='$EDITOR'
 alias f=flush
 alias g=git
@@ -47,14 +47,15 @@ alias o='$BROWSER'
 alias p='$PAGER'
 alias q=exit
 alias r='R --quiet'
-alias s='$SHELL'
-alias t='type -a'
+alias s='$SEARCH'
+alias t='$TRASH'
 # - u
 alias v='$VISUAL'
 # + w - who is logged and what they do
 alias x=xargs
 # - y
 # - z
+alias ?='type -a'
 
 alias ga='g a'
 alias gc='g c'

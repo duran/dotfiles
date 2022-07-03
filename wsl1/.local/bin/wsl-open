@@ -1,3 +1,0 @@
-#!/bin/sh
-
-realpath "$1" | sed 's;/mnt/c;C:/;g' | xargs cmd.exe /C start

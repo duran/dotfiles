@@ -1,6 +1,6 @@
 # Software default reference
 
-|                  |\*nix                                               |X11                                                    |MacOS\*                                                        |Windows 10-|
+|                  |\*nix                                               |X11                                                    |MacOS\*                                                        |Windows    |
 |:-----------------|:---------------------------------------------------|:------------------------------------------------------|:--------------------------------------------------------------|:---|
 |Package Manager   |Default                                             |Default                                                |[Homebrew](https://brew.sh/)                                                   ||
 |Window Manager[^1]|[Tmux](https://github.com/tmux/tmux/wiki)-          |[i3](https://i3wm.org/)+                               |Default                                                         ||
@@ -9,7 +9,7 @@
 |Web Browser+      |[w3m](http://w3m.sourceforge.net/)                  |[Firefox](https://www.mozilla.org/en-US/firefox/new/)\*|[Firefox](https://www.mozilla.org/en-US/firefox/new/)\*         |[Firefox](https://www.mozilla.org/en-US/firefox/new/)\*|
 |Terminal Emulator |[Tmux](https://github.com/tmux/tmux/wiki)-[^1]      |[XTerm](https://invisible-island.net/xterm/)           |[Terminal.app](https://en.wikipedia.org/wiki/Terminal_(macOS))\*|[Window Terminal](https://docs.microsoft.com/en-us/windows/terminal/)\*|
 |Basic Text Editor+|[Vim](https://www.vim.org/)                         |[Vim](https://www.vim.org/)                            |[Vim](https://www.vim.org/)                                     |[Vim](https://www.vim.org/)+|
-|PDF Reader        |[pdftotext](https://en.wikipedia.org/wiki/Pdftotext)|[Zathura](https://pwmt.org/projects/zathura/)          |[Preview](https://support.apple.com/guide/preview/welcome/mac)  |[Firefox](https://www.mozilla.org/en-US/firefox/new/)|
+|PDF Reader        |[pdftotext](https://en.wikipedia.org/wiki/Pdftotext)|[Zathura](https://pwmt.org/projects/zathura/)          |[Preview](https://support.apple.com/guide/preview/welcome/mac)  |[SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader)|
 |Photo Viewer      |[chafa](https://hpjansson.org/chafa/download/)      |[SXIV](https://github.com/muennich/sxiv)               |[Preview](https://support.apple.com/guide/preview/welcome/mac)  |Default|
 |Video Player-     |[mpv](https://mpv.io/)                              |[mpv](https://mpv.io/)                                 |[Quicktime](https://support.apple.com/quicktime)                |Default|
 |Music Player-     |[mpv](https://mpv.io/)                              |[mpv](https://mpv.io/)                                 |[Quicktime](https://support.apple.com/quicktime)                |Default|
@@ -19,6 +19,19 @@
 
 
 [^1]: The Window Manager initilization is closely linked to the DE, OS, and boot loader. In Unix, install the shell files manually (`.profile`+whatever) and proceed to deal with the peculiarities of the boot loader, DE, and OS.
+
+# TODO
+
+|Alias|Variable|Command|Description|
+|:--|:--|:--|:--|
+|o|BROWSER|open||
+|s|SEARCHER|search||
+|t|TRASH|trash||
+|c|CLIPBOARD|clipboard||
+||TERMINAL|terminal||
+|||||
+|p|PAGER|||
+|v|VISUAL|||
 
 
 # Notes

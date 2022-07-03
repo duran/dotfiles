@@ -1,0 +1,3 @@
+#!/bin/sh
+
+test -t 0 && powershell.exe get-clipboard || clip.exe
