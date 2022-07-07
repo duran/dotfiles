@@ -11,4 +11,4 @@
 # (/etc/* can be different sometimes, like /etc/zsh/*)
 # from:  https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html
 
-test "$ENV" && . "${XDG_CONFIG_HOME:-$HOME/.config}/sh/profile"
+test "$ENV" && . "$HOME"/.config/sh/profile

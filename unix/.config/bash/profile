@@ -7,6 +7,6 @@
 # from:  https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html
 
 # Load POSIX interactive conf.
-test "$ENV" || . "${XDG_CONFIG_HOME:-$HOME/.config}/sh/profile"
+test "$ENV" || . "$HOME"/.config/sh/profile
 
-. "${XDG_CONFIG_HOME:-$HOME/.config}/bash/interactive"
+. "$HOME"/.config/bash/interactive

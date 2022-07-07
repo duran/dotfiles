@@ -1,14 +1,14 @@
 # Software default reference
 
-|                  |\*nix                                               |X11                                                    |MacOS\*                                                        |Windows    |
+|                  |Unix VT100                                          |Linux X11                                              |MacOS                                                          |Windows    |
 |:-----------------|:---------------------------------------------------|:------------------------------------------------------|:--------------------------------------------------------------|:---|
 |Package Manager   |Default                                             |Default                                                |[Homebrew](https://brew.sh/)                                                   ||
-|Window Manager[^1]|[Tmux](https://github.com/tmux/tmux/wiki)-          |[i3](https://i3wm.org/)+                               |Default                                                         ||
-|Launcher          |Default                                             |[rofi](https://github.com/davatorium/rofi)             |[Spotlight](https://en.wikipedia.org/wiki/Spotlight_(software)) |[Windows Search](https://en.wikipedia.org/wiki/Windows_Search)|
+|Window Manager[^1]|[Tmux](https://github.com/tmux/tmux/wiki)-          |[i3](https://i3wm.org/)+                               |Default                                                         |[WinGet](https://docs.microsoft.com/en-us/windows/package-manager/winget/)|
+|Launcher          |Default                                             |[rofi](https://github.com/davatorium/rofi)             |[Spotlight](https://en.wikipedia.org/wiki/Spotlight_(software)) |[PowerToys Run](https://docs.microsoft.com/en-us/windows/powertoys/run)|
 |File manager+     |[Ranger](https://ranger.github.io/)                 |[PCManFM](https://wiki.lxde.org/en/PCManFM)            |[Finder](https://support.apple.com/en-us/HT201732)              |Default|
 |Web Browser+      |[w3m](http://w3m.sourceforge.net/)                  |[Firefox](https://www.mozilla.org/en-US/firefox/new/)\*|[Firefox](https://www.mozilla.org/en-US/firefox/new/)\*         |[Firefox](https://www.mozilla.org/en-US/firefox/new/)\*|
-|Terminal Emulator |[Tmux](https://github.com/tmux/tmux/wiki)-[^1]      |[XTerm](https://invisible-island.net/xterm/)           |[Terminal.app](https://en.wikipedia.org/wiki/Terminal_(macOS))\*|[Window Terminal](https://docs.microsoft.com/en-us/windows/terminal/)\*|
-|Basic Text Editor+|[Vim](https://www.vim.org/)                         |[Vim](https://www.vim.org/)                            |[Vim](https://www.vim.org/)                                     |[Vim](https://www.vim.org/)+|
+|Terminal Emulator |[Tmux](https://github.com/tmux/tmux/wiki)-[^1]      |[XTerm](https://invisible-island.net/xterm/)           |[Terminal.app](https://en.wikipedia.org/wiki/Terminal_(macOS))\*|[Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/)\*|
+|Basic Text Editor+|[Vim](https://www.vim.org/)                         |[Vim](https://www.vim.org/)                            |[Vim](https://www.vim.org/)                                     |[Vim](https://www.vim.org/)|
 |PDF Reader        |[pdftotext](https://en.wikipedia.org/wiki/Pdftotext)|[Zathura](https://pwmt.org/projects/zathura/)          |[Preview](https://support.apple.com/guide/preview/welcome/mac)  |[SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader)|
 |Photo Viewer      |[chafa](https://hpjansson.org/chafa/download/)      |[SXIV](https://github.com/muennich/sxiv)               |[Preview](https://support.apple.com/guide/preview/welcome/mac)  |Default|
 |Video Player-     |[mpv](https://mpv.io/)                              |[mpv](https://mpv.io/)                                 |[Quicktime](https://support.apple.com/quicktime)                |Default|

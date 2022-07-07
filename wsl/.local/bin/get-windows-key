@@ -1,0 +1,3 @@
+#!/bin/sh
+
+"$BROWSER" "$HOME"/.local/lib/vbs/GetKey.vbs

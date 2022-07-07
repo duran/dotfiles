@@ -38,7 +38,7 @@ export VISUAL=vim
 # Web browser (and general url/path opener)
 export BROWSER=open
 # Shell, interactive conf, history size
-export ENV="${XDG_CONFIG_HOME:-$HOME/.config}/sh/interactive"
+export ENV="$HOME"/.config/sh/interactive
 export HISTSIZE=5000
 
 
@@ -70,7 +70,7 @@ export HISTCONTROL=ignorespace
 #export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history"
 
 # Readline
-export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/readline.conf"
+export INPUTRC="$HOME"/.config/readline.conf
 
 # Less
 # TODO: Check key bindings
@@ -109,11 +109,11 @@ export FZF_DEFAULT_COMMAND='fd --hidden --exclude .git'
 export FZF_DEFAULT_OPTS='--bind=ctrl-j:accept'
 
 # Python
-export PYTHONSTARTUP="${XDG_CONFIG_HOME:-$HOME/.config}/python/interactive"
-export IPYTHONDIR="${XDG_CONFIG_HOME:-$HOME/.config}/ipython"
+export PYTHONSTARTUP="$HOME"/.config/python/interactive
+export IPYTHONDIR="$HOME"/.config/ipython
 
 # R
-export R_ENVIRON="${XDG_CONFIG_HOME:-$HOME/.config}/r/env"
+export R_ENVIRON="$HOME"/.config/r/env
 
 # Homebrew
 export HOMEBREW_NO_ANALYTICS=1       # no telemery

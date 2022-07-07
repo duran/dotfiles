@@ -1,3 +1,2 @@
-# FUTURE: Differenciate between text/graphical browsers
 SURFRAW_text_browser=$BROWSER
 SURFRAW_graphical_browser=$BROWSER

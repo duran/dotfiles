@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Xautosecurelock
+Exec=xautolock
+TryExec=xautolock -time 120 -locker xsecurelock
+GenericName=Inactivity locker
+NoDisplay=true

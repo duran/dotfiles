@@ -11,7 +11,7 @@ test "$( cat /proc/1/comm )" == systemd && logind=systemctl || logind=loginctl
 case "$ACTION" in
     lock)
         # for some reason blurlock does not work for me
-        i3blurlock
+        xsecurelock
         break
         ;;
     logout)
