@@ -1,1 +1,3 @@
-/bin/xterm
+#!/bin/sh
+
+/bin/xterm -e "$@"

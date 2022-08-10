@@ -147,7 +147,7 @@ bindsym $mod+Shift+q --release exec --no-startup-id xkill
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 
 # Terminal + program lauchers (and switchers)
-bindsym $mod+Return  exec "$TERMINAL"
+bindsym $mod+Return  exec "$TERMINAL $SHELL"
 bindsym $mod+Shift+Return exec env ENV=/dev/null xterm sh
 #
 bindsym $mod+o       exec --no-startup-id rofi -show drun -drun-show-actions
@@ -155,7 +155,7 @@ bindsym $mod+Shift+o exec --no-startup-id rofi -show ssh
 #
 bindsym $mod+slash exec --no-startup-id rofi -show window
 #
-bindsym $mod+e exec "$TERMINAL -e pbedit"
+bindsym $mod+e exec "$TERMINAL pbedit"
 #
 bindsym $mod+Shift+e exec "cd $HOME; $VISUAL"
 #
@@ -208,12 +208,31 @@ set_from_resource $good_dark color2
 set_from_resource $muted_dark color7
 set_from_resource $muted_brigth color15
 
-# <colorclass>          <border> <background>  <text>  <indicator> <child_border>
-client.focused          $good_dark  $good_dark  $background #FFC300
-client.focused_inactive $background  $foreground  $background #FFC300
-client.unfocused        $muted_dark  $muted_dark  $background #FFC300
-client.urgent           $bad_dark $bad_dark $background #FFC300
-client.background       #FFC300
+# Base16 Monokai by Wimer Hazenberg (http://www.monokai.nl)
+# template by Matt Parnell, @parnmatt
+
+set $base00 #272822
+set $base01 #383830
+set $base02 #49483e
+set $base03 #75715e
+set $base04 #a59f85
+set $base05 #f8f8f2
+set $base06 #f5f4f1
+set $base07 #f9f8f5
+set $base08 #f92672
+set $base09 #fd971f
+set $base0A #f4bf75
+set $base0B #a6e22e
+set $base0C #a1efe4
+set $base0D #66d9ef
+set $base0E #ae81ff
+set $base0F #cc6633
+
+client.focused $base0D $base0D $base00 $base01
+client.focused_inactive $base02 $base02 $base03 $base01
+client.unfocused $base01 $base01 $base03 $base01
+client.urgent $base02 $base08 $base07 $base08
+
 bar {
     mode hide
     i3bar_command i3bar
@@ -225,16 +244,13 @@ bar {
     strip_workspace_numbers yes
 
     colors {
-        background $background
-        statusline $foreground
-        separator  $foreground
-
-    #                      border       backgr.     text
-        focused_workspace  $good_dark  $good_dark   $background
-        active_workspace   $background $foreground  $background
-        inactive_workspace $foreground $background  $foreground
-        urgent_workspace   $background $bad_dark    $background
-        binding_mode       $background $foreground  $background
+        separator $base03
+        background $base01
+        statusline $base05
+        focused_workspace $base0C $base0D $base00
+        active_workspace $base02 $base02 $base07
+        inactive_workspace $base01 $base01 $base03
+        urgent_workspace $base08 $base08 $base07
     }
 }
 
@@ -332,7 +348,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # exec --no-startup-id clipit
 exec --no-startup-id volumeicon
 # Launch ranger
-#exec --no-startup-id "$TERMINAL -e ranger"
+#exec --no-startup-id "$TERMINAL ranger"
 
 # linux generic commands
 exec --no-startup-id true;"$BROWSER" "$HOME"

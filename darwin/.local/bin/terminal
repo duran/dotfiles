@@ -3,15 +3,13 @@
 
 
 on run argv
-    set commandStart to false
     set commandString to ""
 
     repeat with parameter in argv
-        if commandStart then set commandString to commandString & quoted form of parameter & " "
-        if parameter as string is equal to "-e" then set commandStart to true
+        set commandString to commandString & quoted form of parameter & " "
     end repeat
 
-    if commandStart then set commandString to commandString & ";exit"
+    set commandString to commandString & ";exit"
 
     tell application "Terminal"
         # If does not exist, launch

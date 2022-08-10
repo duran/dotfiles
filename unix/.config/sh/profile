@@ -46,10 +46,8 @@ export HISTSIZE=5000
 # Non-POSIX #
 #############
 
-# TODO: Fix duplication
-# Terminal: several options
-export TERMINAL=terminal # Terminal
-export TERMCMD=terminal  # ...2 
+# Terminal
+export TERMINAL=terminal
 # Clipboard
 export CLIPBOARD=clipboard
 # Trash

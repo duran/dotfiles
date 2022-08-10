@@ -37,4 +37,6 @@ if command -v fzf >/dev/null 2>&1; then
     READLINE_POINT="${#READLINE_LINE}"
   }
   bind -x '"\C-R": _editline_fzf'
+  _file_fzf() { "$BROWSER" "$(fzf --preview 'less {}')"; }
+  bind -x '"\es": _file_fzf'
 fi
