@@ -22,16 +22,15 @@
 
 # Common commands
 
-Alias -> Variable -> Command
-TODO
+I expose OS-dependent common functionality as a single command. I expose an alias that resolves to a variable that points to an executable. The current functionality is the following:
 
 |Alias|Variable|Command|Description|
 |:--|:--|:--|:--|
 |o|BROWSER|open|Opens URI or path with the OS default. Only one at a time.|
-|s|SEARCHER|search|Search in file paths and file contents in all computer files.|
+|s|SEARCHER|search|Search in file paths and file contents in all computer files.Experimental.|
 |t|TRASH|trash|Send one file to OS trash folder. Only one at a time.|
 |c|CLIPBOARD|clipboard|Saves or prints OS clipboard.|
-||TERMINAL|terminal|Executes the terminal.|
+||TERMINAL|terminal|Executes command in the terminal.|
 |||||
 |p|PAGER||Open file in text pager.|
 |v|VISUAL||Opens file in text editor.|
@@ -39,10 +38,10 @@ TODO
 
 # Notes
 
-`¹` A referencfe number shows a link to a particular issue.
+`¹` A reference number shows a link to a particular issue.
 
-`*` An asterisk indicates an undisclosed issue.
+`*` An asterisk indicates manual configuartion installation.
 
 `+` A plus symbol marks a section to be expanded.
-
 `-` A minus symbol warns about a no longer in use section, probably deprecated.
+

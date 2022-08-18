@@ -1,3 +1,4 @@
+" From https://github.com/sickill/vim-monokai
 " Vim color file
 " Converted from Textmate theme Monokai using Coloration v0.3.2 (http://github.com/sickill/coloration)
 

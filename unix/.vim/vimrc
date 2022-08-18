@@ -1,4 +1,5 @@
 " Backup and swap files
+set nocompatible
 " TODO: Set this with XDG or turn off
 " TODO: This will fail unless the directory exists in advance
 set history=5000                           " increase history commands

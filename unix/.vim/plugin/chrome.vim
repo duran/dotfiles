@@ -1,6 +1,5 @@
 " Visual options
 syntax on           " enable syntax processing
-colorscheme monokai " theme
 set shortmess+=I    " remove intro message
 set cursorline      " line under the cursor
 set colorcolumn=+1  " visual mark after textwidth column

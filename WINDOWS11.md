@@ -2,7 +2,7 @@
 
 2\. Install software:
 ```ps
-$packages=@("Microsoft.PowerToys","Lexikos.AutoHotkey","Mozilla.Firefox","Microsoft.WindowsTerminal","Debian.Debian","Canonical.Ubuntu","vim.vim","SumatraPDF.SumatraPDF")
+$packages=@("Microsoft.PowerToys","Lexikos.AutoHotkey","Mozilla.Firefox","Microsoft.WindowsTerminal","Debian.Debian","Canonical.Ubuntu","vim.vim","SumatraPDF.SumatraPDF", "voidtools.Everything")
 foreach($package in packages){
     winget install $package
 }

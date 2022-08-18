@@ -1,11 +1,18 @@
 set window-title-basename true
 set selection-clipboard clipboard
 
-#map o exec 'firefox "%"'
+map = adjust_window width
 map <C-s> focus_inputbar ":exec bash -c 'cp $FILE $(xdg-user-dir DOWNLOAD)/$(basename $FILE)'"
+#map o exec 'firefox "%"'
 #map <C-o> feedkeys ":exec acroread $FILE<Return>"
 
-set default-bg "#101010" # Background
-set default-fg "#d0d0d0" # Foreground
+set default-bg \#272822
+set default-fg \#f8f8f2
+
+set recolor-darkcolor \#f8f8f2
+set recolor-lightcolor \#272822
+set recolor-keephue true
+# This seems to be broken with mupdf, but poppler is much slower
+set recolor-reverse-video true
 
 set recolor true

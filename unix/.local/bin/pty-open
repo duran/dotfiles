@@ -18,7 +18,7 @@ case "$1" in
   ########
   # Web
   https://*|http://*|*.html)
-    "$BROWSER" "$@"
+    w3m "$@"
   ;;
   #########
   # Files #
