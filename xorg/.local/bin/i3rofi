@@ -19,11 +19,11 @@ case "$ACTION" in
         break
         ;;
     suspend)
-        blurlock && $logind suspend
+        $logind suspend
         break
         ;;
     hibernate)
-        blurlock && $logind hibernate
+        $logind hibernate
         break
         ;;
     reboot)

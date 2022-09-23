@@ -1,5 +1,1 @@
-# Library to add alias to command line programs
-
-rsync alias --sync -rpcLDvz --chmod=D0755,F0644
-rsync alias --diff --recursive --delete --checksum --verbose --dry-run
-rsync alias --backup --archive --compress --verbose -P
+.config/popt.conf

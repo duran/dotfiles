@@ -111,7 +111,7 @@ export PYTHONSTARTUP="$HOME"/.config/python/interactive
 export IPYTHONDIR="$HOME"/.config/ipython
 
 # R
-export R_ENVIRON="$HOME"/.config/r/env
+export R_ENVIRON_USER="$HOME"/.config/r/env
 
 # Homebrew
 export HOMEBREW_NO_ANALYTICS=1       # no telemery

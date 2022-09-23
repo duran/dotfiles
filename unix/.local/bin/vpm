@@ -1,0 +1,27 @@
+#!/bin/sh
+
+_usage(){ echo 'Usage vpm vim|neovim <folder> start|opt <command>'; exit 1; }
+
+test $# -le 3 && _usage
+
+if ! test "$3" = start  && ! test "$3" = opt
+then
+    _usage
+fi
+
+if test "$1" = vim
+then
+    packpath=.vim/pack
+elif test "$1" = neovim
+then
+    packpath=.local/share/pack
+else
+    _usage
+fi
+
+path="$HOME/$packpath/$2/$3"
+
+mkdir -p "$path"
+cd "$path"
+
+"${@:4}"

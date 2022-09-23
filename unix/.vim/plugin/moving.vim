@@ -1,3 +1,4 @@
+set mouse=a         " let me select with the mouse
 set notimeout       " not timeout for keys
 set nottimeout      " never, for real
 set hidden          " vim to not complain when you open a new buffer 
