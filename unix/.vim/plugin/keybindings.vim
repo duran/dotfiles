@@ -57,19 +57,9 @@ nnoremap \ @:
 " nnoremap - :tabclose<c-j>
 
 
-" noremap <a-t> :tabnew<c-j>
 " noremap <a-n> gt
 " noremap <a-p> gT
-" noremap <a-1> 1gt
-" noremap <a-2> 2gt
-" noremap <a-3> 3gt
-" noremap <a-4> 4gt
-" noremap <a-5> 5gt
-" noremap <a-6> 6gt
-" noremap <a-7> 7gt
-" noremap <a-8> 8gt
-" noremap <a-9> 9gt
-" noremap <a-0> 10gt
+
 
 " Shortcut to rapidly toggle `set list`
 " nnoremap <a-l> :set list!<c-j>
@@ -186,3 +176,42 @@ inoremap <c-z> <c-o>:suspend<c-j>
 " :w !sudo tee % > /dev/null 
 
 " nnoremap <leader>b :if &binary | set nobinary | %!xxd -r | else | set binary | %!xxd | endif<c-j>
+
+"
+" MacOS-like
+"
+" TODO: Revise
+" cut/copy/paste
+" vnoremap <a-x> "+x
+" vnoremap <a-c> "+y
+" vnoremap <a-v> "+p
+" " undo/redo
+" nnoremap <a-z> u
+" nnoremap <a-Z> <c-r>
+" " select all items
+" nnoremap <a-a> ggvG
+" " search
+" nnoremap <a-f> /
+" "nnoremap <a-g> 
+" "nnoremap <a-G> 
+" <a-h> Hide the windows of the front app. To view the front app but hide all other apps, press Option-<a-H.
+" <a-m> Minimize the front window to the Dock. To minimize all windows of the front app, press Option-<a-M.
+" <a-o> Open the selected item, or open a dialog to select a file to open.
+" <a-p> Print the current document.
+" " save and close
+" nnoremap <a-s> :update<c-[>
+" nnoremap <a-t> :tabnew<c-j>
+" nnoremap <a-w> ZQ
+" " move around
+" nnoremap <a–`> gt
+" " nnoremap <a-tab> recent app
+" noremap <a-1> 1gt
+" noremap <a-2> 2gt
+" noremap <a-3> 3gt
+" noremap <a-4> 4gt
+" noremap <a-5> 5gt
+" noremap <a-6> 6gt
+" noremap <a-7> 7gt
+" noremap <a-8> 8gt
+" noremap <a-9> 9gt
+" noremap <a-0> 10gt
