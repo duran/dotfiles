@@ -23,3 +23,4 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 " 11. TODO: Terminal (again) (ctrl+`)
 " 12. TODO: Version control (ctrl+shift+G) (again)
 " 13. TODO: Edit, build, test and debug
+nnoremap <m-o> :Commands<cr>

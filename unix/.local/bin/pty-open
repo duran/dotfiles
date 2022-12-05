@@ -35,7 +35,7 @@ case "$1" in
     imgcat  "$@"
   ;;
   *.WAV|*.mp?|*.avi)
-    mpv -vo caca "$@"
+    mpv -vo tct "$@"
   ;;
   # Richly formatted documents
   *.pdf)

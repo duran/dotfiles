@@ -1,30 +1,24 @@
 2022:
     reformat thinkpad
-        - install Debian stable
+        - all the confusing x things
         - gio vs exa vs ..
         - login screen + screensaver
-        - all the confusing x things
         - systemd
+        - i3 workflow
         - autostart with dex
         - fonts
         - x goodies (ie mouse)
         - launcher like win/mac
-        - kde
         - screenshots
-        - Email/Caldav/Cardav
-        - i3 workflow
         - qt + gtk common theming
-    reformat stream with new OS
-    reformat thinkpad to arch
-    config vscode reconf email + vscode + tmux + ...
-    get android phone (/e/?)
-    fix trash
-    fix screenshots
-    zotero + calibre + sinflefile + ... as memex start
+    config vscode
+    install grapheneos
+    send bug report stow
 2023:
+    fix trash windows
     how to create small portable apps macos for opening files
-    linux workflow with
-    i3+x with more than one dis (+ powertoy ideas)
+    how to create small portable apps windows for opening files
+    linux workflow with i3+x with more than one dis (+ powertoy ideas)
     reconf firefox + qutebrowser
 
 ================================================================================
@@ -60,4 +54,7 @@ check different line disciplines in Linux/Unix
 check all possible bash options and add them to {set}
 clipboard manager
 aria?
-try emacs
+try emacs, Clion, helix (2025)
+revise kde/gnome/apache/gnu/nongnu
+- Email/Caldav/Cardav
+

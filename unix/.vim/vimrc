@@ -9,5 +9,6 @@ set directory^=~/.local/share/vim/swap//   " where to save swap files
 set backupdir^=~/.local/share/vim/backup// " where to store temporary backups
 " set nobackup
 " set noundofile
-" Turn on <key1> <c-h> <key2> digraph keybindings
-set digraph
+" Do not assume that leading zeroes means an octal
+set nrformats-=octal
+

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=viboard
+Exec=viboard
+TryExec=viboard
+GenericName=Edit Clipboard in Editor
+Terminal=true
