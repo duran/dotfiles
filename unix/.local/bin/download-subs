@@ -1,0 +1,8 @@
+#!/bin/sh
+set -o errexit
+set -o nounset
+# aka set -eux
+# FIXME: Make this more versatile
+# Also check https://github.com/m1guelpf/yt-whisper
+
+yt-dlp  --write-auto-sub --write-sub --sub-lang "en,en-us,en-GB,automatic-caption-en" --skip-download "$@"

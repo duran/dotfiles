@@ -1,0 +1,63 @@
+# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd
+# NOTE: Can use import to load Linux/MacOS/etc options
+env:
+  TERM: xterm-256color
+
+window:
+  option_as_alt: Both
+  padding:
+    x: 6
+    y: 6
+  decorations: full
+  title: Terminal
+  # (Linux/BSD only)
+  class:
+    general: Terminal
+
+scrolling:
+  history: 10000
+
+# Font configuration
+font:
+  size: 14.0
+  offset:
+    x: 1
+    y: 1
+
+# Monokai pro from Alacritty themes
+colors:
+  primary:
+    background: '0x2D2A2E'
+    foreground: '0xfff1f3'
+  normal:
+    black:   '0x2c2525'
+    red:     '0xfd6883'
+    green:   '0xadda78'
+    yellow:  '0xf9cc6c'
+    blue:    '0xf38d70'
+    magenta: '0xa8a9eb'
+    cyan:    '0x85dacc'
+    white:   '0xfff1f3'
+  bright:
+    black:   '0x72696a'
+    red:     '0xfd6883'
+    green:   '0xadda78'
+    yellow:  '0xf9cc6c'
+    blue:    '0xf38d70'
+    magenta: '0xa8a9eb'
+    cyan:    '0x85dacc'
+    white:   '0xfff1f3'
+
+#mouse_bindings:
+#  - { mouse: Middle, action: PasteSelection }
+
+key_bindings:
+  - { key: Plus,   mods: Command|Shift, action: IncreaseFontSize }
+  - { key: Minus,  mods: Command,       action: DecreaseFontSize }
+  - { key: Equals, mods: Command,       action: ResetFontSize }
+#  - { key: Z, mods: Command, command: { program: "alacritty", args: ["-e", "vttest"] }
+#  - { key: T, mods: Command, chars: "potato" }
+#  - { key: PageUp,    mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
+#  - { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
+#  - { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
+#  - { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }

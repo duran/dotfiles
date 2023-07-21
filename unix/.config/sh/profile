@@ -42,20 +42,6 @@ export ENV="$HOME"/.config/sh/interactive
 export HISTSIZE=5000
 
 
-#############
-# Non-POSIX #
-#############
-
-# Terminal
-export TERMINAL=terminal
-# Clipboard
-export CLIPBOARD=clipboard
-# Trash
-export TRASHER=trash
-# Searcher
-export SEARCHER=search
-
-
 ##################
 # Other Software #
 ##################

@@ -33,6 +33,9 @@ XTerm*utf8: 2
 ! Make Alt send a escape key (^[) like most terminals
 XTerm*metaSendsEscape: true
 
+! Support windows escape keys (especially write in clipboard with osc-52)
+XTerm*allowWindowOps: true
+
 ! Increase the buffer.
 XTerm*saveLines: 4096
 

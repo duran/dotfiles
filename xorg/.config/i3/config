@@ -332,7 +332,7 @@ workspace_layout tabbed
 
 # x specific settins
 # background NOTE: xsetroot does not work with picom. If you want images use feh or nitrogen.
-# exec --no-startup-id xsetroot -solid "#333333"
+# exec --no-startup-id xsetroot -solid "#"333333"
 exec --no-startup-id hsetroot -solid $foreground ; sleep 1; picom -b
 
 # unknown
