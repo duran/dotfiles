@@ -1,0 +1,23 @@
+#!/usr/bin/osascript
+# NOTE: Opens a new tab if terminal maximized, otherwise an window. No good way to fix.
+
+
+on run argv
+    set commandString to ""
+
+    repeat with parameter in argv
+        set commandString to commandString & quoted form of parameter & " "
+    end repeat
+
+    set commandString to commandString & ";exit"
+
+    tell application "Terminal"
+        # If does not exist, launch
+        if not (exists window 1) then reopen
+        # Lauch command
+        tell window 1 to set newTab to do script commandString
+        # Focus
+        activate
+    end tell
+end run
+

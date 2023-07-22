@@ -147,7 +147,7 @@ bindsym $mod+Shift+q --release exec --no-startup-id xkill
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 
 # Terminal + program lauchers (and switchers)
-bindsym $mod+Return  exec "$TERMINAL $SHELL"
+bindsym $mod+Return  exec "terminal $SHELL"
 bindsym $mod+Shift+Return exec env ENV=/dev/null xterm sh
 #
 bindsym $mod+o       exec --no-startup-id rofi -show drun -drun-show-actions
@@ -155,7 +155,7 @@ bindsym $mod+Shift+o exec --no-startup-id rofi -show ssh
 #
 bindsym $mod+slash exec --no-startup-id rofi -show window
 #
-bindsym $mod+e exec "$TERMINAL pbedit"
+bindsym $mod+e exec "terminal pbedit"
 #
 bindsym $mod+Shift+e exec "cd $HOME; $VISUAL"
 #
@@ -348,7 +348,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # exec --no-startup-id clipit
 exec --no-startup-id volumeicon
 # Launch ranger
-#exec --no-startup-id "$TERMINAL ranger"
+#exec --no-startup-id "terminal ranger"
 
 # linux generic commands
 exec --no-startup-id true;"$BROWSER" "$HOME"
