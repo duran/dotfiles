@@ -30,6 +30,10 @@
     prompt = false
     tool = vimdiff
     conflictstyle = diff3
+[merge "dvc"]
+    name = DVC merge driver
+    driver = dvc git-hook merge-driver --ancestor %O --our %A --their %B
+
 [mergetool]
     # Do not keep a backup of changes
     keepBackup = false
@@ -141,3 +145,4 @@
     insteadOf = "gist:"
 [url "git@heroku.com:"]
     insteadOf = "heroku:"
+

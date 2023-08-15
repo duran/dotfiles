@@ -3,6 +3,9 @@
 env:
   TERM: xterm-256color
 
+selection:
+  save_to_clipboard: true
+
 window:
   option_as_alt: Both
   padding:

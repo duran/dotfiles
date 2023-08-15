@@ -103,6 +103,3 @@ export R_ENVIRON_USER="$HOME"/.config/r/env
 export HOMEBREW_NO_ANALYTICS=1       # no telemery
 export HOMEBREW_NO_AUTO_UPDATE=1     # no automatic update of homebrew
 export HOMEBREW_NO_INSTALL_UPGRADE=1 # no automatic update of homebrew packages
-
-# DVC
-export DVC_NO_ANALYTICS=1
