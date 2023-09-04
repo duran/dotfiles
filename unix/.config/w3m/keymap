@@ -14,8 +14,8 @@ keymap zh HELP
 # FIXME: Copy paste with temp files
 keymap r RELOAD
 keymap T TAB_MENU
-keymap yy EXTERN      '(printf %s | $CLIPBOARD)'
-keymap YY EXTERN_LINK '(printf %s | $CLIPBOARD)'
+keymap yy EXTERN      '(printf %s | clipboard)'
+keymap YY EXTERN_LINK '(printf %s | clipboard)'
 # MISSING: Missing Yy yank
 # MISSING: Missing u undo clossing tab
 # NOTE: Cannot scroll half page up (C-u)

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=XTerm
+GenericName=Terminal
+Exec=xterm
+X-ExecArg=-e
+TryExec=xterm
+Terminal=false

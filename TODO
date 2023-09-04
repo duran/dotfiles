@@ -1,4 +1,4 @@
-2022:
+2023:
     reformat thinkpad
         - all the confusing x things
         - gio vs exa vs ..
@@ -11,25 +11,27 @@
         - launcher like win/mac
         - screenshots
         - qt + gtk common theming
+    improve backup system
     config vscode
-    install grapheneos
     send bug report stow
-2023:
-    fix trash windows
-    how to create small portable apps macos for opening files
-    how to create small portable apps windows for opening files
-    linux workflow with i3+x with more than one dis (+ powertoy ideas)
+2024:
+    userserver
+    go
+    config lf
+    config sioyek
     reconf firefox + qutebrowser
+2025:
+    clean up vim
+2027:
+    Move to Nvim
 
 ================================================================================
 try new wms: bspwm, qutile, awesomewm
-retry conky
 config
 windows:
     - WSL2 as server
     - how to change programatically 
     - switch to debian
-try new pdf readers: sioyek, okular, evince, gv, browsers
 try neovim
     - move to neovim and embed in vscode and firefox
     - make possible to do the following:
@@ -50,11 +52,10 @@ try neovim
 try qutebrowser, nyxt, vivaldi, opera, midori, browsh
 reconf loadkeys + xmodmap (several keyboards, several layouts) + xdotool
 check setkdbmap with -device, xinput and /usr/include/X11/keysymdef.h
-check different line disciplines in Linux/Unix
 check all possible bash options and add them to {set}
 clipboard manager
-aria?
 try emacs, Clion, helix (2025)
 revise kde/gnome/apache/gnu/nongnu
 - Email/Caldav/Cardav
+Nix
 
