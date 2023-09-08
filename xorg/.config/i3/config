@@ -154,12 +154,14 @@ bindsym $mod+o       exec --no-startup-id rofi -show drun -drun-show-actions
 bindsym $mod+Shift+o exec --no-startup-id rofi -show ssh
 #
 bindsym $mod+slash exec --no-startup-id rofi -show window
+bindsym $mod+Shift+slash exec --no-startup-id xterm -title popup -e srfzf
 #
 bindsym $mod+e exec "terminal pbedit"
 #
 bindsym $mod+Shift+e exec "cd $HOME; $VISUAL"
 #
 bindsym $mod+y fullscreen disable, floating enable, resize set 400 300, sticky enable, move window to position 1515 20
+#
 
 
 # Screenshot
@@ -192,6 +194,7 @@ default_border pixel 2
 for_window [class="jetbrains-.*" title="win0"] floating enable;
 for_window [class="firefox*" title="Export Bookmarks File"] floating disable;
 for_window [class="firefox*" title="File Upload"] floating disable;
+for_window [title="popup"] floating enable;
 #
 assign [class="firefoxdeveloperedition"] $ws2
 

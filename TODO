@@ -20,10 +20,14 @@
     config lf
     config sioyek
     reconf firefox + qutebrowser
+    xdg gtk/kde themes
 2025:
     clean up vim
 2027:
-    Move to Nvim
+    move to Nvim
+2030:
+    purge config
+    clean tty/pty
 
 ================================================================================
 try new wms: bspwm, qutile, awesomewm

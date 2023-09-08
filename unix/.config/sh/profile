@@ -36,7 +36,7 @@ export PAGER=less
 export EDITOR='vim -E'
 export VISUAL=vim
 # Web browser (and general url/path opener)
-export BROWSER=open
+export BROWSER=browser
 # Shell, interactive conf, history size
 export ENV="$HOME"/.config/sh/interactive
 export HISTSIZE=5000
@@ -108,3 +108,7 @@ export HOMEBREW_NO_INSTALL_UPGRADE=1 # no automatic update of homebrew packages
 export WWW_HOME=https://en.wikinews.org/wiki/Special:Random
 # W3M
 export W3M_DIR="$HOME"/.config/w3m
+
+# Terminal emulators
+export TERMCMD=terminal
+export TERMINAL_EMULATOR=terminal
