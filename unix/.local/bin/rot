@@ -1,0 +1,9 @@
+#!/bin/sh
+# Simple letter substituion cipher
+# https://en.wikipedia.org/wiki/ROT13
+
+case "$1" in
+  13) tr A-Za-z N-ZA-Mn-za-m ;;
+  47) tr \!-~ P-~\!-O ;;
+  *) >&2 echo "First argument has to be 13 or 47, got $1" ; exit 1 ;;
+esac

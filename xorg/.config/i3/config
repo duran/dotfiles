@@ -138,7 +138,7 @@ bindsym $mod+b bar mode toggle
 ################################################################################
 
 # Turn off, logout, etc.
-bindsym $mod+Escape exec i3rofi
+#bindsym $mod+Escape exec i3rofi
 bindsym $mod+z exec --no-startup-id xsecurelock
 
 # Kill programs
@@ -154,7 +154,7 @@ bindsym $mod+o       exec --no-startup-id rofi -show drun -drun-show-actions
 bindsym $mod+Shift+o exec --no-startup-id rofi -show ssh
 #
 bindsym $mod+slash exec --no-startup-id rofi -show window
-bindsym $mod+Shift+slash exec --no-startup-id xterm -title popup -e srfzf
+bindsym $mod+Shift+slash exec --no-startup-id xterm -title popup -e sr-fzf
 #
 bindsym $mod+e exec "terminal pbedit"
 #

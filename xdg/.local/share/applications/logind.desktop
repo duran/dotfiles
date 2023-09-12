@@ -1,0 +1,22 @@
+[Desktop Entry]
+Type=Application
+Name=Logind
+Exec=true
+TryExec=systemctl
+GenericName=System/Service Manager
+
+[Desktop Action poweroff]
+Name=Poweroff computer
+Exec=systemctl poweroff
+
+[Desktop Action reboot]
+Name=Reboot computer
+Exec=systemctl reboot
+
+[Desktop Action suspend]
+Name=Suspend computer
+Exec=systemctl suspend
+
+[Desktop Action hibernate]
+Name=Hibernate computer
+Exec=systemctl hibernate

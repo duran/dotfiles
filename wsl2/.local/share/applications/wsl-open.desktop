@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Open in Windows Host
+Exec=wsl-open
+TryExec=wsl-open
+GenericName=Generic Opener

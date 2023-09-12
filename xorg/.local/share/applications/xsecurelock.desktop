@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=Application
+Name=xsecurelock
+Exec=xsecurelock
+TryExec=xsecurelock
+GenericName=Image Viewer
+
+[Desktop Action new-private-window]
+Name=New Private Window
+
+
+    logout)
+        i3-msg exit
+        break
+        ;;
+esac
+
+exit 0

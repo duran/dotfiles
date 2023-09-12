@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SRFZF_HISTORY="$HOME"/.cache/srfzf.log
+SRFZF_HISTORY="$HOME"/.cache/sr-fzf.log
 
 touch "$SRFZF_HISTORY"
 

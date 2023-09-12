@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Generic Terminal Editor
+Exec=visual -- %F
+TryExec=visual
+GenericName=Text Editor
+Terminal=true

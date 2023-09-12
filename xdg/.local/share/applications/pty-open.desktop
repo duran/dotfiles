@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=pty-open
-Exec=pty-open -- %F
-TryExec=pty-open
-GenericName=File Opener
-Terminal=true

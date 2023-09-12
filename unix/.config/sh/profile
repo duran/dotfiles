@@ -29,14 +29,12 @@
 # POSIX #
 #########
 # Executable path(s) for executables
-# TODO: missing XDG path
 export PATH="$PATH:$HOME/.local/bin" # Personal scripts in path
-# Text: Pager, CLI editor, TUI editor
+# Text: Pager, CLI editor, TUI editor, Web Browser
 export PAGER=less
 export EDITOR='vim -E'
 export VISUAL=vim
-# Web browser (and general url/path opener)
-export BROWSER=browser
+export BROWSER=w3m
 # Shell, interactive conf, history size
 export ENV="$HOME"/.config/sh/interactive
 export HISTSIZE=5000

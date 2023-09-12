@@ -22,18 +22,19 @@
 
 # Common commands
 
-I expose OS-dependent common functionality as a single command. I expose an alias that resolves to a variable that points to an executable. The current functionality is the following:
+I expose OS-dependent common functionality as a single command. I expose an alias that resolves to a variable that points to an executable The current functionality is the following:
 
 |Alias|Command|Description|
 |:--|:--|:--|
 |o|open|Opens URI or path with the OS default. Only one at a time.|
-|s|search|Search in file paths and file contents in all computer files.Experimental.|
+|s|search|Search in file paths and file contents in all computer files. Experimental.|
 |t|trash|Send one file to OS trash folder. Only one at a time.|
 |c|clipboard|Saves or prints OS clipboard.|
 ||terminal|Executes command in the terminal.|
 |||||
-|p||Open file in text pager.|
-|v||Opens file in text editor.|
+|p||Open file in terminal text pager.|
+|v||Opens file in terminal text editor.|
+|b||Opens url in terminal web browser.|
 
 
 # Notes

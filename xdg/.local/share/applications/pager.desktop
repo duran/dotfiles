@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Generic Terminal Pager
+Exec=pager -- %F
+TryExec=pager
+GenericName=Pager
+Terminal=true

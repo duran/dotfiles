@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# FIXME: Broken
-wt.exe -w 0 -d . "$SHELL-c $@"

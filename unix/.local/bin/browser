@@ -1,3 +1,2 @@
 #!/bin/sh
-
-open ${1:-$WWW_HOME}
+"$BROWSER" "$@"

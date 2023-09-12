@@ -1,0 +1,63 @@
+[Default Applications]
+###############
+# Local files #
+###############
+# Folders
+inode/directory=wsl-open.desktop
+# Text
+application/octet-stream=wsl-open.desktop
+text/plain=wsl-open.desktop
+application/ecmascript=wsl-open.desktop
+application/javascript=wsl-open.desktop
+application/json=wsl-open.desktop
+text/css=wsl-open.desktop
+text/csv=wsl-open.desktop
+application/typescript=wsl-open.desktop
+text/markdown=wsl-open.desktop
+text/calendar=wsl-open.desktop
+application/xml=wsl-open.desktop
+application/x-shellscript=wsl-open.desktop
+text/html=wsl-open.desktop
+application/x-extension-htm=wsl-open.desktop
+application/x-extension-html=wsl-open.desktop
+application/x-extension-shtml=wsl-open.desktop
+application/x-extension-xhtml=wsl-open.desktop
+application/x-extension-xht=wsl-open.desktop
+application/xhtml+xml=wsl-open.desktop
+# Documents (containers)
+application/pdf=org.pwmt.wsl-open.desktop
+application/epub+zip=org.pwmt.wsl-open.desktop
+application/postscript=org.pwmt.wsl-open.desktop
+image/vnd.djvu=org.pwmt.wsl-open.desktop
+# Image
+image/bmp=wsl-open.desktop
+image/gif=wsl-open.desktop
+image/jpeg=wsl-open.desktop
+image/png=wsl-open.desktop
+image/svg+xml=wsl-open.desktop
+image/tiff=wsl-open.desktop
+image/webp=wsl-open.desktop
+image/x-icon=wsl-open.desktop
+# Audio/Video
+audio/aac=wsl-open.desktop
+audio/ogg=wsl-open.desktop
+audio/wav=wsl-open.desktop
+audio/webm=wsl-open.desktop
+audio/x-midi=wsl-open.desktop
+video/3gpp2=wsl-open.desktop
+video/3gpp=wsl-open.desktop
+video/mpeg=wsl-open.desktop
+video/ogg=wsl-open.desktop
+video/webm=wsl-open.desktop
+video/x-msvideo=wsl-open.desktop
+video/mp4=wsl-open.desktop
+########
+# URIs #
+########
+# Web
+x-scheme-handler/http=wsl-open.desktop
+x-scheme-handler/https=wsl-open.desktop
+x-scheme-handler/ftp=wsl-open.desktop
+x-scheme-handler/chrome=wsl-open.desktop
+# TODO:Office
+# X, has libreoffice, ext od[dfgpst]|docx?|sxc|xlsx?|xlt|xlw|gnm|gnumeric, flag f = libreoffice "$@"
