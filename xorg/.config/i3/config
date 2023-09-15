@@ -154,7 +154,7 @@ bindsym $mod+o       exec --no-startup-id rofi -show drun -drun-show-actions
 bindsym $mod+Shift+o exec --no-startup-id rofi -show ssh
 #
 bindsym $mod+slash exec --no-startup-id rofi -show window
-bindsym $mod+Shift+slash exec --no-startup-id xterm -title popup -e sr-fzf
+bindsym $mod+Shift+slash exec --no-startup-id xterm -title popup -e sr-rl
 #
 bindsym $mod+e exec "terminal pbedit"
 #

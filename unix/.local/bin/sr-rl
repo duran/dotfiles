@@ -1,0 +1,7 @@
+#!/bin/sh
+
+SRRL_HISTORY="$HOME"/.cache/sr-rl.log
+
+touch "$SRRL_HISTORY"
+
+rlwrap -H "$SRRL_HISTORY" -s 1000 -f. -r xargs -L1 sr

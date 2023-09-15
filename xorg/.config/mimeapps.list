@@ -1,24 +1,26 @@
 [Default Applications]
-# TODO: scheme handlers
 ###############
 # Local files #
 ###############
 # Dumped everything from the official MIME handlers to here: https://docs.w3cub.com/http/basics_of_http/mime_types/complete_list_of_mime_types/
-# Folders
+# Also take a look at: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+# Directories
 inode/directory=ranger.desktop
-# Text
-application/octet-stream=pty-open.desktop
-text/plain=pty-open.desktop
-application/ecmascript=pty-open.desktop
-application/javascript=pty-open.desktop
-application/json=pty-open.desktop
-text/css=pty-open.desktop
-text/csv=pty-open.desktop
-application/typescript=pty-open.desktop
-text/markdown=pty-open.desktop
-text/calendar=pty-open.desktop
-application/xml=pty-open.desktop
-application/x-shellscript=pty-open.desktop
+# Binaries
+application/octet-stream=pager.desktop
+# Plain text
+text/plain=pager.desktop
+application/xml=pager.desktop
+application/json=pager.desktop
+application/ecmascript=pager.desktop
+application/javascript=pager.desktop
+application/typescript=pager.desktop
+application/x-shellscript=pager.desktop
+text/css=pager.desktop
+text/csv=pager.desktop
+text/markdown=pager.desktop
+text/calendar=pager.desktop
+# Webpages
 text/html=firefox.desktop
 application/x-extension-htm=firefox.desktop
 application/x-extension-html=firefox.desktop
@@ -53,6 +55,8 @@ video/ogg=mpv.desktop
 video/webm=mpv.desktop
 video/x-msvideo=mpv.desktop
 video/mp4=mpv.desktop
+# Compressed files
+application/x-compressed-tar=tar-fzf
 ########
 # URIs #
 ########
@@ -61,5 +65,4 @@ x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/ftp=firefox.desktop
 x-scheme-handler/chrome=firefox.desktop
-# TODO:Office
-# X, has libreoffice, ext od[dfgpst]|docx?|sxc|xlsx?|xlt|xlw|gnm|gnumeric, flag f = libreoffice "$@"
+

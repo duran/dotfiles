@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Generic Terminal Editor
+Name=Default Terminal Editor
 Exec=visual -- %F
 TryExec=visual
 GenericName=Text Editor

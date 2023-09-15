@@ -1,0 +1,7 @@
+#!/bin/sh
+# a poor man urlview with rg, fzf and GNU xargs
+
+REGEXP='(https?|mailto|s?ftp|magnet):[^\])]+'
+COMMAND=open
+
+rg -o "$REGEXP" "$@" | fzf | xargs -r -L1 "$COMMAND"

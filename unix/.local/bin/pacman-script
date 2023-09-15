@@ -1,8 +1,0 @@
-#!/bin/sh
-
-case "$1" in
-  update) pacman -Syu; pacman -Scc;;
-  sizes) pacman -Qi | awk '/^Name/{name=$3}/^Installed/{print $4$5,name}' | sort -h;;
-  origin) pacman -Qo "$@";;
-  *) >&2 cat $0;;
-esac

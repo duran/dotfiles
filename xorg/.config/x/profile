@@ -19,4 +19,5 @@ xset m 2 0
 setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
 # Regular keyboard without Scroll_Lock/Pause/Break, most mod keys send special combination when tapped
 xmodmap "$HOME/.config/x/modmap"
+xrdb -load "$HOME"/.config/x/resources
 xcape -e 'ISO_Level3_Shift=Multi_key;Super_L=Control_L|space;Control_L=Caps_Lock;Shift_L=Escape'

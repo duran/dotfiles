@@ -1,7 +1,0 @@
-#!/bin/sh
-
-SRFZF_HISTORY="$HOME"/.cache/sr-fzf.log
-
-touch "$SRFZF_HISTORY"
-
-< "$SRFZF_HISTORY" fzf --print-query --history "$SRFZF_HISTORY" | head -n 1 | xargs sr

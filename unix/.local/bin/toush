@@ -1,5 +1,4 @@
 #!/bin/sh
-# TODO: check if $1 exist
 
 if test -e "$1"; then
     >&2 echo File exist alredy, aborting...
@@ -7,13 +6,14 @@ if test -e "$1"; then
 fi
 
 if test "$1"; then
-> "$1" cat - <<< '#!/bin/sh
+> "$1" cat  << EOF
+#!/bin/sh
 set -o errexit
 set -o nounset
 set -o xtrace
 # aka set -eux
+EOF
 
-'
 chmod +x "$1"
 "$VISUAL" "$1"
 else

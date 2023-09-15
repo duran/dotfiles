@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Generic Terminal Web Browser
+Name=Default Terminal Web Browser
 Exec=browser -- %F
 TryExec=browser
 GenericName=Web Browser

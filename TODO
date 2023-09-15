@@ -1,8 +1,8 @@
 2023:
     reformat thinkpad
-        - all the confusing x things
-        - gio vs exa vs ..
-        - login screen + screensaver
+        - gio bringing up uxterm not xterm
+        - color in pager sucks
+        - add fzf: Bash, Vim, rg, ...
         - systemd
         - i3 workflow
         - autostart with dex
@@ -10,7 +10,8 @@
         - x goodies (ie mouse)
         - launcher like win/mac
         - screenshots
-        - qt + gtk common theming
+        - clean up **/bin/*
+        - clean redshift
     improve backup system
     config vscode
     send bug report stow
@@ -21,17 +22,21 @@
     config sioyek
     reconf firefox + qutebrowser
     xdg gtk/kde themes
+    fix default terminal launcher
+    readline
 2025:
     clean up vim
+    try helix, helix
+2026
+    try helix, emacs, nyxt
 2027:
     move to Nvim
 2030:
-    purge config
+    try emacs, helix, 
     clean tty/pty
 
 ================================================================================
 try new wms: bspwm, qutile, awesomewm
-config
 windows:
     - WSL2 as server
     - how to change programatically 
@@ -58,7 +63,6 @@ reconf loadkeys + xmodmap (several keyboards, several layouts) + xdotool
 check setkdbmap with -device, xinput and /usr/include/X11/keysymdef.h
 check all possible bash options and add them to {set}
 clipboard manager
-try emacs, Clion, helix (2025)
 revise kde/gnome/apache/gnu/nongnu
 - Email/Caldav/Cardav
 Nix

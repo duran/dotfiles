@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Default Terminal
+Exec=terminal
+TryExec=terminal
+GenericName=Terminal Emulator
