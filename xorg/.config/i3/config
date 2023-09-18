@@ -200,7 +200,7 @@ assign [class="firefoxdeveloperedition"] $ws2
 
 
 # Fonts
-font xft:DejaVu Sans Mono 11
+font pango:IBM Plex Mono 11
 
 
 # Colors from X
@@ -333,10 +333,7 @@ workspace_layout tabbed
 # lock automatically (now in autostart)
 # exec --no-startup-id xautolock -time 120 -locker xsecurelock
 
-# x specific settins
-# background NOTE: xsetroot does not work with picom. If you want images use feh or nitrogen.
-# exec --no-startup-id xsetroot -solid "#"333333"
-exec --no-startup-id hsetroot -solid $foreground ; sleep 1; picom -b
+exec --no-startup-id dex -a
 
 # unknown
 # FIXME: I do not know if this is neccesary

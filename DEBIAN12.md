@@ -1,6 +1,7 @@
 1. Minimal install, nothing extra
-1. Update database `sudo apt update && sudo apt upgrade`
-1. Install WM and basic tools `sudo apt install man git i3 dex`
+1. Update database `sudo apt update && sudo apt upgrade` 1. Install WM and basic tools `sudo apt install man git i3 dex`
+
+sudo vim /etc/apt/sources.list # and add contrib and non-free
 
 ```
 coreutils
@@ -40,7 +41,8 @@ sxiv
 mpv
 xcape
 xsel
-redshift
+gammastep
+fonts-ibm-plex
 # xdg-terminal-exec
 
 ```

@@ -60,21 +60,21 @@ export INPUTRC="$HOME"/.config/readline.conf
 export LESS=-R
 export LESSHISTFILE=-
 
-LESS_TERMCAP_mb=$(printf '\E[1;31m')     # begin bold
-LESS_TERMCAP_md=$(printf '\E[1;36m')     # begin blink
-LESS_TERMCAP_me=$(printf '\E[0m')        # reset bold/blink
-LESS_TERMCAP_so=$(printf '\E[01;44;33m') # begin reverse video
-LESS_TERMCAP_se=$(printf '\E[0m')        # reset reverse video
-LESS_TERMCAP_us=$(printf '\E[1;32m')     # begin underline
-LESS_TERMCAP_ue=$(printf '\E[0m')        # reset underline
-
-export LESS_TERMCAP_mb
-export LESS_TERMCAP_md
-export LESS_TERMCAP_me
-export LESS_TERMCAP_so
-export LESS_TERMCAP_se
-export LESS_TERMCAP_us
-export LESS_TERMCAP_ue
+# LESS_TERMCAP_mb=$(printf '\E[1;31m')     # begin bold
+# LESS_TERMCAP_md=$(printf '\E[1;36m')     # begin blink
+# LESS_TERMCAP_me=$(printf '\E[0m')        # reset bold/blink
+# LESS_TERMCAP_so=$(printf '\E[01;44;33m') # begin reverse video
+# LESS_TERMCAP_se=$(printf '\E[0m')        # reset reverse video
+# LESS_TERMCAP_us=$(printf '\E[1;32m')     # begin underline
+# LESS_TERMCAP_ue=$(printf '\E[0m')        # reset underline
+# 
+# export LESS_TERMCAP_mb
+# export LESS_TERMCAP_md
+# export LESS_TERMCAP_me
+# export LESS_TERMCAP_so
+# export LESS_TERMCAP_se
+# export LESS_TERMCAP_us
+# export LESS_TERMCAP_ue
 
 # GNU ls
 # (colors created with dircolors over .dir_colors and used with ls --colors) plus date and size

@@ -36,7 +36,7 @@ alias c=clipboard
 alias e='$EDITOR'
 alias f=flush
 alias g=git
-alias h=hp
+# - h
 alias i=invite
 # - j
 alias k=man
@@ -44,6 +44,7 @@ alias l='ls -CF'
 # - m
 # - n
 alias o=open
+
 alias p='$PAGER'
 alias q=exit
 alias r='R --quiet'

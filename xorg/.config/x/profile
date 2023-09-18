@@ -1,6 +1,9 @@
 #!/bin/sh
 # Technically this should be in .xprofile, or maybe systemd
-# If this does not work with your distribution you could try to put this thing in .xsession, .xinitrc, or .profile_local
+# If this does not work with your distribution you could try to put this thing in .xprofile, .xserverrc, .xsessionrc, .xinitrc, or .profile_local
+
+# Set up most important config from shell
+. "$HOME"/.config/sh/profile
 
 # Use custom path X compose file
 export XCOMPOSEFILE="$HOME"/.config/x/compose

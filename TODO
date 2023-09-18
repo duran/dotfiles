@@ -2,16 +2,13 @@
     reformat thinkpad
         - gio bringing up uxterm not xterm
         - color in pager sucks
+        - add ls colors
         - add fzf: Bash, Vim, rg, ...
         - systemd
         - i3 workflow
-        - autostart with dex
-        - fonts
         - x goodies (ie mouse)
         - launcher like win/mac
         - screenshots
-        - clean up **/bin/*
-        - clean redshift
     improve backup system
     config vscode
     send bug report stow
@@ -26,9 +23,10 @@
     readline
 2025:
     clean up vim
-    try helix, helix
+    try helix
+    automatic redshift, timezone
 2026
-    try helix, emacs, nyxt
+    try emacs, nyxt
 2027:
     move to Nvim
 2030:

@@ -1,12 +1,11 @@
 [Desktop Entry]
 Type=Application
-Name=Redshift
-Exec=redshift
-TryExec=redshift
+Name=gammastep
+Exec=gammastep
+TryExec=gammastep
 GenericName=Color Temperature Adjustment
 Actions=turn-off;
 
 [Desktop Action turn-off]
 Name=Turn Off
-Exec=sh -c 'killall -9 redshift && redshift -x'
-TryExec=redshift
+Exec=sh -c 'killall -9 gammastep && gammastep -x'
