@@ -57,7 +57,7 @@ export INPUTRC="$HOME"/.config/readline.conf
 # Less
 # TODO: Check key bindings
 
-export LESS=-R
+export LESS='-RXF --use-color -Dd+r$Du+b'
 export LESSHISTFILE=-
 
 # LESS_TERMCAP_mb=$(printf '\E[1;31m')     # begin bold
@@ -78,7 +78,8 @@ export LESSHISTFILE=-
 
 # GNU ls
 # (colors created with dircolors over .dir_colors and used with ls --colors) plus date and size
-export LS_COLORS='no=00:fi=00:mh=01:ex=01;31:su=31;43:sg=31;43:ca=31;43:di=01;34:st=34;43:ln=01;36:or=36;41:mi=36;41:pi=01;32:so=01;32:do=01;32:bd=01;33:cd=01;33:'
+export LS_COLORS='no=00:fi=00:di=36:ln=35:pi=37;44:so=37;44:do=37;44:bd=37;44:cd=37;44:or=05;37;45:mi=05;37;45:tw=30;46:ow=30;46:ex=01;31:';
+
 export TIME_STYLE=long-iso
 export BLOCK_SIZE="'1"
 
@@ -89,6 +90,8 @@ export LSCOLORS=ExGxFxdxCxDxDxxbaDecac
 # FZF
 export FZF_DEFAULT_COMMAND='fd --hidden --exclude .git'
 export FZF_DEFAULT_OPTS='--bind=ctrl-j:accept'
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS "\
+'--color=bg+:,bg:,spinner:,hl: --color=fg:,header:,info:,pointer: --color=marker:,fg+:,prompt:,hl+: --color=bg+:#383830,bg:#272822,spinner:#a1efe4,hl:#66d9ef --color=fg:#a59f85,header:#66d9ef,info:#f4bf75,pointer:#a1efe4 --color=marker:#a1efe4,fg+:#f5f4f1,prompt:#f4bf75,hl+:#66d9ef'
 
 # Python
 export PYTHONSTARTUP="$HOME"/.config/python/interactive

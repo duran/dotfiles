@@ -1,18 +1,46 @@
 set window-title-basename true
 set selection-clipboard clipboard
 
-map = adjust_window width
-map <C-s> focus_inputbar ":exec bash -c 'cp $FILE $(xdg-user-dir DOWNLOAD)/$(basename $FILE)'"
-#map o exec 'firefox "%"'
-#map <C-o> feedkeys ":exec acroread $FILE<Return>"
+#map = adjust_window width
+#map <C-s> focus_inputbar ":exec sh -c 'cp $FILE "$HOME/tmp/$(basename $FILE)'"
 
-set default-bg \#272822
-set default-fg \#f8f8f2
-
-set recolor-darkcolor \#f8f8f2
-set recolor-lightcolor \#272822
-set recolor-keephue true
-# This seems to be broken with mupdf, but poppler is much slower
-set recolor-reverse-video true
+# Dark mode
 
 set recolor true
+set recolor-keephue true
+
+#set recolor-darkcolor  "#272822"
+#set recolor-lightcolor "#383830"
+
+set recolor-lightcolor          "#272822"
+set recolor-darkcolor           "#f5f4f1"
+
+
+set default-bg                  "#272822"
+set default-fg                  "#383830"
+
+#set statusbar-fg                "#a59f85"
+set statusbar-bg                "#49483e"
+
+set inputbar-bg                 "#272822"
+set inputbar-fg                 "#f9f8f5"
+
+set notification-bg             "#272822"
+set notification-fg             "#f9f8f5"
+
+set notification-error-bg       "#272822"
+set notification-error-fg       "#f92672"
+
+set notification-warning-bg     "#272822"
+set notification-warning-fg     "#f92672"
+
+set highlight-color             "#f4bf75"
+set highlight-active-color      "#66d9ef"
+
+set completion-bg               "#383830"
+set completion-fg               "#66d9ef"
+
+set completion-highlight-fg     "#f9f8f5"
+set completion-highlight-bg     "#66d9ef"
+
+

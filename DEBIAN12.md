@@ -2,6 +2,7 @@
 1. Update database `sudo apt update && sudo apt upgrade` 1. Install WM and basic tools `sudo apt install man git i3 dex`
 
 sudo vim /etc/apt/sources.list # and add contrib and non-free
+sudo update-alternatives --config x-terminal-emulator
 
 ```
 coreutils
@@ -15,6 +16,7 @@ wget
 fdfind
 fzf
 rlwrap
+libnotify-bin
 # ripgrep-all
 ripgrep
 pandoc
@@ -24,7 +26,7 @@ ffmpeg
 tmux
 ranger
 w3m
-vim
+vim-gtk3
 pdftotext
 #
 i3
@@ -41,6 +43,8 @@ sxiv
 mpv
 xcape
 xsel
+flameshot
+maim
 gammastep
 fonts-ibm-plex
 # xdg-terminal-exec

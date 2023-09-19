@@ -1,14 +1,7 @@
 2023:
     reformat thinkpad
-        - gio bringing up uxterm not xterm
-        - color in pager sucks
-        - add ls colors
         - add fzf: Bash, Vim, rg, ...
-        - systemd
         - i3 workflow
-        - x goodies (ie mouse)
-        - launcher like win/mac
-        - screenshots
     improve backup system
     config vscode
     send bug report stow
@@ -18,9 +11,15 @@
     config lf
     config sioyek
     reconf firefox + qutebrowser
-    xdg gtk/kde themes
-    fix default terminal launcher
-    readline
+    minor annoyances:
+        - xdg gtk/kde themes
+        - fix default terminal launcher
+        - proper way to do popups
+        - readline
+        - ls GNU vs BSD
+        - proper way to integrate lf in open popups
+        - cursor themes
+        - systemd
 2025:
     clean up vim
     try helix

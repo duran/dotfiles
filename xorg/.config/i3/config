@@ -150,7 +150,7 @@ bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart du
 bindsym $mod+Return  exec "terminal $SHELL"
 bindsym $mod+Shift+Return exec env ENV=/dev/null xterm sh
 #
-bindsym $mod+o       exec --no-startup-id rofi -show drun -drun-show-actions
+bindsym $mod+o       exec --no-startup-id sh -c 'fdfind | rofi -dmenu | xargs open'
 bindsym $mod+Shift+o exec --no-startup-id rofi -show ssh
 #
 bindsym $mod+slash exec --no-startup-id rofi -show window
@@ -162,10 +162,12 @@ bindsym $mod+Shift+e exec "cd $HOME; $VISUAL"
 #
 bindsym $mod+y fullscreen disable, floating enable, resize set 400 300, sticky enable, move window to position 1515 20
 #
+bindsym $mod+space exec --no-startup-id rofi -show combi -drun-show-actions
 
 
 # Screenshot
-bindsym Print                      exec --no-startup-id scrot    -e 'mv $f '"${TMPDIR:-$HOME}"; exec notify-send 'screenshot saved in '"${TMPDIR:-$HOME}" 
+bindsym Print exec maim "$HOME/tmp/$(date -Is).png"; exec notify-send "screenshot taken"
+#bindsym Print exec --no-startup-id maim
 #bindsym $mod+Print       --release exec --no-startup-id scrot -u -e 'mv $f '"${TMPDIR:-$HOME}"; exec notify-send 'screenshot saved in '"${TMPDIR:-$HOME}" 
 #bindsym $mod+Shift+Print --release exec --no-startup-id scrot -s -e 'mv $f '"${TMPDIR:-$HOME}"; exec notify-send 'screenshot saved in '"${TMPDIR:-$HOME}" 
 
@@ -204,6 +206,8 @@ font pango:IBM Plex Mono 11
 
 
 # Colors from X
+
+
 set_from_resource $background background
 set_from_resource $foreground foreground
 set_from_resource $bad_dark color1
