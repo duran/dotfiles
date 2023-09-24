@@ -1,0 +1,61 @@
+# vi: filetype=i3config
+#############
+# Automatic #
+#############
+
+###########
+# Startup #
+###########
+exec --no-startup-id dex -a
+
+##########
+# Manual #
+##########
+
+# No mod
+########
+
+# Screen brightness controls
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; notify-send -t 500 \\"Brightness at $(xbacklight -get | grep -Po '^[0-9]+')%\\""
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send -t 500 \\"Brightness at $(xbacklight -get | grep -Po '^[0-9]+')%\\""
+
+# Audio controls
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 5%+; notify-send -t 500 \\"Volume at $(amixer sget Master | grep -Po '[[][0-9]+%[]]')\\""
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master 5%-; notify-send -t 500 \\"Volume at $(amixer sget Master | grep -Po '[[][0-9]+%[]]')\\""
+bindsym XF86AudioMute exec "amixer -q sset Master toggle; notify-send -t 500 \\"Volume at $(amixer sget Master | grep -Po '[[][0-9]+%[]]')\\""
+
+# Media buttons
+bindsym XF86AudioPrev exec "exec playerctl previous"
+bindsym XF86AudioPlay exec "exec playerctl play-pause"
+bindsym XF86AudioNext exec "exec playerctl next"
+
+# Mod
+########
+
+# Lock
+bindsym $mod+z exec --no-startup-id xsecurelock
+
+# Terminal + program lauchers (and switchers)
+bindsym $mod+Return  exec terminal
+bindsym $mod+Shift+Return exec env ENV=/dev/null xterm sh
+#
+bindsym $mod+o       exec --no-startup-id sh -c 'fdfind | rofi -dmenu | xargs open'
+bindsym $mod+Shift+o exec --no-startup-id rofi -show ssh
+#
+bindsym $mod+slash exec --no-startup-id rofi -show window
+bindsym $mod+Shift+slash exec --no-startup-id xterm -title popup -e sr-rl
+#
+bindsym $mod+e exec terminal viboard
+#
+bindsym $mod+y fullscreen disable, floating enable, resize set 400 300, sticky enable, move window to position 1515 20
+#
+bindsym $mod+space exec --no-startup-id rofi -show combi -drun-show-actions
+
+
+# Screenshot
+#bindsym Print exec maim "$HOME/tmp/$(date -Is).png"; exec notify-send "screenshot taken"
+#bindsym Print exec --no-startup-id maim
+#bindsym $mod+Print       --release exec --no-startup-id scrot -u -e 'mv $f '"${TMPDIR:-$HOME}"; exec notify-send 'screenshot saved in '"${TMPDIR:-$HOME}" 
+#bindsym $mod+Shift+Print --release exec --no-startup-id scrot -s -e 'mv $f '"${TMPDIR:-$HOME}"; exec notify-send 'screenshot saved in '"${TMPDIR:-$HOME}" 
+
+

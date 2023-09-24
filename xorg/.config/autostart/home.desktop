@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Default File Manager
+Exec=sh -c 'open "$HOME"'

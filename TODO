@@ -22,7 +22,7 @@
         - systemd
 2025:
     clean up vim
-    try helix
+    try helix, kakoune
     automatic redshift, timezone
 2026
     try emacs, nyxt

@@ -116,3 +116,5 @@ case "$1" in
     ;;
 esac
 ```
+
+edit xdg-{open,terminal-exec}

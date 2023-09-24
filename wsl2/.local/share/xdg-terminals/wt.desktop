@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Windows Terminal
-Exec=wt.exe -w 0 -d .
-X-ExecArg=
-TryExec=wt.exe
-GenericName=Terminal Emulator

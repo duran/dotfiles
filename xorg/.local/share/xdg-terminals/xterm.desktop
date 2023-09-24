@@ -1,1 +1,5 @@
-/usr/share/applications/xterm.desktop
+[Desktop Entry]
+Name=XTerm
+Type=Application
+Exec=xterm
+TryExec=xterm

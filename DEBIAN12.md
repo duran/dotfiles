@@ -17,6 +17,7 @@ fdfind
 fzf
 rlwrap
 libnotify-bin
+tlp tlp-rdw
 # ripgrep-all
 ripgrep
 pandoc

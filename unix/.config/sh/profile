@@ -37,7 +37,14 @@ export VISUAL=vim
 export BROWSER=w3m
 # Shell, interactive conf, history size
 export ENV="$HOME"/.config/sh/interactive
+export HISTFILE="$HOME/.cache/shell_history"
 export HISTSIZE=5000
+
+#######
+# XDG #
+#######
+# Use gnome tools (like gio) when interacting with xdg tools (like xdg-open)
+export XDG_CURRENT_DESKTOP=MATE
 
 
 ##################
@@ -57,29 +64,16 @@ export INPUTRC="$HOME"/.config/readline.conf
 # Less
 # TODO: Check key bindings
 
-export LESS='-RXF --use-color -Dd+r$Du+b'
+export LESS='-RX --use-color -Dd+r$Du+b'
 export LESSHISTFILE=-
 
-# LESS_TERMCAP_mb=$(printf '\E[1;31m')     # begin bold
-# LESS_TERMCAP_md=$(printf '\E[1;36m')     # begin blink
-# LESS_TERMCAP_me=$(printf '\E[0m')        # reset bold/blink
-# LESS_TERMCAP_so=$(printf '\E[01;44;33m') # begin reverse video
-# LESS_TERMCAP_se=$(printf '\E[0m')        # reset reverse video
-# LESS_TERMCAP_us=$(printf '\E[1;32m')     # begin underline
-# LESS_TERMCAP_ue=$(printf '\E[0m')        # reset underline
-# 
-# export LESS_TERMCAP_mb
-# export LESS_TERMCAP_md
-# export LESS_TERMCAP_me
-# export LESS_TERMCAP_so
-# export LESS_TERMCAP_se
-# export LESS_TERMCAP_us
-# export LESS_TERMCAP_ue
+# W3M
+export WWW_HOME=https://en.wikinews.org/wiki/Special:Random
+export W3M_DIR="$HOME"/.config/w3m
 
 # GNU ls
 # (colors created with dircolors over .dir_colors and used with ls --colors) plus date and size
 export LS_COLORS='no=00:fi=00:di=36:ln=35:pi=37;44:so=37;44:do=37;44:bd=37;44:cd=37;44:or=05;37;45:mi=05;37;45:tw=30;46:ow=30;46:ex=01;31:';
-
 export TIME_STYLE=long-iso
 export BLOCK_SIZE="'1"
 
@@ -88,7 +82,7 @@ export CLICOLOR=1
 export LSCOLORS=ExGxFxdxCxDxDxxbaDecac
 
 # FZF
-export FZF_DEFAULT_COMMAND='fd --hidden --exclude .git'
+export FZF_DEFAULT_COMMAND='fdfind --hidden --exclude .git'
 export FZF_DEFAULT_OPTS='--bind=ctrl-j:accept'
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS "\
 '--color=bg+:,bg:,spinner:,hl: --color=fg:,header:,info:,pointer: --color=marker:,fg+:,prompt:,hl+: --color=bg+:#383830,bg:#272822,spinner:#a1efe4,hl:#66d9ef --color=fg:#a59f85,header:#66d9ef,info:#f4bf75,pointer:#a1efe4 --color=marker:#a1efe4,fg+:#f5f4f1,prompt:#f4bf75,hl+:#66d9ef'
@@ -104,11 +98,6 @@ export R_ENVIRON_USER="$HOME"/.config/r/env
 export HOMEBREW_NO_ANALYTICS=1       # no telemery
 export HOMEBREW_NO_AUTO_UPDATE=1     # no automatic update of homebrew
 export HOMEBREW_NO_INSTALL_UPGRADE=1 # no automatic update of homebrew packages
-
-# Browser
-export WWW_HOME=https://en.wikinews.org/wiki/Special:Random
-# W3M
-export W3M_DIR="$HOME"/.config/w3m
 
 # Terminal emulators
 export TERMCMD=terminal

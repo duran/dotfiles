@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Default Web Browser
+Exec=sh -c 'open "$WWW_HOME"'
