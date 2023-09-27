@@ -3,7 +3,7 @@
 
 " TODO: Clean up some day
 if exists('g:loaded_fzf')
-    set rtp+=$FZF_HOME
+    " set rtp+=$FZF_HOME
     " Fix Xterm incompatibilities
     " https://github.com/junegunn/fzf.vim/issues/900
     let &t_TI = ""

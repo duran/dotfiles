@@ -7,6 +7,7 @@
 # Startup #
 ###########
 exec --no-startup-id dex -a
+exec --no-startup-id env RESOURCE_NAME=terminal_scratchpad terminal
 
 ##########
 # Manual #
@@ -29,33 +30,39 @@ bindsym XF86AudioPrev exec "exec playerctl previous"
 bindsym XF86AudioPlay exec "exec playerctl play-pause"
 bindsym XF86AudioNext exec "exec playerctl next"
 
-# Mod
-########
-
-# Lock
-bindsym $mod+z exec --no-startup-id xsecurelock
-
-# Terminal + program lauchers (and switchers)
-bindsym $mod+Return  exec terminal
-bindsym $mod+Shift+Return exec env ENV=/dev/null xterm sh
-#
-bindsym $mod+o       exec --no-startup-id sh -c 'fdfind | rofi -dmenu | xargs open'
-bindsym $mod+Shift+o exec --no-startup-id rofi -show ssh
-#
-bindsym $mod+slash exec --no-startup-id rofi -show window
-bindsym $mod+Shift+slash exec --no-startup-id xterm -title popup -e sr-rl
-#
-bindsym $mod+e exec terminal viboard
-#
-bindsym $mod+y fullscreen disable, floating enable, resize set 400 300, sticky enable, move window to position 1515 20
-#
-bindsym $mod+space exec --no-startup-id rofi -show combi -drun-show-actions
-
-
 # Screenshot
-#bindsym Print exec maim "$HOME/tmp/$(date -Is).png"; exec notify-send "screenshot taken"
+bindsym Print exec maim "$HOME/tmp/$(date -Is).png"; exec notify-send "screenshot taken"
 #bindsym Print exec --no-startup-id maim
 #bindsym $mod+Print       --release exec --no-startup-id scrot -u -e 'mv $f '"${TMPDIR:-$HOME}"; exec notify-send 'screenshot saved in '"${TMPDIR:-$HOME}" 
 #bindsym $mod+Shift+Print --release exec --no-startup-id scrot -s -e 'mv $f '"${TMPDIR:-$HOME}"; exec notify-send 'screenshot saved in '"${TMPDIR:-$HOME}" 
 
+# Mod
+########
 
+# Lock
+
+# Window manager
+# Search for windows
+bindsym $mod+Tab exec --no-startup-id rofi -show window
+# Lock
+bindsym $mod+z      exec --no-startup-id xsecurelock
+bindsym $mod+Escape exec --no-startup-id sh -c 'printf "poweroff\nreboot\nsuspend\nhibernate\nhybrid-sleep" | rofi -dmenu | xargs -r -L1 systemctl'
+
+
+# Open, launch, and  search locally and remotelly
+bindsym $mod+o       exec --no-startup-id sh -c 'fdfind | rofi -dmenu -i -multi-select | xargs -r -L1 open'
+bindsym $mod+p       exec --no-startup-id sh -c 'fdfind | rofi -dmenu -i -multi-select | xargs -r -L1 open'
+bindsym $mod+Shift+o exec --no-startup-id rofi -show ssh
+bindsym $mod+Shift+p exec --no-startup-id rofi -show drun -drun-show-actions
+# something to search all (rga fe) here
+bindsym $mod+b       exec --no-startup-id env RESOURCE_NAME=modal terminal env BROWSER=open rlwrap -H "$HOME"/.cache/sr-rl.log -s 1000 -f. -r xargs -r -L1 sr
+bindsym $mod+slash   exec --no-startup-id env RESOURCE_NAME=modal terminal env BROWSER=open rlwrap -H "$HOME"/.cache/sr-rl.log -s 1000 -f. -r xargs -r -L1 sr
+# Spotlight/Powertoys clone
+bindsym $mod+space exec --no-startup-id rofi -show combi
+
+# Terminals
+bindsym $mod+Return       exec terminal
+bindsym $mod+Shift+Return exec env ENV=/dev/null xterm sh
+
+# Clipboard
+bindsym $mod+c exec env RESOURCE_NAME=modal terminal viboard

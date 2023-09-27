@@ -12,3 +12,10 @@ set backupdir^=~/.local/share/vim/backup// " where to store temporary backups
 " Do not assume that leading zeroes means an octal
 set nrformats-=octal
 
+set rtp+=/usr/share/doc/fzf/examples/plugin/
+
+call plug#begin()
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf'
+call plug#end()
+

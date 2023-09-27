@@ -13,20 +13,20 @@ set $ws9 9
 #############
 # Automatic #
 #############
+
+# Instances
+for_window [instance="modal"] floating enable;
 for_window [instance="scratchpad"] move window to scratchpad;
-for_window [instance="floating"] floating enable;
 
-#exec_always env RESOURCE_NAME=terminal-scratchpad terminal
-#exec_always env RESOURCE_NAME=terminal-scratchpad terminal
-#exec_always --no-startup-id qutebrowser
-
-#assign [con_mark="browser"] $ws2
-#for_window [class="(?i)firefox|qutebrowser|w3m|chrom(ium|e)"] mark "browser"
-
-
-assign [class="(?i)firefox|qutebrowser|w3m|chrom(ium|e)"] $ws2
+# Browsers
+# qutebrowser
+assign [class="(?i)qutebrowser"] $ws2
+# Firefox
+assign [class="(?i)firefox" window_role="browser"] $ws2
 #for_window [class="firefox*" title="Export Bookmarks File"] floating disable;
 #for_window [class="firefox*" title="File Upload"] floating disable;
+
+# Other
 #for_window [class="jetbrains-.*" title="win0"] floating enable;
 
 ###########
@@ -36,6 +36,7 @@ workspace_layout tabbed
 workspace_auto_back_and_forth yes
 floating_modifier $mod
 
+
 ##########
 # Manual #
 ##########
@@ -44,6 +45,7 @@ bindsym $mod+h       focus left
 bindsym $mod+j       focus down
 bindsym $mod+k       focus up
 bindsym $mod+l       focus right
+#
 bindsym $mod+Shift+h move  left
 bindsym $mod+Shift+j move  down
 bindsym $mod+Shift+k move  up
@@ -77,28 +79,32 @@ bindsym $mod+t layout tabbed
 bindsym $mod+d layout stacking
 bindsym $mod+s layout splitv
 bindsym $mod+v layout splith
+#
 bindsym $mod+Shift+s split v;exec notify-send 'tile horizontally'
 bindsym $mod+Shift+v split h;exec notify-send 'tile vertically'
 
 
-# Floating,backlog and pinned windows
+# Kill app
+bindsym $mod+w kill
+bindsym $mod+q kill
+
+# Reload and restart
+bindsym $mod+r reload
+bindsym $mod+Shift+r restart
+
+
+# TODO: Resize is still a big mess
+# TODO: No support for nesting containers
+
+# Floating,scratchpad, and pinned windows
 floating_modifier $mod
 bindsym $mod+grave focus mode_toggle
 bindsym $mod+Shift+asciitilde floating toggle
-#
 #
 bindsym $mod+backslash sticky toggle
 #
 bindsym $mod+f fullscreen toggle
 
-# TODO: parent/child
-# Kill app
-bindsym $mod+w kill
-bindsym $mod+q kill
-
-
-
-# TODO: Change this one
 # Resize window (you can also use the mouse for that)
 bindsym $mod+Ctrl+r mode "resize"
 mode "resize" {
@@ -119,12 +125,10 @@ mode "resize" {
     bindsym semicolon   mode "default"
 }
 
-# Reload and restart
-bindsym $mod+Shift+r restart
-bindsym $mod+r reload
 
 # hide/unhide i3status bar
-bindsym $mod+b bar mode toggle
+# bindsym $mod+b bar mode toggle
+#bindsym $mod+y fullscreen disable, floating enable, resize set 400 300, sticky enable, move window to position 1515 20
 
 # Gap modes
 set $mode_gaps Gaps: (o) outer, (i) inner

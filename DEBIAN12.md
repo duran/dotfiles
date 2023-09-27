@@ -5,33 +5,51 @@ sudo vim /etc/apt/sources.list # and add contrib and non-free
 sudo update-alternatives --config x-terminal-emulator
 
 ```
+# CLI utilities
 coreutils
 util-linux
 moreutils
 git
 stow
-libglib2.0-0
 curl
 wget
+libglib2.0-0
 fdfind
+ripgrep
+libnotify-bin
+pandoc
+ffmpeg
+poppler-utils
+pdftotext
+borgmatic
+tlp tlp-rdw
+#ripgrep-all
+#xdg-terminal-exec
+alsa-utils
+playerctl
+
+# TUI tools
 fzf
 rlwrap
-libnotify-bin
-tlp tlp-rdw
-# ripgrep-all
-ripgrep
-pandoc
-poppler-utils
-ffmpeg
-#
 tmux
 ranger
-w3m
 vim-gtk3
-pdftotext
-#
+w3m
+
+# GUI utilities
+xbacklight
+xcape
+xsel
 i3
 rofi
+lightdm
+gammastep
+fonts-ibm-plex
+xsecurelock
+flameshot
+maim
+
+# GUI tools
 pcmanfm
 firefox-esr
 xterm
@@ -39,20 +57,10 @@ zathura
 zathura-djvu
 zathura-ps
 zathura-cb
-lightdm
 sxiv
 mpv
-xcape
-xsel
-flameshot
-maim
-gammastep
-fonts-ibm-plex
-# xdg-terminal-exec
 
 ```
-Annoyances:
-GRUB
 
 Annoyances:
 GRUB

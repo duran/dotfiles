@@ -31,7 +31,6 @@ vnoremap <a-k> :m '<-2<CR>gv=gv
 
 " Go to places
 nnoremap gb :ls<c-j>:b
-nnoremap gx :execute ':silent !open <cWORD>' <c-j> :redraw! <c-j>h
 
 " Repeat macros and commands faster
 nnoremap Q @@

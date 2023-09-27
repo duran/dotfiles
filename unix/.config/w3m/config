@@ -1,5 +1,5 @@
-editor "$EDITOR"
-extbrowser "$BROWSER"
+editor "$VISUAL"
+extbrowser "open"
 
 auto_image 1
 

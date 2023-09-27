@@ -118,3 +118,8 @@ esac
 ```
 
 edit xdg-{open,terminal-exec}
+
+xbacklight
+https://askubuntu.com/questions/715306/xbacklight-no-outputs-have-backlight-property-no-sys-class-backlight-folder
+
+How to install basic vim plugin properly?

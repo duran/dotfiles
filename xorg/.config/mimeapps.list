@@ -65,4 +65,5 @@ x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/ftp=firefox.desktop
 x-scheme-handler/chrome=firefox.desktop
+x-scheme-handler/qute=qutebrowser.desktop
 
