@@ -3,5 +3,6 @@ configuration {
     combi-modi: "window,drun,ssh";
     ssh-command: "{terminal} {ssh-client} {host} [-p {port}]";
     run-shell-command: "{terminal} {cmd}";
+    terminal: "terminal";
 }
 @theme "Monokai"

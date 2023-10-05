@@ -1,8 +1,8 @@
 2023:
-    improve backup system
     config vscode
-    send bug report stow
+    improve backup system
 2024:
+    fix cracked display
     userserver
     go
     config lf
@@ -20,10 +20,10 @@
         - rga
 2025:
     clean up vim
-    try helix, kakoune
+    try emacs, helix, kakoune
+    try nyxt
     automatic redshift, timezone
-2026
-    try emacs, nyxt
+2026:
 2027:
     move to Nvim
 2030:

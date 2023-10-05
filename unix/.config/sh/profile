@@ -34,7 +34,7 @@ export PATH="$PATH:$HOME/.local/bin" # Personal scripts in path
 export PAGER=less
 export EDITOR='vim -E'
 export VISUAL=vim
-export BROWSER=w3m
+export BROWSER=open
 # Shell, interactive conf, history size
 export ENV="$HOME"/.config/sh/interactive
 export HISTFILE="$HOME/.cache/shell_history"
@@ -98,7 +98,3 @@ export R_ENVIRON_USER="$HOME"/.config/r/env
 export HOMEBREW_NO_ANALYTICS=1       # no telemery
 export HOMEBREW_NO_AUTO_UPDATE=1     # no automatic update of homebrew
 export HOMEBREW_NO_INSTALL_UPGRADE=1 # no automatic update of homebrew packages
-
-# Terminal emulators
-export TERMCMD=terminal
-export TERMINAL_EMULATOR=terminal

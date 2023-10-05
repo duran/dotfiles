@@ -51,7 +51,7 @@ nameserver 2620:fe::10
 nameserver 8.8.8.8
 nameserver 2001:4860:4860::8888
 ```
-# Set timeoupt borked DNS
+# Set timeout borked DNS
 options timeout:1
 
 ```
@@ -123,3 +123,10 @@ xbacklight
 https://askubuntu.com/questions/715306/xbacklight-no-outputs-have-backlight-property-no-sys-class-backlight-folder
 
 How to install basic vim plugin properly?
+
+
+WSL:
+- Install necessary drivers
+- Install Mesa
+- Kitty with X11
+

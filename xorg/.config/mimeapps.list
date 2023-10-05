@@ -1,11 +1,16 @@
 [Default Applications]
+###########
+# Special #
+###########
+# Directories
+inode/directory=ranger.desktop
+# Default terminal
+x-scheme-handler/terminal=terminal.desktop
 ###############
 # Local files #
 ###############
 # Dumped everything from the official MIME handlers to here: https://docs.w3cub.com/http/basics_of_http/mime_types/complete_list_of_mime_types/
 # Also take a look at: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
-# Directories
-inode/directory=ranger.desktop
 # Binaries
 application/octet-stream=pager.desktop
 # Plain text
