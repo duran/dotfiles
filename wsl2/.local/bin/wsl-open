@@ -1,3 +1,0 @@
-#!/bin/sh
-
-test -f "$1" && wslview "$(wslpath -w $1)" || wslview "$1"

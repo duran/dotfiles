@@ -3,61 +3,61 @@
 # Local files #
 ###############
 # Folders
-inode/directory=wsl-open.desktop
+inode/directory=powershell-open.desktop
 # Text
-application/octet-stream=wsl-open.desktop
-text/plain=wsl-open.desktop
-application/ecmascript=wsl-open.desktop
-application/javascript=wsl-open.desktop
-application/json=wsl-open.desktop
-text/css=wsl-open.desktop
-text/csv=wsl-open.desktop
-application/typescript=wsl-open.desktop
-text/markdown=wsl-open.desktop
-text/calendar=wsl-open.desktop
-application/xml=wsl-open.desktop
-application/x-shellscript=wsl-open.desktop
-text/html=wsl-open.desktop
-application/x-extension-htm=wsl-open.desktop
-application/x-extension-html=wsl-open.desktop
-application/x-extension-shtml=wsl-open.desktop
-application/x-extension-xhtml=wsl-open.desktop
-application/x-extension-xht=wsl-open.desktop
-application/xhtml+xml=wsl-open.desktop
+application/octet-stream=powershell-open.desktop
+text/plain=powershell-open.desktop
+application/ecmascript=powershell-open.desktop
+application/javascript=powershell-open.desktop
+application/json=powershell-open.desktop
+text/css=powershell-open.desktop
+text/csv=powershell-open.desktop
+application/typescript=powershell-open.desktop
+text/markdown=powershell-open.desktop
+text/calendar=powershell-open.desktop
+application/xml=powershell-open.desktop
+application/x-shellscript=powershell-open.desktop
+text/html=powershell-open.desktop
+application/x-extension-htm=powershell-open.desktop
+application/x-extension-html=powershell-open.desktop
+application/x-extension-shtml=powershell-open.desktop
+application/x-extension-xhtml=powershell-open.desktop
+application/x-extension-xht=powershell-open.desktop
+application/xhtml+xml=powershell-open.desktop
 # Documents (containers)
-application/pdf=org.pwmt.wsl-open.desktop
-application/epub+zip=org.pwmt.wsl-open.desktop
-application/postscript=org.pwmt.wsl-open.desktop
-image/vnd.djvu=org.pwmt.wsl-open.desktop
+application/pdf=org.pwmt.powershell-open.desktop
+application/epub+zip=org.pwmt.powershell-open.desktop
+application/postscript=org.pwmt.powershell-open.desktop
+image/vnd.djvu=org.pwmt.powershell-open.desktop
 # Image
-image/bmp=wsl-open.desktop
-image/gif=wsl-open.desktop
-image/jpeg=wsl-open.desktop
-image/png=wsl-open.desktop
-image/svg+xml=wsl-open.desktop
-image/tiff=wsl-open.desktop
-image/webp=wsl-open.desktop
-image/x-icon=wsl-open.desktop
+image/bmp=powershell-open.desktop
+image/gif=powershell-open.desktop
+image/jpeg=powershell-open.desktop
+image/png=powershell-open.desktop
+image/svg+xml=powershell-open.desktop
+image/tiff=powershell-open.desktop
+image/webp=powershell-open.desktop
+image/x-icon=powershell-open.desktop
 # Audio/Video
-audio/aac=wsl-open.desktop
-audio/ogg=wsl-open.desktop
-audio/wav=wsl-open.desktop
-audio/webm=wsl-open.desktop
-audio/x-midi=wsl-open.desktop
-video/3gpp2=wsl-open.desktop
-video/3gpp=wsl-open.desktop
-video/mpeg=wsl-open.desktop
-video/ogg=wsl-open.desktop
-video/webm=wsl-open.desktop
-video/x-msvideo=wsl-open.desktop
-video/mp4=wsl-open.desktop
+audio/aac=powershell-open.desktop
+audio/ogg=powershell-open.desktop
+audio/wav=powershell-open.desktop
+audio/webm=powershell-open.desktop
+audio/x-midi=powershell-open.desktop
+video/3gpp2=powershell-open.desktop
+video/3gpp=powershell-open.desktop
+video/mpeg=powershell-open.desktop
+video/ogg=powershell-open.desktop
+video/webm=powershell-open.desktop
+video/x-msvideo=powershell-open.desktop
+video/mp4=powershell-open.desktop
 ########
 # URIs #
 ########
 # Web
-x-scheme-handler/http=wsl-open.desktop
-x-scheme-handler/https=wsl-open.desktop
-x-scheme-handler/ftp=wsl-open.desktop
-x-scheme-handler/chrome=wsl-open.desktop
+x-scheme-handler/http=powershell-open.desktop
+x-scheme-handler/https=powershell-open.desktop
+x-scheme-handler/ftp=powershell-open.desktop
+x-scheme-handler/chrome=powershell-open.desktop
 # TODO:Office
 # X, has libreoffice, ext od[dfgpst]|docx?|sxc|xlsx?|xlt|xlw|gnm|gnumeric, flag f = libreoffice "$@"

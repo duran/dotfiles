@@ -1,0 +1,6 @@
+#!/bin/sh
+
+powershell.exe start '"'"$1"'"'
+
+# Does not work without installing extra crummy stuff
+# test -f "$1" && wslview "$(wslpath -w $1)" || wslview "$1"

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
 Name=Open in Windows Host
-Exec=wsl-open
-TryExec=wsl-open
+Exec=powershell-open
+TryExec=powershell-open
 GenericName=Generic Opener
