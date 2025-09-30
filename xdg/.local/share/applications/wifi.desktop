@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Wifi Configuration
+Exec=nmtui
+TryExec=nmtui
+GenericName=Wifi
+Terminal=true
+
