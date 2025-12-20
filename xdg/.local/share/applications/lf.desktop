@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Terminal File Browser
+Exec=lf -- %F
+TryExec=lf
+GenericName=File Browser
+Terminal=true

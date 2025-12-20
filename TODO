@@ -1,64 +1,31 @@
-2023:
+2026:
     config vscode
     improve backup system
-2024:
-    fix cracked display
-    userserver
-    go
+    move to nvim
+    fix keyboard
     config lf
     config sioyek
+    config email
+2027:
+    userserver
     reconf firefox + qutebrowser
     minor annoyances:
         - xdg gtk/kde themes
-        - fix default terminal launcher
         - proper way to do popups
         - readline
-        - ls GNU vs BSD
         - proper way to integrate lf in open popups
         - cursor themes
-        - systemd
         - rga
 2025:
-    clean up vim
     try emacs, helix, kakoune
-    try nyxt
     automatic redshift, timezone
-2026:
-2027:
-    move to Nvim
-2030:
-    try emacs, helix, 
-    clean tty/pty
 
 ================================================================================
-try new wms: bspwm, qutile, awesomewm
 windows:
     - WSL2 as server
     - how to change programatically 
     - switch to debian
-try neovim
-    - move to neovim and embed in vscode and firefox
-    - make possible to do the following:
-        1. Check multiple cursor solution for vim (shift+alt+...)
-        2. IntelliSense: Ctrl+Space
-        3. Move lines up and down
-        4. Comment block of code with Ctrl+/
-        5. Rename refactoring 
-        6. Formatting (again)
-        7. Folding (again)
-        8. Errors and warnings
-        9. Snippeds
-        10. Emmets VIM
-        11. Terminal (again) (ctrl+`)
-        12. Version control (ctrl+shift+G) (again)
-        13. Edit, build, test and debug
-    - :options + usr_01... + quickfix mksession
-try qutebrowser, nyxt, vivaldi, opera, midori, browsh
-reconf loadkeys + xmodmap (several keyboards, several layouts) + xdotool
-check setkdbmap with -device, xinput and /usr/include/X11/keysymdef.h
-check all possible bash options and add them to {set}
 clipboard manager
-revise kde/gnome/apache/gnu/nongnu
 - Email/Caldav/Cardav
 Nix
 

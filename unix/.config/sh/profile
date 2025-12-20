@@ -45,6 +45,8 @@ export HISTSIZE=5000
 #######
 # Use gnome tools (like gio) when interacting with xdg tools (like xdg-open)
 export XDG_CURRENT_DESKTOP=MATE
+# Point to xinit config
+export XINITRC="$HOME"/.config/x/init
 
 
 ##################

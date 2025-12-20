@@ -1,0 +1,5 @@
+set number
+set relativenumber
+
+map . set hidden!
+map W $3 terminal $SHELL

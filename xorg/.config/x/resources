@@ -53,8 +53,12 @@ XTerm*fastScroll: true
 XTerm*fullscreen: never
 
 ! Use pretty font
-XTerm*font: -*-terminus-medium-r-*-*-16-*-*-*-*-*-iso10646-1
-XTerm*allowBoldFonts: false
+! XTerm*font: -*-terminus-medium-r-*-*-16-*-*-*-*-*-iso10646-1
+! XTerm*allowBoldFonts: false
+XTerm*font: pango:Monospace
+XTerm*faceName: Monospace
+XTerm*faceSize: 30
+
 
 ! Keybindings
 

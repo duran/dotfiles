@@ -4,5 +4,6 @@ configuration {
     ssh-command: "{terminal} {ssh-client} {host} [-p {port}]";
     run-shell-command: "{terminal} {cmd}";
     terminal: "terminal";
+    dpi: 1;
 }
 @theme "Monokai"
